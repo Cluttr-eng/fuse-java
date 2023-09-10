@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.openapitools.client.model.GetInvestmentTransactionsRequestTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:19:51" hostname="Mac-1694351685470.local" time="0.008">
+<testsuite name="org.openapitools.client.model.GetInvestmentTransactionsRequestTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:26:46" hostname="Mac-1694350014854.local" time="0.003">
   <properties/>
-  <testcase name="accessTokenTest()" classname="org.openapitools.client.model.GetInvestmentTransactionsRequestTest" time="0.001"/>
+  <testcase name="accessTokenTest()" classname="org.openapitools.client.model.GetInvestmentTransactionsRequestTest" time="0.0"/>
   <testcase name="recordsPerPageTest()" classname="org.openapitools.client.model.GetInvestmentTransactionsRequestTest" time="0.0"/>
   <testcase name="optionsTest()" classname="org.openapitools.client.model.GetInvestmentTransactionsRequestTest" time="0.0"/>
-  <testcase name="endDateTest()" classname="org.openapitools.client.model.GetInvestmentTransactionsRequestTest" time="0.0"/>
+  <testcase name="endDateTest()" classname="org.openapitools.client.model.GetInvestmentTransactionsRequestTest" time="0.001"/>
   <testcase name="pageTest()" classname="org.openapitools.client.model.GetInvestmentTransactionsRequestTest" time="0.0"/>
-  <testcase name="testGetInvestmentTransactionsRequest()" classname="org.openapitools.client.model.GetInvestmentTransactionsRequestTest" time="0.0"/>
-  <testcase name="startDateTest()" classname="org.openapitools.client.model.GetInvestmentTransactionsRequestTest" time="0.001"/>
+  <testcase name="testGetInvestmentTransactionsRequest()" classname="org.openapitools.client.model.GetInvestmentTransactionsRequestTest" time="0.001"/>
+  <testcase name="startDateTest()" classname="org.openapitools.client.model.GetInvestmentTransactionsRequestTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

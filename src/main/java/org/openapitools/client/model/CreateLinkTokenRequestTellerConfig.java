@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * CreateLinkTokenRequestTellerConfig
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-10T13:19:07.464573Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-10T13:25:52.697721Z[UTC]")
 public class CreateLinkTokenRequestTellerConfig {
   /**
    * The mode of account selection: - &#39;disabled&#39;: automatically connect all the supported financial accounts associated with this user&#39;s account at the institution (default). - &#39;single&#39;: the user will see a list of supported financial accounts and will need to select one to connect - &#39;multiple&#39;: the user will see a list of supported financial accounts and will need to select one or more to connect

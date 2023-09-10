@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.openapitools.client.model.MigrateFinancialConnectionsAggregatorConnectionDataTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:19:51" hostname="Mac-1694351685470.local" time="0.002">
+<testsuite name="org.openapitools.client.model.MigrateFinancialConnectionsAggregatorConnectionDataTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:26:46" hostname="Mac-1694350014854.local" time="0.009">
   <properties/>
-  <testcase name="mxTest()" classname="org.openapitools.client.model.MigrateFinancialConnectionsAggregatorConnectionDataTest" time="0.001"/>
+  <testcase name="mxTest()" classname="org.openapitools.client.model.MigrateFinancialConnectionsAggregatorConnectionDataTest" time="0.0"/>
   <testcase name="testMigrateFinancialConnectionsAggregatorConnectionData()" classname="org.openapitools.client.model.MigrateFinancialConnectionsAggregatorConnectionDataTest" time="0.0"/>
   <testcase name="tellerTest()" classname="org.openapitools.client.model.MigrateFinancialConnectionsAggregatorConnectionDataTest" time="0.0"/>
   <testcase name="plaidTest()" classname="org.openapitools.client.model.MigrateFinancialConnectionsAggregatorConnectionDataTest" time="0.001"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.openapitools.client.model.FinancialConnectionsInvestmentTransactionTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:19:51" hostname="Mac-1694351685470.local" time="0.004">
+<testsuite name="org.openapitools.client.model.FinancialConnectionsInvestmentTransactionTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:26:46" hostname="Mac-1694350014854.local" time="0.008">
   <properties/>
   <testcase name="priceTest()" classname="org.openapitools.client.model.FinancialConnectionsInvestmentTransactionTest" time="0.0"/>
   <testcase name="accountNameTest()" classname="org.openapitools.client.model.FinancialConnectionsInvestmentTransactionTest" time="0.0"/>
@@ -9,9 +9,9 @@
   <testcase name="feesTest()" classname="org.openapitools.client.model.FinancialConnectionsInvestmentTransactionTest" time="0.0"/>
   <testcase name="remoteAccountIdTest()" classname="org.openapitools.client.model.FinancialConnectionsInvestmentTransactionTest" time="0.0"/>
   <testcase name="subtypeTest()" classname="org.openapitools.client.model.FinancialConnectionsInvestmentTransactionTest" time="0.0"/>
-  <testcase name="securityTest()" classname="org.openapitools.client.model.FinancialConnectionsInvestmentTransactionTest" time="0.001"/>
+  <testcase name="securityTest()" classname="org.openapitools.client.model.FinancialConnectionsInvestmentTransactionTest" time="0.0"/>
   <testcase name="descriptionTest()" classname="org.openapitools.client.model.FinancialConnectionsInvestmentTransactionTest" time="0.0"/>
-  <testcase name="currencyTest()" classname="org.openapitools.client.model.FinancialConnectionsInvestmentTransactionTest" time="0.0"/>
+  <testcase name="currencyTest()" classname="org.openapitools.client.model.FinancialConnectionsInvestmentTransactionTest" time="0.001"/>
   <testcase name="testFinancialConnectionsInvestmentTransaction()" classname="org.openapitools.client.model.FinancialConnectionsInvestmentTransactionTest" time="0.0"/>
   <testcase name="quantityTest()" classname="org.openapitools.client.model.FinancialConnectionsInvestmentTransactionTest" time="0.0"/>
   <testcase name="dateTest()" classname="org.openapitools.client.model.FinancialConnectionsInvestmentTransactionTest" time="0.0"/>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.openapitools.client.model.FinancialConnectionsAccountTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:19:51" hostname="Mac-1694351685470.local" time="0.011">
+<testsuite name="org.openapitools.client.model.FinancialConnectionsAccountTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:26:46" hostname="Mac-1694350014854.local" time="0.012">
   <properties/>
   <testcase name="institutionTest()" classname="org.openapitools.client.model.FinancialConnectionsAccountTest" time="0.0"/>
   <testcase name="typeTest()" classname="org.openapitools.client.model.FinancialConnectionsAccountTest" time="0.0"/>
   <testcase name="balanceTest()" classname="org.openapitools.client.model.FinancialConnectionsAccountTest" time="0.0"/>
   <testcase name="remoteIdTest()" classname="org.openapitools.client.model.FinancialConnectionsAccountTest" time="0.0"/>
   <testcase name="testFinancialConnectionsAccount()" classname="org.openapitools.client.model.FinancialConnectionsAccountTest" time="0.0"/>
-  <testcase name="maskTest()" classname="org.openapitools.client.model.FinancialConnectionsAccountTest" time="0.001"/>
-  <testcase name="fingerprintTest()" classname="org.openapitools.client.model.FinancialConnectionsAccountTest" time="0.0"/>
-  <testcase name="subtypeTest()" classname="org.openapitools.client.model.FinancialConnectionsAccountTest" time="0.005"/>
+  <testcase name="maskTest()" classname="org.openapitools.client.model.FinancialConnectionsAccountTest" time="0.0"/>
+  <testcase name="fingerprintTest()" classname="org.openapitools.client.model.FinancialConnectionsAccountTest" time="0.006"/>
+  <testcase name="subtypeTest()" classname="org.openapitools.client.model.FinancialConnectionsAccountTest" time="0.0"/>
   <testcase name="remoteDataTest()" classname="org.openapitools.client.model.FinancialConnectionsAccountTest" time="0.0"/>
   <testcase name="currencyTest()" classname="org.openapitools.client.model.FinancialConnectionsAccountTest" time="0.001"/>
-  <testcase name="nameTest()" classname="org.openapitools.client.model.FinancialConnectionsAccountTest" time="0.0"/>
+  <testcase name="nameTest()" classname="org.openapitools.client.model.FinancialConnectionsAccountTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

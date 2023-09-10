@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.openapitools.client.model.GetFinancialConnectionsBalanceResponseTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:19:51" hostname="Mac-1694351685470.local" time="0.0">
+<testsuite name="org.openapitools.client.model.GetFinancialConnectionsBalanceResponseTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:26:46" hostname="Mac-1694350014854.local" time="0.0">
   <properties/>
   <testcase name="testGetFinancialConnectionsBalanceResponse()" classname="org.openapitools.client.model.GetFinancialConnectionsBalanceResponseTest" time="0.0"/>
   <testcase name="requestIdTest()" classname="org.openapitools.client.model.GetFinancialConnectionsBalanceResponseTest" time="0.0"/>

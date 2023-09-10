@@ -56,7 +56,7 @@ import org.openapitools.client.JSON;
 /**
  * CreateSessionRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-10T13:19:07.464573Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-10T13:25:52.697721Z[UTC]")
 public class CreateSessionRequest {
   public static final String SERIALIZED_NAME_SUPPORTED_FINANCIAL_INSTITUTION_AGGREGATORS = "supported_financial_institution_aggregators";
   @SerializedName(SERIALIZED_NAME_SUPPORTED_FINANCIAL_INSTITUTION_AGGREGATORS)

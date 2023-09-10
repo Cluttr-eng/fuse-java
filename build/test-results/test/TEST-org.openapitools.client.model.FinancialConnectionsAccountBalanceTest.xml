@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.openapitools.client.model.FinancialConnectionsAccountBalanceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:19:51" hostname="Mac-1694351685470.local" time="0.003">
+<testsuite name="org.openapitools.client.model.FinancialConnectionsAccountBalanceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:26:45" hostname="Mac-1694350014854.local" time="0.005">
   <properties/>
   <testcase name="lastUpdatedDateTest()" classname="org.openapitools.client.model.FinancialConnectionsAccountBalanceTest" time="0.001"/>
   <testcase name="isoCurrencyCodeTest()" classname="org.openapitools.client.model.FinancialConnectionsAccountBalanceTest" time="0.0"/>

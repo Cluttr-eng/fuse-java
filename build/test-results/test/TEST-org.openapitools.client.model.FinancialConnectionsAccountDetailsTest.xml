@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.openapitools.client.model.FinancialConnectionsAccountDetailsTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:19:51" hostname="Mac-1694351685470.local" time="0.002">
+<testsuite name="org.openapitools.client.model.FinancialConnectionsAccountDetailsTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:26:46" hostname="Mac-1694350014854.local" time="0.002">
   <properties/>
   <testcase name="accountNumberTest()" classname="org.openapitools.client.model.FinancialConnectionsAccountDetailsTest" time="0.0"/>
   <testcase name="achTest()" classname="org.openapitools.client.model.FinancialConnectionsAccountDetailsTest" time="0.0"/>
   <testcase name="remoteIdTest()" classname="org.openapitools.client.model.FinancialConnectionsAccountDetailsTest" time="0.0"/>
-  <testcase name="remoteDataTest()" classname="org.openapitools.client.model.FinancialConnectionsAccountDetailsTest" time="0.001"/>
+  <testcase name="remoteDataTest()" classname="org.openapitools.client.model.FinancialConnectionsAccountDetailsTest" time="0.0"/>
   <testcase name="testFinancialConnectionsAccountDetails()" classname="org.openapitools.client.model.FinancialConnectionsAccountDetailsTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

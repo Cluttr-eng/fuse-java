@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.openapitools.client.model.CreateSessionRequestTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:19:50" hostname="Mac-1694351685470.local" time="0.008">
+<testsuite name="org.openapitools.client.model.CreateSessionRequestTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:26:45" hostname="Mac-1694350014854.local" time="0.009">
   <properties/>
-  <testcase name="entityTest()" classname="org.openapitools.client.model.CreateSessionRequestTest" time="0.0"/>
+  <testcase name="entityTest()" classname="org.openapitools.client.model.CreateSessionRequestTest" time="0.001"/>
   <testcase name="accessTokenTest()" classname="org.openapitools.client.model.CreateSessionRequestTest" time="0.0"/>
-  <testcase name="supportedFinancialInstitutionAggregatorsTest()" classname="org.openapitools.client.model.CreateSessionRequestTest" time="0.0"/>
+  <testcase name="supportedFinancialInstitutionAggregatorsTest()" classname="org.openapitools.client.model.CreateSessionRequestTest" time="0.001"/>
   <testcase name="testCreateSessionRequest()" classname="org.openapitools.client.model.CreateSessionRequestTest" time="0.001"/>
-  <testcase name="productsTest()" classname="org.openapitools.client.model.CreateSessionRequestTest" time="0.001"/>
+  <testcase name="productsTest()" classname="org.openapitools.client.model.CreateSessionRequestTest" time="0.0"/>
   <testcase name="isWebViewTest()" classname="org.openapitools.client.model.CreateSessionRequestTest" time="0.0"/>
   <testcase name="countryCodesTest()" classname="org.openapitools.client.model.CreateSessionRequestTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

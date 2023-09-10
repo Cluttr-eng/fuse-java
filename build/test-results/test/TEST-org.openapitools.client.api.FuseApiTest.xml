@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.openapitools.client.api.FuseApiTest" tests="28" skipped="28" failures="0" errors="0" timestamp="2023-09-10T13:19:51" hostname="Mac-1694351685470.local" time="0.001">
+<testsuite name="org.openapitools.client.api.FuseApiTest" tests="28" skipped="28" failures="0" errors="0" timestamp="2023-09-10T13:26:46" hostname="Mac-1694350014854.local" time="0.001">
   <properties/>
   <testcase name="getFinancialConnectionsBalancesTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
     <skipped/>
@@ -67,7 +67,7 @@
   <testcase name="getFinancialInstitutionTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="syncFinancialConnectionsDataTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.001">
+  <testcase name="syncFinancialConnectionsDataTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
     <skipped/>
   </testcase>
   <testcase name="getFinancialConnectionsAccountsTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">

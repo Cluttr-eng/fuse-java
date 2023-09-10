@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.openapitools.client.model.EvalConsumerRiskReportRequestTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:19:51" hostname="Mac-1694351685470.local" time="0.002">
+<testsuite name="org.openapitools.client.model.EvalConsumerRiskReportRequestTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:26:46" hostname="Mac-1694350014854.local" time="0.013">
   <properties/>
-  <testcase name="timeFrameTest()" classname="org.openapitools.client.model.EvalConsumerRiskReportRequestTest" time="0.001"/>
+  <testcase name="timeFrameTest()" classname="org.openapitools.client.model.EvalConsumerRiskReportRequestTest" time="0.011"/>
   <testcase name="testEvalConsumerRiskReportRequest()" classname="org.openapitools.client.model.EvalConsumerRiskReportRequestTest" time="0.0"/>
   <testcase name="eventsTest()" classname="org.openapitools.client.model.EvalConsumerRiskReportRequestTest" time="0.001"/>
   <testcase name="windowSizeTest()" classname="org.openapitools.client.model.EvalConsumerRiskReportRequestTest" time="0.0"/>

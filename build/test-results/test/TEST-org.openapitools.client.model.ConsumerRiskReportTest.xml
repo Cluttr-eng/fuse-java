@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.openapitools.client.model.ConsumerRiskReportTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:19:51" hostname="Mac-1694351685470.local" time="0.003">
+<testsuite name="org.openapitools.client.model.ConsumerRiskReportTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:26:46" hostname="Mac-1694350014854.local" time="0.006">
   <properties/>
   <testcase name="customizationIdTest()" classname="org.openapitools.client.model.ConsumerRiskReportTest" time="0.0"/>
   <testcase name="idTest()" classname="org.openapitools.client.model.ConsumerRiskReportTest" time="0.0"/>
   <testcase name="isoCurrencyCodeTest()" classname="org.openapitools.client.model.ConsumerRiskReportTest" time="0.0"/>
-  <testcase name="currentSpendTest()" classname="org.openapitools.client.model.ConsumerRiskReportTest" time="0.0"/>
+  <testcase name="currentSpendTest()" classname="org.openapitools.client.model.ConsumerRiskReportTest" time="0.001"/>
   <testcase name="predictedBalanceTest()" classname="org.openapitools.client.model.ConsumerRiskReportTest" time="0.001"/>
   <testcase name="pendingPaymentsAmountTest()" classname="org.openapitools.client.model.ConsumerRiskReportTest" time="0.0"/>
   <testcase name="spendLimitTest()" classname="org.openapitools.client.model.ConsumerRiskReportTest" time="0.0"/>

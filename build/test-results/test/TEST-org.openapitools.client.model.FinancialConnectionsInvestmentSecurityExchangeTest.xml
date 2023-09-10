@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.openapitools.client.model.FinancialConnectionsInvestmentSecurityExchangeTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:19:51" hostname="Mac-1694351685470.local" time="0.003">
+<testsuite name="org.openapitools.client.model.FinancialConnectionsInvestmentSecurityExchangeTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:26:45" hostname="Mac-1694350014854.local" time="0.002">
   <properties/>
   <testcase name="suffixTest()" classname="org.openapitools.client.model.FinancialConnectionsInvestmentSecurityExchangeTest" time="0.001"/>
-  <testcase name="micCodeTest()" classname="org.openapitools.client.model.FinancialConnectionsInvestmentSecurityExchangeTest" time="0.001"/>
+  <testcase name="micCodeTest()" classname="org.openapitools.client.model.FinancialConnectionsInvestmentSecurityExchangeTest" time="0.0"/>
   <testcase name="testFinancialConnectionsInvestmentSecurityExchange()" classname="org.openapitools.client.model.FinancialConnectionsInvestmentSecurityExchangeTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

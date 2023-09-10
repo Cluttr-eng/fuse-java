@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * FinancialConnectionsOwnerAddressesInnerData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-10T13:19:07.464573Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-10T13:25:52.697721Z[UTC]")
 public class FinancialConnectionsOwnerAddressesInnerData {
   public static final String SERIALIZED_NAME_FULL_ADDRESS = "full_address";
   @SerializedName(SERIALIZED_NAME_FULL_ADDRESS)
