@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.openapitools.client.model.CreateLinkTokenRequestTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:19:51" hostname="Mac-1694351685470.local" time="0.007">
+  <properties/>
+  <testcase name="webhookUrlTest()" classname="org.openapitools.client.model.CreateLinkTokenRequestTest" time="0.0"/>
+  <testcase name="entityTest()" classname="org.openapitools.client.model.CreateLinkTokenRequestTest" time="0.0"/>
+  <testcase name="mxTest()" classname="org.openapitools.client.model.CreateLinkTokenRequestTest" time="0.001"/>
+  <testcase name="institutionIdTest()" classname="org.openapitools.client.model.CreateLinkTokenRequestTest" time="0.0"/>
+  <testcase name="snaptradeTest()" classname="org.openapitools.client.model.CreateLinkTokenRequestTest" time="0.0"/>
+  <testcase name="sessionClientSecretTest()" classname="org.openapitools.client.model.CreateLinkTokenRequestTest" time="0.0"/>
+  <testcase name="tellerTest()" classname="org.openapitools.client.model.CreateLinkTokenRequestTest" time="0.0"/>
+  <testcase name="testCreateLinkTokenRequest()" classname="org.openapitools.client.model.CreateLinkTokenRequestTest" time="0.001"/>
+  <testcase name="plaidTest()" classname="org.openapitools.client.model.CreateLinkTokenRequestTest" time="0.003"/>
+  <testcase name="clientNameTest()" classname="org.openapitools.client.model.CreateLinkTokenRequestTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

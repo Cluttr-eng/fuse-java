@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.openapitools.client.model.EnrichedTransactionTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:19:51" hostname="Mac-1694351685470.local" time="0.003">
+  <properties/>
+  <testcase name="idTest()" classname="org.openapitools.client.model.EnrichedTransactionTest" time="0.0"/>
+  <testcase name="merchantIdTest()" classname="org.openapitools.client.model.EnrichedTransactionTest" time="0.001"/>
+  <testcase name="testEnrichedTransaction()" classname="org.openapitools.client.model.EnrichedTransactionTest" time="0.001"/>
+  <testcase name="categoriesTest()" classname="org.openapitools.client.model.EnrichedTransactionTest" time="0.0"/>
+  <testcase name="merchantNameTest()" classname="org.openapitools.client.model.EnrichedTransactionTest" time="0.001"/>
+  <testcase name="logoTest()" classname="org.openapitools.client.model.EnrichedTransactionTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

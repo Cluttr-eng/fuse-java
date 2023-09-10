@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.openapitools.client.api.FuseApiTest" tests="28" skipped="28" failures="0" errors="0" timestamp="2023-09-10T13:19:51" hostname="Mac-1694351685470.local" time="0.001">
+  <properties/>
+  <testcase name="getFinancialConnectionsBalancesTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getEntityTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getFinancialConnectionTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="updateConsumerRiskReportCustomizationTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="enrichTransactionsTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="createLinkTokenTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="addAccountEventsTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getConsumerRiskReportTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getFinancialConnectionsTransactionsTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="deleteFinancialConnectionTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getAssetReportTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="refreshAssetReportTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="createAssetReportTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getFinanceScoreTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getInvestmentHoldingsTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="createSessionTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getInvestmentTransactionsTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getFinancialConnectionsAccountStatementTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="migrateFinancialConnectionTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="createConsumerRiskReportCustomizationTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="exchangeFinancialConnectionsPublicTokenTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getFinancialInstitutionTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="syncFinancialConnectionsDataTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase name="getFinancialConnectionsAccountsTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getFinancialConnectionsAccountDetailsTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getFinancialConnectionsOwnersTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="createConsumerRiskReportTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="v1FinancialConnectionsLiabilitiesPostTest()" classname="org.openapitools.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
