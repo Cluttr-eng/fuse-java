@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.openapitools.client.model.SyncTransactionsRequestTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-09-10T13:19:51" hostname="Mac-1694351685470.local" time="0.003">
+  <properties/>
+  <testcase name="accessTokenTest()" classname="org.openapitools.client.model.SyncTransactionsRequestTest" time="0.0"/>
+  <testcase name="cursorTest()" classname="org.openapitools.client.model.SyncTransactionsRequestTest" time="0.001"/>
+  <testcase name="testSyncTransactionsRequest()" classname="org.openapitools.client.model.SyncTransactionsRequestTest" time="0.0"/>
+  <testcase name="countTest()" classname="org.openapitools.client.model.SyncTransactionsRequestTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
