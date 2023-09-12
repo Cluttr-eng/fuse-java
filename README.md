@@ -4,6 +4,7 @@
 ## Quick start
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
 
+```
 class SdkTest {
 
     private final FuseApi apiInstance;
@@ -54,4 +55,4 @@ class SdkTest {
         CreateLinkTokenResponse createLinkTokenResponse = apiInstance.createLinkToken(createLinkTokenRequest);
     }
 }
-
+```
