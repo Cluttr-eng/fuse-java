@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.fuse.client.model.FinancialConnectionDetailsPlaidTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-09-12T14:49:07" hostname="Mac-1694529973771.local" time="0.001">
+<testsuite name="org.fuse.client.model.FinancialConnectionDetailsPlaidTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-09-12T15:14:23" hostname="Mac-1694531526087.local" time="0.001">
   <properties/>
   <testcase name="accessTokenTest()" classname="org.fuse.client.model.FinancialConnectionDetailsPlaidTest" time="0.0"/>
   <testcase name="itemIdTest()" classname="org.fuse.client.model.FinancialConnectionDetailsPlaidTest" time="0.0"/>

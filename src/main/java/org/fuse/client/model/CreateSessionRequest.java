@@ -56,7 +56,7 @@ import org.fuse.client.JSON;
 /**
  * CreateSessionRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T14:48:18.188409Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
 public class CreateSessionRequest {
   public static final String SERIALIZED_NAME_SUPPORTED_FINANCIAL_INSTITUTION_AGGREGATORS = "supported_financial_institution_aggregators";
   @SerializedName(SERIALIZED_NAME_SUPPORTED_FINANCIAL_INSTITUTION_AGGREGATORS)

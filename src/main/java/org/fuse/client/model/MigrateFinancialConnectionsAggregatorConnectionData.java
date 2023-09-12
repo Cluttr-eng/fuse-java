@@ -53,7 +53,7 @@ import org.fuse.client.JSON;
 /**
  * The input data for the financial connections to be migrated into the unified Fuse API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T14:48:18.188409Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
 public class MigrateFinancialConnectionsAggregatorConnectionData {
   public static final String SERIALIZED_NAME_PLAID = "plaid";
   @SerializedName(SERIALIZED_NAME_PLAID)

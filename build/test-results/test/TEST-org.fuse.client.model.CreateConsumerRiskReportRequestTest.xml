@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.fuse.client.model.CreateConsumerRiskReportRequestTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-09-12T14:49:06" hostname="Mac-1694529973771.local" time="0.009">
+<testsuite name="org.fuse.client.model.CreateConsumerRiskReportRequestTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-09-12T15:14:23" hostname="Mac-1694531526087.local" time="0.003">
   <properties/>
-  <testcase name="testCreateConsumerRiskReportRequest()" classname="org.fuse.client.model.CreateConsumerRiskReportRequestTest" time="0.001"/>
-  <testcase name="customizationIdTest()" classname="org.fuse.client.model.CreateConsumerRiskReportRequestTest" time="0.005"/>
-  <testcase name="accountIdTest()" classname="org.fuse.client.model.CreateConsumerRiskReportRequestTest" time="0.002"/>
+  <testcase name="testCreateConsumerRiskReportRequest()" classname="org.fuse.client.model.CreateConsumerRiskReportRequestTest" time="0.0"/>
+  <testcase name="customizationIdTest()" classname="org.fuse.client.model.CreateConsumerRiskReportRequestTest" time="0.001"/>
+  <testcase name="accountIdTest()" classname="org.fuse.client.model.CreateConsumerRiskReportRequestTest" time="0.0"/>
   <testcase name="isoCurrencyCodeTest()" classname="org.fuse.client.model.CreateConsumerRiskReportRequestTest" time="0.0"/>
   <testcase name="endUserNameTest()" classname="org.fuse.client.model.CreateConsumerRiskReportRequestTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

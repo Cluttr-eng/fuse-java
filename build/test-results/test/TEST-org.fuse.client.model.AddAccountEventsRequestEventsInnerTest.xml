@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2023-09-12T14:49:06" hostname="Mac-1694529973771.local" time="0.01">
+<testsuite name="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2023-09-12T15:14:23" hostname="Mac-1694531526087.local" time="0.008">
   <properties/>
-  <testcase name="transactionDescriptionTest()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.001"/>
-  <testcase name="amountTest()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.0"/>
+  <testcase name="transactionDescriptionTest()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.0"/>
+  <testcase name="amountTest()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.001"/>
   <testcase name="idTest()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.0"/>
   <testcase name="balanceTest()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.0"/>
   <testcase name="isoCurrencyCodeTest()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.0"/>
-  <testcase name="statusTest()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.001"/>
+  <testcase name="statusTest()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.0"/>
   <testcase name="transactionOwnerTypeTest()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.0"/>
   <testcase name="currentTest()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.001"/>
   <testcase name="countryCodeTest()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.0"/>
   <testcase name="testAddAccountEventsRequestEventsInner()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.001"/>
-  <testcase name="eventTypeTest()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.0"/>
-  <testcase name="availableTest()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.001"/>
-  <testcase name="transactionTypeTest()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.0"/>
-  <testcase name="merchantNameTest()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.001"/>
-  <testcase name="timestampTest()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.0"/>
+  <testcase name="eventTypeTest()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.001"/>
+  <testcase name="availableTest()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.0"/>
+  <testcase name="transactionTypeTest()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.001"/>
+  <testcase name="merchantNameTest()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.0"/>
+  <testcase name="timestampTest()" classname="org.fuse.client.model.AddAccountEventsRequestEventsInnerTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

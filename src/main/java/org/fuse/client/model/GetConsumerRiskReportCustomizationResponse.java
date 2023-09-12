@@ -51,7 +51,7 @@ import org.fuse.client.JSON;
 /**
  * GetConsumerRiskReportCustomizationResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T14:48:18.188409Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
 public class GetConsumerRiskReportCustomizationResponse {
   public static final String SERIALIZED_NAME_CONSUMER_RISK_REPORT_CUSTOMIZATION = "consumer_risk_report_customization";
   @SerializedName(SERIALIZED_NAME_CONSUMER_RISK_REPORT_CUSTOMIZATION)
