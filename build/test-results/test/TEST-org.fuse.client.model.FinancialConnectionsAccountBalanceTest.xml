@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.fuse.client.model.FinancialConnectionsAccountBalanceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-09-12T14:49:06" hostname="Mac-1694529973771.local" time="0.007">
+  <properties/>
+  <testcase name="lastUpdatedDateTest()" classname="org.fuse.client.model.FinancialConnectionsAccountBalanceTest" time="0.0"/>
+  <testcase name="isoCurrencyCodeTest()" classname="org.fuse.client.model.FinancialConnectionsAccountBalanceTest" time="0.001"/>
+  <testcase name="testFinancialConnectionsAccountBalance()" classname="org.fuse.client.model.FinancialConnectionsAccountBalanceTest" time="0.001"/>
+  <testcase name="remoteAccountIdTest()" classname="org.fuse.client.model.FinancialConnectionsAccountBalanceTest" time="0.001"/>
+  <testcase name="currentTest()" classname="org.fuse.client.model.FinancialConnectionsAccountBalanceTest" time="0.001"/>
+  <testcase name="availableTest()" classname="org.fuse.client.model.FinancialConnectionsAccountBalanceTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

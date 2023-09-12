@@ -19,6 +19,8 @@
 
 * `BE` (value: `"BE"`)
 
+* `BG` (value: `"BG"`)
+
 * `BH` (value: `"BH"`)
 
 * `BM` (value: `"BM"`)
@@ -28,6 +30,8 @@
 * `BR` (value: `"BR"`)
 
 * `BW` (value: `"BW"`)
+
+* `BY` (value: `"BY"`)
 
 * `CA` (value: `"CA"`)
 
@@ -47,7 +51,11 @@
 
 * `DE` (value: `"DE"`)
 
+* `DO` (value: `"DO"`)
+
 * `DZ` (value: `"DZ"`)
+
+* `EC` (value: `"EC"`)
 
 * `EG` (value: `"EG"`)
 
@@ -70,6 +78,8 @@
 * `GR` (value: `"GR"`)
 
 * `HK` (value: `"HK"`)
+
+* `HU` (value: `"HU"`)
 
 * `ID` (value: `"ID"`)
 
@@ -109,6 +119,10 @@
 
 * `MC` (value: `"MC"`)
 
+* `MD` (value: `"MD"`)
+
+* `MK` (value: `"MK"`)
+
 * `MO` (value: `"MO"`)
 
 * `MT` (value: `"MT"`)
@@ -143,6 +157,8 @@
 
 * `QA` (value: `"QA"`)
 
+* `RO` (value: `"RO"`)
+
 * `RU` (value: `"RU"`)
 
 * `SA` (value: `"SA"`)
@@ -150,6 +166,8 @@
 * `SE` (value: `"SE"`)
 
 * `SG` (value: `"SG"`)
+
+* `SK` (value: `"SK"`)
 
 * `SL` (value: `"SL"`)
 
@@ -160,6 +178,8 @@
 * `TW` (value: `"TW"`)
 
 * `TZ` (value: `"TZ"`)
+
+* `UA` (value: `"UA"`)
 
 * `UG` (value: `"UG"`)
 
