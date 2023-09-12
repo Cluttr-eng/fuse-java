@@ -5,6 +5,18 @@
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
 
 ```
+package mypackage;
+
+import java.util.*;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.model.*;
+import org.fuse.client.api.FuseApi;
+
 class SdkTest {
 
     private final FuseApi apiInstance;
