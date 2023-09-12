@@ -68,3 +68,24 @@ class SdkTest {
     }
 }
 ```
+
+
+Publishing:
+
+Add to build.gradle
+
+```
+publishing {
+    publications {
+    release(MavenPublication) {
+    groupId = 'com.github.Cluttr-eng'
+    artifactId = 'fuse-java'
+    version = $VERSION
+    
+                afterEvaluate {
+                    from components.release
+                }
+            }
+        }
+}
+```
