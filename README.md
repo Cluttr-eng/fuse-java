@@ -4,6 +4,16 @@
 ## Quick start
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
 
+The library is served using jitpack.
+
+Add these dependencies
+```
+implementation("com.github.Cluttr-eng:fuse-java:VERSION")
+implementation("com.squareup.okhttp3:okhttp:VERSION")
+implementation("com.google.code.gson:gson:VERSION")
+implementation("io.gsonfire:gson-fire:VERSION")
+```
+
 ```
 package mypackage;
 
