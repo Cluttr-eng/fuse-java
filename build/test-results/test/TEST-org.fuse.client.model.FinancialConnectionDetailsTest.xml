@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.fuse.client.model.FinancialConnectionDetailsTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2023-09-12T15:14:23" hostname="Mac-1694531526087.local" time="0.016">
+<testsuite name="org.fuse.client.model.FinancialConnectionDetailsTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2023-09-12T15:27:34" hostname="Adibs-MacBook-Pro-2.local" time="0.004">
   <properties/>
   <testcase name="truelayerTest()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.0"/>
   <testcase name="finicityTest()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.0"/>
-  <testcase name="basiqTest()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.0"/>
+  <testcase name="basiqTest()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.001"/>
   <testcase name="connectionStatusTest()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.0"/>
   <testcase name="idTest()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.0"/>
   <testcase name="mxTest()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.0"/>
   <testcase name="finverseTest()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.0"/>
   <testcase name="connectionStatusUpdatedAtTest()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.0"/>
-  <testcase name="belvoTest()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.001"/>
+  <testcase name="belvoTest()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.0"/>
   <testcase name="isOauthTest()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.0"/>
-  <testcase name="snaptradeTest()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.001"/>
-  <testcase name="monoTest()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.006"/>
+  <testcase name="snaptradeTest()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.0"/>
+  <testcase name="monoTest()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.0"/>
   <testcase name="flinksTest()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.0"/>
   <testcase name="tellerTest()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.001"/>
   <testcase name="aggregatorTest()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.0"/>
   <testcase name="akoyaTest()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.0"/>
-  <testcase name="testFinancialConnectionDetails()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.001"/>
+  <testcase name="testFinancialConnectionDetails()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.0"/>
   <testcase name="plaidTest()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.0"/>
   <testcase name="saltedgeTest()" classname="org.fuse.client.model.FinancialConnectionDetailsTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>

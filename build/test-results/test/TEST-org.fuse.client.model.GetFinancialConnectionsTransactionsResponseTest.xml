@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.fuse.client.model.GetFinancialConnectionsTransactionsResponseTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-09-12T15:14:23" hostname="Mac-1694531526087.local" time="0.002">
+<testsuite name="org.fuse.client.model.GetFinancialConnectionsTransactionsResponseTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-09-12T15:27:34" hostname="Adibs-MacBook-Pro-2.local" time="0.001">
   <properties/>
   <testcase name="totalTransactionsTest()" classname="org.fuse.client.model.GetFinancialConnectionsTransactionsResponseTest" time="0.0"/>
-  <testcase name="testGetFinancialConnectionsTransactionsResponse()" classname="org.fuse.client.model.GetFinancialConnectionsTransactionsResponseTest" time="0.0"/>
+  <testcase name="testGetFinancialConnectionsTransactionsResponse()" classname="org.fuse.client.model.GetFinancialConnectionsTransactionsResponseTest" time="0.001"/>
   <testcase name="transactionsTest()" classname="org.fuse.client.model.GetFinancialConnectionsTransactionsResponseTest" time="0.0"/>
   <testcase name="requestIdTest()" classname="org.fuse.client.model.GetFinancialConnectionsTransactionsResponseTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

@@ -75,17 +75,20 @@ Publishing:
 Add to build.gradle
 
 ```
-publishing {
-    publications {
-    release(MavenPublication) {
-    groupId = 'com.github.Cluttr-eng'
-    artifactId = 'fuse-java'
-    version = $VERSION
-    
-                afterEvaluate {
-                    from components.release
-                }
+plugins {
+    id 'maven-publish'
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.java
+                groupId = 'com.github.Cluttr-eng'
+                artifactId = 'fuse-java'
+                version = VERSION
             }
         }
+    }
 }
 ```

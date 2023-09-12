@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.fuse.client.model.EvalConsumerRiskReportResponseTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-09-12T15:14:23" hostname="Mac-1694531526087.local" time="0.008">
+<testsuite name="org.fuse.client.model.EvalConsumerRiskReportResponseTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-09-12T15:27:34" hostname="Adibs-MacBook-Pro-2.local" time="0.001">
   <properties/>
   <testcase name="meanGrantedBelowFailedPaymentsTest()" classname="org.fuse.client.model.EvalConsumerRiskReportResponseTest" time="0.0"/>
   <testcase name="meanGrantedAboveFailedPaymentsTest()" classname="org.fuse.client.model.EvalConsumerRiskReportResponseTest" time="0.0"/>
   <testcase name="testEvalConsumerRiskReportResponse()" classname="org.fuse.client.model.EvalConsumerRiskReportResponseTest" time="0.0"/>
   <testcase name="meanPredictedLimitsTest()" classname="org.fuse.client.model.EvalConsumerRiskReportResponseTest" time="0.0"/>
-  <testcase name="meanSuccessfulPaymentsTest()" classname="org.fuse.client.model.EvalConsumerRiskReportResponseTest" time="0.001"/>
+  <testcase name="meanSuccessfulPaymentsTest()" classname="org.fuse.client.model.EvalConsumerRiskReportResponseTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
