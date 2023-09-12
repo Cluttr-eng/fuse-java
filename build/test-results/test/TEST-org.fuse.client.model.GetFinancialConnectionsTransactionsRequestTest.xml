@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.fuse.client.model.GetFinancialConnectionsTransactionsRequestTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-09-12T14:49:05" hostname="Mac-1694529973771.local" time="0.015">
+  <properties/>
+  <testcase name="accessTokenTest()" classname="org.fuse.client.model.GetFinancialConnectionsTransactionsRequestTest" time="0.0"/>
+  <testcase name="recordsPerPageTest()" classname="org.fuse.client.model.GetFinancialConnectionsTransactionsRequestTest" time="0.001"/>
+  <testcase name="endDateTest()" classname="org.fuse.client.model.GetFinancialConnectionsTransactionsRequestTest" time="0.001"/>
+  <testcase name="pageTest()" classname="org.fuse.client.model.GetFinancialConnectionsTransactionsRequestTest" time="0.011"/>
+  <testcase name="testGetFinancialConnectionsTransactionsRequest()" classname="org.fuse.client.model.GetFinancialConnectionsTransactionsRequestTest" time="0.001"/>
+  <testcase name="startDateTest()" classname="org.fuse.client.model.GetFinancialConnectionsTransactionsRequestTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

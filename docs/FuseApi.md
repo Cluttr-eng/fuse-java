@@ -43,12 +43,12 @@ All URIs are relative to *https://sandbox-api.letsfuse.com*
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -120,12 +120,12 @@ Use this endpoint to generate an Asset Report for a user. For Plaid, you will ne
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -195,12 +195,12 @@ Starts the background process that will calculate the consumer risk report depen
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -268,12 +268,12 @@ public class Example {
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -343,12 +343,12 @@ Create a link token to start the process of a user connecting to a specific fina
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -418,12 +418,12 @@ Creates a session that returns a client_secret which is required as a parameter 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -491,12 +491,12 @@ Delete a financial connection
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -564,12 +564,12 @@ public class Example {
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -643,12 +643,12 @@ API to exchange a public token for an access token and financial connection id
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -718,12 +718,12 @@ Retrieves the Asset Report in JSON format. For Plaid, you will need to have the 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -791,12 +791,12 @@ Get consumer risk report
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -868,12 +868,12 @@ An entity is automatically created after a successful connection. The id of the 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -941,12 +941,12 @@ Get finance score
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1014,12 +1014,12 @@ Get financial connection details
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1087,12 +1087,12 @@ Get account details
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1162,12 +1162,12 @@ Retrieves an account statement for the given financial connection, account and d
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1235,12 +1235,12 @@ Get accounts
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1308,12 +1308,12 @@ Get balances
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1381,12 +1381,12 @@ Get account owners
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1454,12 +1454,12 @@ Get transactions
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1529,12 +1529,12 @@ Receive metadata for a financial institution
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1602,12 +1602,12 @@ Get investment holdings
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1675,12 +1675,12 @@ Get investment transactions
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1750,12 +1750,12 @@ This endpoint migrates financial connections from Plaid or MX into the unified F
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1825,12 +1825,12 @@ Refreshes the Asset Report in JSON format. For Plaid, you will need to have the 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1900,12 +1900,12 @@ Call this endpoint upon receiving a financial_connection.sync_data webhook. This
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1975,12 +1975,12 @@ Update consumer risk report customization
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2050,12 +2050,12 @@ Get liabilities
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.FuseApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
 
 public class Example {
   public static void main(String[] args) {

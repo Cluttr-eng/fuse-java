@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.fuse.client.model.FinancialConnectionsInvestmentSecurityTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2023-09-12T14:49:06" hostname="Mac-1694529973771.local" time="0.006">
+  <properties/>
+  <testcase name="closePriceTest()" classname="org.fuse.client.model.FinancialConnectionsInvestmentSecurityTest" time="0.001"/>
+  <testcase name="typeTest()" classname="org.fuse.client.model.FinancialConnectionsInvestmentSecurityTest" time="0.0"/>
+  <testcase name="remoteIdTest()" classname="org.fuse.client.model.FinancialConnectionsInvestmentSecurityTest" time="0.001"/>
+  <testcase name="sedolTest()" classname="org.fuse.client.model.FinancialConnectionsInvestmentSecurityTest" time="0.0"/>
+  <testcase name="symbolTest()" classname="org.fuse.client.model.FinancialConnectionsInvestmentSecurityTest" time="0.0"/>
+  <testcase name="isinTest()" classname="org.fuse.client.model.FinancialConnectionsInvestmentSecurityTest" time="0.0"/>
+  <testcase name="testFinancialConnectionsInvestmentSecurity()" classname="org.fuse.client.model.FinancialConnectionsInvestmentSecurityTest" time="0.0"/>
+  <testcase name="currencyTest()" classname="org.fuse.client.model.FinancialConnectionsInvestmentSecurityTest" time="0.0"/>
+  <testcase name="cusipTest()" classname="org.fuse.client.model.FinancialConnectionsInvestmentSecurityTest" time="0.001"/>
+  <testcase name="exchangeTest()" classname="org.fuse.client.model.FinancialConnectionsInvestmentSecurityTest" time="0.0"/>
+  <testcase name="nameTest()" classname="org.fuse.client.model.FinancialConnectionsInvestmentSecurityTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -95,6 +95,10 @@
 
 * `MISSING_AKOYA_CLIENT_SECRET_HEADER` (value: `"missing_akoya_client_secret_header"`)
 
+* `MISSING_SALTEDGE_APP_ID_HEADER` (value: `"missing_saltedge_app_id_header"`)
+
+* `MISSING_SALTEDGE_APP_SECRET_HEADER` (value: `"missing_saltedge_app_secret_header"`)
+
 * `AGGREGATOR_ERROR` (value: `"aggregator_error"`)
 
 * `AGGREGATOR_DISCONNECTED_ERROR` (value: `"aggregator_disconnected_error"`)

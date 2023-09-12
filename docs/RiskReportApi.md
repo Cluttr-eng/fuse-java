@@ -17,12 +17,12 @@ Delete consumer risk report
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.RiskReportApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.RiskReportApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -94,12 +94,12 @@ Get consumer risk report customization
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.RiskReportApi;
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.RiskReportApi;
 
 public class Example {
   public static void main(String[] args) {

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.fuse.client.api.FuseApiTest" tests="28" skipped="28" failures="0" errors="0" timestamp="2023-09-12T14:49:07" hostname="Mac-1694529973771.local" time="0.011">
+  <properties/>
+  <testcase name="getFinancialConnectionsBalancesTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getEntityTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getFinancialConnectionTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="updateConsumerRiskReportCustomizationTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="enrichTransactionsTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="createLinkTokenTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="addAccountEventsTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getConsumerRiskReportTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getFinancialConnectionsTransactionsTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="deleteFinancialConnectionTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getAssetReportTest()" classname="org.fuse.client.api.FuseApiTest" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase name="refreshAssetReportTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="createAssetReportTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getFinanceScoreTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getInvestmentHoldingsTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="createSessionTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getInvestmentTransactionsTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getFinancialConnectionsAccountStatementTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="migrateFinancialConnectionTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="createConsumerRiskReportCustomizationTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="exchangeFinancialConnectionsPublicTokenTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getFinancialInstitutionTest()" classname="org.fuse.client.api.FuseApiTest" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase name="syncFinancialConnectionsDataTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getFinancialConnectionsAccountsTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getFinancialConnectionsAccountDetailsTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getFinancialConnectionsOwnersTest()" classname="org.fuse.client.api.FuseApiTest" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase name="createConsumerRiskReportTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="v1FinancialConnectionsLiabilitiesPostTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

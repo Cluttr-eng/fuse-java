@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.fuse.client.model.GetConsumerRiskReportCustomizationResponseTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-09-12T14:49:06" hostname="Mac-1694529973771.local" time="0.001">
+  <properties/>
+  <testcase name="consumerRiskReportCustomizationTest()" classname="org.fuse.client.model.GetConsumerRiskReportCustomizationResponseTest" time="0.0"/>
+  <testcase name="requestIdTest()" classname="org.fuse.client.model.GetConsumerRiskReportCustomizationResponseTest" time="0.0"/>
+  <testcase name="testGetConsumerRiskReportCustomizationResponse()" classname="org.fuse.client.model.GetConsumerRiskReportCustomizationResponseTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
