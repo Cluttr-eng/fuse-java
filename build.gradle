@@ -166,3 +166,17 @@ test {
     }
 
 }
+
+publishing {
+    publications {
+    release(MavenPublication) {
+    groupId = 'com.github.Cluttr-eng'
+    artifactId = 'fuse-java'
+    version = '1.0.4'
+
+                afterEvaluate {
+                    from components.release
+                }
+            }
+        }
+}
