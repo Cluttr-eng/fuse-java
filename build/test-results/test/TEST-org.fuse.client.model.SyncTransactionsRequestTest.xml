@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.fuse.client.model.SyncTransactionsRequestTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-09-12T14:49:06" hostname="Mac-1694529973771.local" time="0.004">
+<testsuite name="org.fuse.client.model.SyncTransactionsRequestTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-09-12T15:14:23" hostname="Mac-1694531526087.local" time="0.002">
   <properties/>
-  <testcase name="accessTokenTest()" classname="org.fuse.client.model.SyncTransactionsRequestTest" time="0.0"/>
+  <testcase name="accessTokenTest()" classname="org.fuse.client.model.SyncTransactionsRequestTest" time="0.001"/>
   <testcase name="cursorTest()" classname="org.fuse.client.model.SyncTransactionsRequestTest" time="0.0"/>
-  <testcase name="testSyncTransactionsRequest()" classname="org.fuse.client.model.SyncTransactionsRequestTest" time="0.0"/>
+  <testcase name="testSyncTransactionsRequest()" classname="org.fuse.client.model.SyncTransactionsRequestTest" time="0.001"/>
   <testcase name="countTest()" classname="org.fuse.client.model.SyncTransactionsRequestTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

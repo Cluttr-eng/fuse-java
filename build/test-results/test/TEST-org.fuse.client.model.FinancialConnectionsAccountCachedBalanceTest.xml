@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.fuse.client.model.FinancialConnectionsAccountCachedBalanceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-09-12T14:49:07" hostname="Mac-1694529973771.local" time="0.018">
+<testsuite name="org.fuse.client.model.FinancialConnectionsAccountCachedBalanceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-09-12T15:14:24" hostname="Mac-1694531526087.local" time="0.001">
   <properties/>
-  <testcase name="lastUpdatedDateTest()" classname="org.fuse.client.model.FinancialConnectionsAccountCachedBalanceTest" time="0.002"/>
-  <testcase name="isoCurrencyCodeTest()" classname="org.fuse.client.model.FinancialConnectionsAccountCachedBalanceTest" time="0.001"/>
-  <testcase name="currentTest()" classname="org.fuse.client.model.FinancialConnectionsAccountCachedBalanceTest" time="0.001"/>
+  <testcase name="lastUpdatedDateTest()" classname="org.fuse.client.model.FinancialConnectionsAccountCachedBalanceTest" time="0.0"/>
+  <testcase name="isoCurrencyCodeTest()" classname="org.fuse.client.model.FinancialConnectionsAccountCachedBalanceTest" time="0.0"/>
+  <testcase name="currentTest()" classname="org.fuse.client.model.FinancialConnectionsAccountCachedBalanceTest" time="0.0"/>
   <testcase name="testFinancialConnectionsAccountCachedBalance()" classname="org.fuse.client.model.FinancialConnectionsAccountCachedBalanceTest" time="0.0"/>
   <testcase name="availableTest()" classname="org.fuse.client.model.FinancialConnectionsAccountCachedBalanceTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

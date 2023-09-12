@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.fuse.client.model.AssetReportTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-09-12T14:49:07" hostname="Mac-1694529973771.local" time="0.015">
+<testsuite name="org.fuse.client.model.AssetReportTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-09-12T15:14:24" hostname="Mac-1694531526087.local" time="0.002">
   <properties/>
   <testcase name="daysRequestedTest()" classname="org.fuse.client.model.AssetReportTest" time="0.0"/>
   <testcase name="assetReportIdTest()" classname="org.fuse.client.model.AssetReportTest" time="0.0"/>
   <testcase name="assetReportTokenTest()" classname="org.fuse.client.model.AssetReportTest" time="0.0"/>
-  <testcase name="testAssetReport()" classname="org.fuse.client.model.AssetReportTest" time="0.013"/>
+  <testcase name="testAssetReport()" classname="org.fuse.client.model.AssetReportTest" time="0.001"/>
   <testcase name="accountsTest()" classname="org.fuse.client.model.AssetReportTest" time="0.0"/>
   <testcase name="dateGeneratedTest()" classname="org.fuse.client.model.AssetReportTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

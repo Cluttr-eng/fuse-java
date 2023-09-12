@@ -55,7 +55,7 @@ import org.fuse.client.JSON;
 /**
  * MigrateFinancialConnectionsTokenRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T14:48:18.188409Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
 public class MigrateFinancialConnectionsTokenRequest {
   public static final String SERIALIZED_NAME_CONNECTION_DATA = "connection_data";
   @SerializedName(SERIALIZED_NAME_CONNECTION_DATA)

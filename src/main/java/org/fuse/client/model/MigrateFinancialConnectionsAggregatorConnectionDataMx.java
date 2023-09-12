@@ -50,7 +50,7 @@ import org.fuse.client.JSON;
 /**
  * Details of the MX connection to migrate into the unified Fuse API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T14:48:18.188409Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
 public class MigrateFinancialConnectionsAggregatorConnectionDataMx {
   public static final String SERIALIZED_NAME_USER_GUID = "user_guid";
   @SerializedName(SERIALIZED_NAME_USER_GUID)

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.fuse.client.api.FuseApiTest" tests="28" skipped="28" failures="0" errors="0" timestamp="2023-09-12T14:49:07" hostname="Mac-1694529973771.local" time="0.011">
+<testsuite name="org.fuse.client.api.FuseApiTest" tests="28" skipped="28" failures="0" errors="0" timestamp="2023-09-12T15:14:24" hostname="Mac-1694531526087.local" time="0.0">
   <properties/>
   <testcase name="getFinancialConnectionsBalancesTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
     <skipped/>
@@ -31,7 +31,7 @@
   <testcase name="deleteFinancialConnectionTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="getAssetReportTest()" classname="org.fuse.client.api.FuseApiTest" time="0.001">
+  <testcase name="getAssetReportTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
     <skipped/>
   </testcase>
   <testcase name="refreshAssetReportTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
@@ -64,7 +64,7 @@
   <testcase name="exchangeFinancialConnectionsPublicTokenTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="getFinancialInstitutionTest()" classname="org.fuse.client.api.FuseApiTest" time="0.001">
+  <testcase name="getFinancialInstitutionTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
     <skipped/>
   </testcase>
   <testcase name="syncFinancialConnectionsDataTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
@@ -76,7 +76,7 @@
   <testcase name="getFinancialConnectionsAccountDetailsTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="getFinancialConnectionsOwnersTest()" classname="org.fuse.client.api.FuseApiTest" time="0.001">
+  <testcase name="getFinancialConnectionsOwnersTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">
     <skipped/>
   </testcase>
   <testcase name="createConsumerRiskReportTest()" classname="org.fuse.client.api.FuseApiTest" time="0.0">

@@ -52,7 +52,7 @@ import org.fuse.client.JSON;
 /**
  * TransactionCategory
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T14:48:18.188409Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
 public class TransactionCategory {
   public static final String SERIALIZED_NAME_PRIMARY = "primary";
   @SerializedName(SERIALIZED_NAME_PRIMARY)

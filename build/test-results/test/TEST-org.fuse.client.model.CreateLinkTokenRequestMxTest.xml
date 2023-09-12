@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.fuse.client.model.CreateLinkTokenRequestMxTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-09-12T14:49:05" hostname="Mac-1694529973771.local" time="0.007">
+<testsuite name="org.fuse.client.model.CreateLinkTokenRequestMxTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-09-12T15:14:23" hostname="Mac-1694531526087.local" time="0.003">
   <properties/>
-  <testcase name="configTest()" classname="org.fuse.client.model.CreateLinkTokenRequestMxTest" time="0.007"/>
+  <testcase name="configTest()" classname="org.fuse.client.model.CreateLinkTokenRequestMxTest" time="0.001"/>
   <testcase name="testCreateLinkTokenRequestMx()" classname="org.fuse.client.model.CreateLinkTokenRequestMxTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
