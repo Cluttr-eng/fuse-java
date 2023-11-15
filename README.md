@@ -45,6 +45,7 @@ class SdkTest {
     }
 
     void run() throws ApiException {
+        //If you are using web SDKs, pass in the "is_web_view" property and set it to false, otherwise the Fuse frontend will not work. 
         CreateSessionRequest createSessionRequest = new CreateSessionRequest();
 
         List<Aggregator> aggregatorList = new ArrayList<>();
