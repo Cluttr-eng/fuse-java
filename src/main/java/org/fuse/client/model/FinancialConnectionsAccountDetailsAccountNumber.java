@@ -42,7 +42,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -50,7 +49,7 @@ import org.fuse.client.JSON;
 /**
  * FinancialConnectionsAccountDetailsAccountNumber
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-19T17:51:01.841942Z[UTC]")
 public class FinancialConnectionsAccountDetailsAccountNumber {
   public static final String SERIALIZED_NAME_NUMBER = "number";
   @SerializedName(SERIALIZED_NAME_NUMBER)
@@ -285,9 +284,9 @@ public class FinancialConnectionsAccountDetailsAccountNumber {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FinancialConnectionsAccountDetailsAccountNumber.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialConnectionsAccountDetailsAccountNumber` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

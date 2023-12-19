@@ -50,6 +50,8 @@ public enum Aggregator {
   
   SNAPTRADE("snaptrade"),
   
+  SOPHTRON("sophtron"),
+  
   TELLER("teller"),
   
   TRUELAYER("truelayer");

@@ -56,10 +56,16 @@ import org.fuse.client.model.GetInvestmentTransactionsRequest;
 import org.fuse.client.model.GetInvestmentTransactionsResponse;
 import org.fuse.client.model.GetLiabilitiesRequest;
 import org.fuse.client.model.GetLiabilitiesResponse;
+import org.fuse.client.model.GetRecommendedFinancialInstitutionsRequest;
+import org.fuse.client.model.GetRecommendedFinancialInstitutionsResponse;
 import org.fuse.client.model.MigrateFinancialConnectionsTokenRequest;
 import org.fuse.client.model.MigrateFinancialConnectionsTokenResponse;
 import org.fuse.client.model.RefreshAssetReportRequest;
 import org.fuse.client.model.RefreshAssetReportResponse;
+import org.fuse.client.model.SearchFinancialInstitutionsRequest;
+import org.fuse.client.model.SearchFinancialInstitutionsResponse;
+import org.fuse.client.model.SelectFinancialInstitutionsRequest;
+import org.fuse.client.model.SelectFinancialInstitutionsResponse;
 import org.fuse.client.model.SyncFinancialConnectionsDataResponse;
 import org.fuse.client.model.UpdateConsumerRiskReportCustomizationRequest;
 import org.fuse.client.model.UpdateConsumerRiskReportCustomizationResponse;
@@ -192,7 +198,7 @@ public class FuseApiTest {
     @Test
     public void getAssetReportTest() throws ApiException {
         GetAssetReportRequest getAssetReportRequest = null;
-        RefreshAssetReportResponse response = api.getAssetReport(getAssetReportRequest);
+        AssetReportResponse response = api.getAssetReport(getAssetReportRequest);
         // TODO: test validations
     }
 
@@ -358,6 +364,18 @@ public class FuseApiTest {
     }
 
     /**
+     * Get the default recommended list of institutions that will be displayed when the user is not searching for anything
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getRecommendedFinancialInstitutionsTest() throws ApiException {
+        GetRecommendedFinancialInstitutionsRequest getRecommendedFinancialInstitutionsRequest = null;
+        GetRecommendedFinancialInstitutionsResponse response = api.getRecommendedFinancialInstitutions(getRecommendedFinancialInstitutionsRequest);
+        // TODO: test validations
+    }
+
+    /**
      * Migrate financial connection
      *
      * This endpoint migrates financial connections from Plaid or MX into the unified Fuse API. It accepts a POST request with connection data, aggregator, entity, and Fuse products, and responds with a JSON payload containing the migrated connection&#39;s data, access token, ID, and request ID.
@@ -379,7 +397,31 @@ public class FuseApiTest {
     @Test
     public void refreshAssetReportTest() throws ApiException {
         RefreshAssetReportRequest refreshAssetReportRequest = null;
-        AssetReportResponse response = api.refreshAssetReport(refreshAssetReportRequest);
+        RefreshAssetReportResponse response = api.refreshAssetReport(refreshAssetReportRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Search for financial institutions given a search term.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void searchFinancialInstitutionsTest() throws ApiException {
+        SearchFinancialInstitutionsRequest searchFinancialInstitutionsRequest = null;
+        SearchFinancialInstitutionsResponse response = api.searchFinancialInstitutions(searchFinancialInstitutionsRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Endpoint to call when the user has selected a financial institution.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void selectFinancialInstitutionsTest() throws ApiException {
+        SelectFinancialInstitutionsRequest selectFinancialInstitutionsRequest = null;
+        SelectFinancialInstitutionsResponse response = api.selectFinancialInstitutions(selectFinancialInstitutionsRequest);
         // TODO: test validations
     }
 

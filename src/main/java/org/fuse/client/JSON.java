@@ -154,6 +154,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.FinancialConnectionDetailsPlaid.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.FinancialConnectionDetailsSaltedge.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.FinancialConnectionDetailsSnaptrade.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.FinancialConnectionDetailsSophtron.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.FinancialConnectionDetailsTeller.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.FinancialConnectionDetailsTruelayer.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.FinancialConnectionsAccount.CustomTypeAdapterFactory());
@@ -190,6 +191,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetFinanceScoreResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetFinancialConnectionResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetFinancialConnectionsAccountDetailsRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetFinancialConnectionsAccountDetailsRequestOptions.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetFinancialConnectionsAccountDetailsResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetFinancialConnectionsAccountStatementRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetFinancialConnectionsAccountStatementResponse.CustomTypeAdapterFactory());
@@ -212,6 +214,8 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetInvestmentTransactionsResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetLiabilitiesRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetLiabilitiesResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetRecommendedFinancialInstitutionsRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetRecommendedFinancialInstitutionsResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.InAppTransactionEvent.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.Merchant.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.MerchantLogo.CustomTypeAdapterFactory());
@@ -224,6 +228,10 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.MigrateFinancialConnectionsTokenResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.RefreshAssetReportRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.RefreshAssetReportResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.SearchFinancialInstitutionsRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.SearchFinancialInstitutionsResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.SelectFinancialInstitutionsRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.SelectFinancialInstitutionsResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.SyncFinancialConnectionsDataResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.SyncTransactionsRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.SyncTransactionsResponse.CustomTypeAdapterFactory());

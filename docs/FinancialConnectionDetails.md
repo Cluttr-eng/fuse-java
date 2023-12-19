@@ -25,6 +25,7 @@
 |**finicity** | [**FinancialConnectionDetailsFinicity**](FinancialConnectionDetailsFinicity.md) |  |  [optional] |
 |**akoya** | [**FinancialConnectionDetailsAkoya**](FinancialConnectionDetailsAkoya.md) |  |  [optional] |
 |**saltedge** | [**FinancialConnectionDetailsSaltedge**](FinancialConnectionDetailsSaltedge.md) |  |  [optional] |
+|**sophtron** | [**FinancialConnectionDetailsSophtron**](FinancialConnectionDetailsSophtron.md) |  |  [optional] |
 
 
 

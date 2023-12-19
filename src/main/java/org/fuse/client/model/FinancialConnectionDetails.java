@@ -33,6 +33,7 @@ import org.fuse.client.model.FinancialConnectionDetailsMx;
 import org.fuse.client.model.FinancialConnectionDetailsPlaid;
 import org.fuse.client.model.FinancialConnectionDetailsSaltedge;
 import org.fuse.client.model.FinancialConnectionDetailsSnaptrade;
+import org.fuse.client.model.FinancialConnectionDetailsSophtron;
 import org.fuse.client.model.FinancialConnectionDetailsTeller;
 import org.fuse.client.model.FinancialConnectionDetailsTruelayer;
 
@@ -56,7 +57,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -64,7 +64,7 @@ import org.fuse.client.JSON;
 /**
  * FinancialConnectionDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-19T17:51:01.841942Z[UTC]")
 public class FinancialConnectionDetails {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -186,6 +186,10 @@ public class FinancialConnectionDetails {
   public static final String SERIALIZED_NAME_SALTEDGE = "saltedge";
   @SerializedName(SERIALIZED_NAME_SALTEDGE)
   private FinancialConnectionDetailsSaltedge saltedge;
+
+  public static final String SERIALIZED_NAME_SOPHTRON = "sophtron";
+  @SerializedName(SERIALIZED_NAME_SOPHTRON)
+  private FinancialConnectionDetailsSophtron sophtron;
 
   public FinancialConnectionDetails() {
   }
@@ -568,6 +572,27 @@ public class FinancialConnectionDetails {
   }
 
 
+  public FinancialConnectionDetails sophtron(FinancialConnectionDetailsSophtron sophtron) {
+    
+    this.sophtron = sophtron;
+    return this;
+  }
+
+   /**
+   * Get sophtron
+   * @return sophtron
+  **/
+  @javax.annotation.Nullable
+  public FinancialConnectionDetailsSophtron getSophtron() {
+    return sophtron;
+  }
+
+
+  public void setSophtron(FinancialConnectionDetailsSophtron sophtron) {
+    this.sophtron = sophtron;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -595,12 +620,13 @@ public class FinancialConnectionDetails {
         Objects.equals(this.belvo, financialConnectionDetails.belvo) &&
         Objects.equals(this.finicity, financialConnectionDetails.finicity) &&
         Objects.equals(this.akoya, financialConnectionDetails.akoya) &&
-        Objects.equals(this.saltedge, financialConnectionDetails.saltedge);
+        Objects.equals(this.saltedge, financialConnectionDetails.saltedge) &&
+        Objects.equals(this.sophtron, financialConnectionDetails.sophtron);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, connectionStatus, connectionStatusUpdatedAt, isOauth, aggregator, plaid, teller, mx, snaptrade, flinks, mono, truelayer, finverse, basiq, belvo, finicity, akoya, saltedge);
+    return Objects.hash(id, connectionStatus, connectionStatusUpdatedAt, isOauth, aggregator, plaid, teller, mx, snaptrade, flinks, mono, truelayer, finverse, basiq, belvo, finicity, akoya, saltedge, sophtron);
   }
 
   @Override
@@ -625,6 +651,7 @@ public class FinancialConnectionDetails {
     sb.append("    finicity: ").append(toIndentedString(finicity)).append("\n");
     sb.append("    akoya: ").append(toIndentedString(akoya)).append("\n");
     sb.append("    saltedge: ").append(toIndentedString(saltedge)).append("\n");
+    sb.append("    sophtron: ").append(toIndentedString(sophtron)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -665,6 +692,7 @@ public class FinancialConnectionDetails {
     openapiFields.add("finicity");
     openapiFields.add("akoya");
     openapiFields.add("saltedge");
+    openapiFields.add("sophtron");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -688,9 +716,9 @@ public class FinancialConnectionDetails {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FinancialConnectionDetails.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialConnectionDetails` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
@@ -763,6 +791,10 @@ public class FinancialConnectionDetails {
       // validate the optional field `saltedge`
       if (jsonObj.get("saltedge") != null && !jsonObj.get("saltedge").isJsonNull()) {
         FinancialConnectionDetailsSaltedge.validateJsonElement(jsonObj.get("saltedge"));
+      }
+      // validate the optional field `sophtron`
+      if (jsonObj.get("sophtron") != null && !jsonObj.get("sophtron").isJsonNull()) {
+        FinancialConnectionDetailsSophtron.validateJsonElement(jsonObj.get("sophtron"));
       }
   }
 

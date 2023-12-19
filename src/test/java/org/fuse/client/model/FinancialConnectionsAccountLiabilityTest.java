@@ -119,6 +119,14 @@ public class FinancialConnectionsAccountLiabilityTest {
     }
 
     /**
+     * Test the property 'additionalBalances'
+     */
+    @Test
+    public void additionalBalancesTest() {
+        // TODO: test additionalBalances
+    }
+
+    /**
      * Test the property 'remoteData'
      */
     @Test
