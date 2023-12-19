@@ -16,6 +16,7 @@
 |**type** | **AccountType** |  |  |
 |**subtype** | **AccountSubtype** |  |  [optional] |
 |**balance** | [**FinancialConnectionsAccountCachedBalance**](FinancialConnectionsAccountCachedBalance.md) |  |  |
+|**additionalBalances** | [**List&lt;FinancialConnectionsAccountCachedBalance&gt;**](FinancialConnectionsAccountCachedBalance.md) | An array of additional balances. This may be used for investment type accounts where the user can have multiple balances across different currencies. |  [optional] |
 |**remoteData** | **Object** |  |  |
 |**aprs** | [**List&lt;FinancialConnectionsAccountLiabilityAllOfAprs&gt;**](FinancialConnectionsAccountLiabilityAllOfAprs.md) | The various interest rates that apply to the account. If APR data is not available, this array will be empty. |  [optional] |
 |**interestRatePercentage** | **BigDecimal** | The interest rate on the loan as a percentage. |  [optional] |

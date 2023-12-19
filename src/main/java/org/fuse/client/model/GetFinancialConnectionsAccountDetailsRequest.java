@@ -21,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
+import org.fuse.client.model.GetFinancialConnectionsAccountDetailsRequestOptions;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -42,7 +43,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -50,11 +50,15 @@ import org.fuse.client.JSON;
 /**
  * GetFinancialConnectionsAccountDetailsRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-19T17:51:01.841942Z[UTC]")
 public class GetFinancialConnectionsAccountDetailsRequest {
   public static final String SERIALIZED_NAME_ACCESS_TOKEN = "access_token";
   @SerializedName(SERIALIZED_NAME_ACCESS_TOKEN)
   private String accessToken;
+
+  public static final String SERIALIZED_NAME_OPTIONS = "options";
+  @SerializedName(SERIALIZED_NAME_OPTIONS)
+  private GetFinancialConnectionsAccountDetailsRequestOptions options;
 
   public GetFinancialConnectionsAccountDetailsRequest() {
   }
@@ -80,6 +84,27 @@ public class GetFinancialConnectionsAccountDetailsRequest {
   }
 
 
+  public GetFinancialConnectionsAccountDetailsRequest options(GetFinancialConnectionsAccountDetailsRequestOptions options) {
+    
+    this.options = options;
+    return this;
+  }
+
+   /**
+   * Get options
+   * @return options
+  **/
+  @javax.annotation.Nullable
+  public GetFinancialConnectionsAccountDetailsRequestOptions getOptions() {
+    return options;
+  }
+
+
+  public void setOptions(GetFinancialConnectionsAccountDetailsRequestOptions options) {
+    this.options = options;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -90,12 +115,13 @@ public class GetFinancialConnectionsAccountDetailsRequest {
       return false;
     }
     GetFinancialConnectionsAccountDetailsRequest getFinancialConnectionsAccountDetailsRequest = (GetFinancialConnectionsAccountDetailsRequest) o;
-    return Objects.equals(this.accessToken, getFinancialConnectionsAccountDetailsRequest.accessToken);
+    return Objects.equals(this.accessToken, getFinancialConnectionsAccountDetailsRequest.accessToken) &&
+        Objects.equals(this.options, getFinancialConnectionsAccountDetailsRequest.options);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessToken);
+    return Objects.hash(accessToken, options);
   }
 
   @Override
@@ -103,6 +129,7 @@ public class GetFinancialConnectionsAccountDetailsRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class GetFinancialConnectionsAccountDetailsRequest {\n");
     sb.append("    accessToken: ").append(toIndentedString(accessToken)).append("\n");
+    sb.append("    options: ").append(toIndentedString(options)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -126,6 +153,7 @@ public class GetFinancialConnectionsAccountDetailsRequest {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("access_token");
+    openapiFields.add("options");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -145,9 +173,9 @@ public class GetFinancialConnectionsAccountDetailsRequest {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!GetFinancialConnectionsAccountDetailsRequest.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GetFinancialConnectionsAccountDetailsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
@@ -162,6 +190,10 @@ public class GetFinancialConnectionsAccountDetailsRequest {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("access_token").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `access_token` to be a primitive type in the JSON string but got `%s`", jsonObj.get("access_token").toString()));
+      }
+      // validate the optional field `options`
+      if (jsonObj.get("options") != null && !jsonObj.get("options").isJsonNull()) {
+        GetFinancialConnectionsAccountDetailsRequestOptions.validateJsonElement(jsonObj.get("options"));
       }
   }
 

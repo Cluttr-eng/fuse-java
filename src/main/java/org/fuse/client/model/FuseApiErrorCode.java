@@ -122,6 +122,10 @@ public enum FuseApiErrorCode {
   
   MISSING_SALTEDGE_APP_SECRET_HEADER("missing_saltedge_app_secret_header"),
   
+  MISSING_SOPHTRON_USER_ID_HEADER("missing_sophtron_user_id_header"),
+  
+  MISSING_SOPHTRON_ACCESS_KEY_HEADER("missing_sophtron_access_key_header"),
+  
   AGGREGATOR_ERROR("aggregator_error"),
   
   AGGREGATOR_DISCONNECTED_ERROR("aggregator_disconnected_error"),

@@ -27,8 +27,11 @@ All URIs are relative to *https://sandbox-api.letsfuse.com*
 | [**getFinancialInstitution**](FuseApi.md#getFinancialInstitution) | **GET** /v1/financial_connections/institutions/{institution_id} | Get a financial institution |
 | [**getInvestmentHoldings**](FuseApi.md#getInvestmentHoldings) | **POST** /v1/financial_connections/investments/holdings | Get investment holdings |
 | [**getInvestmentTransactions**](FuseApi.md#getInvestmentTransactions) | **POST** /v1/financial_connections/investments/transactions | Get investment transactions |
+| [**getRecommendedFinancialInstitutions**](FuseApi.md#getRecommendedFinancialInstitutions) | **POST** /v1/financial_connections/institutions/recommended |  |
 | [**migrateFinancialConnection**](FuseApi.md#migrateFinancialConnection) | **POST** /v1/financial_connections/migrate | Migrate financial connection |
 | [**refreshAssetReport**](FuseApi.md#refreshAssetReport) | **POST** /v1/financial_connections/asset_report/refresh |  |
+| [**searchFinancialInstitutions**](FuseApi.md#searchFinancialInstitutions) | **POST** /v1/financial_connections/institutions/search |  |
+| [**selectFinancialInstitutions**](FuseApi.md#selectFinancialInstitutions) | **POST** /v1/financial_connections/institutions/select |  |
 | [**syncFinancialConnectionsData**](FuseApi.md#syncFinancialConnectionsData) | **POST** /v1/financial_connections/sync | Sync financial connections data |
 | [**updateConsumerRiskReportCustomization**](FuseApi.md#updateConsumerRiskReportCustomization) | **POST** /v1/risk_report/consumer/customization/{consumer_risk_report_customization_id} | Update consumer risk report customization |
 | [**v1FinancialConnectionsLiabilitiesPost**](FuseApi.md#v1FinancialConnectionsLiabilitiesPost) | **POST** /v1/financial_connections/liabilities | Get liabilities |
@@ -709,7 +712,7 @@ public class Example {
 
 <a id="getAssetReport"></a>
 # **getAssetReport**
-> RefreshAssetReportResponse getAssetReport(getAssetReportRequest)
+> AssetReportResponse getAssetReport(getAssetReportRequest)
 
 
 
@@ -745,7 +748,7 @@ public class Example {
     FuseApi apiInstance = new FuseApi(defaultClient);
     GetAssetReportRequest getAssetReportRequest = new GetAssetReportRequest(); // GetAssetReportRequest | 
     try {
-      RefreshAssetReportResponse result = apiInstance.getAssetReport(getAssetReportRequest);
+      AssetReportResponse result = apiInstance.getAssetReport(getAssetReportRequest);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling FuseApi#getAssetReport");
@@ -766,7 +769,7 @@ public class Example {
 
 ### Return type
 
-[**RefreshAssetReportResponse**](RefreshAssetReportResponse.md)
+[**AssetReportResponse**](AssetReportResponse.md)
 
 ### Authorization
 
@@ -1739,6 +1742,81 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 
+<a id="getRecommendedFinancialInstitutions"></a>
+# **getRecommendedFinancialInstitutions**
+> GetRecommendedFinancialInstitutionsResponse getRecommendedFinancialInstitutions(getRecommendedFinancialInstitutionsRequest)
+
+
+
+Get the default recommended list of institutions that will be displayed when the user is not searching for anything
+
+### Example
+```java
+// Import classes:
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://sandbox-api.letsfuse.com");
+    
+    // Configure API key authorization: fuseApiKey
+    ApiKeyAuth fuseApiKey = (ApiKeyAuth) defaultClient.getAuthentication("fuseApiKey");
+    fuseApiKey.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //fuseApiKey.setApiKeyPrefix("Token");
+
+    // Configure API key authorization: fuseClientId
+    ApiKeyAuth fuseClientId = (ApiKeyAuth) defaultClient.getAuthentication("fuseClientId");
+    fuseClientId.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //fuseClientId.setApiKeyPrefix("Token");
+
+    FuseApi apiInstance = new FuseApi(defaultClient);
+    GetRecommendedFinancialInstitutionsRequest getRecommendedFinancialInstitutionsRequest = new GetRecommendedFinancialInstitutionsRequest(); // GetRecommendedFinancialInstitutionsRequest | 
+    try {
+      GetRecommendedFinancialInstitutionsResponse result = apiInstance.getRecommendedFinancialInstitutions(getRecommendedFinancialInstitutionsRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling FuseApi#getRecommendedFinancialInstitutions");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **getRecommendedFinancialInstitutionsRequest** | [**GetRecommendedFinancialInstitutionsRequest**](GetRecommendedFinancialInstitutionsRequest.md)|  | [optional] |
+
+### Return type
+
+[**GetRecommendedFinancialInstitutionsResponse**](GetRecommendedFinancialInstitutionsResponse.md)
+
+### Authorization
+
+[fuseApiKey](../README.md#fuseApiKey), [fuseClientId](../README.md#fuseClientId)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Response |  -  |
+
 <a id="migrateFinancialConnection"></a>
 # **migrateFinancialConnection**
 > MigrateFinancialConnectionsTokenResponse migrateFinancialConnection(migrateFinancialConnectionsTokenRequest)
@@ -1816,7 +1894,7 @@ public class Example {
 
 <a id="refreshAssetReport"></a>
 # **refreshAssetReport**
-> AssetReportResponse refreshAssetReport(refreshAssetReportRequest)
+> RefreshAssetReportResponse refreshAssetReport(refreshAssetReportRequest)
 
 
 
@@ -1852,7 +1930,7 @@ public class Example {
     FuseApi apiInstance = new FuseApi(defaultClient);
     RefreshAssetReportRequest refreshAssetReportRequest = new RefreshAssetReportRequest(); // RefreshAssetReportRequest | 
     try {
-      AssetReportResponse result = apiInstance.refreshAssetReport(refreshAssetReportRequest);
+      RefreshAssetReportResponse result = apiInstance.refreshAssetReport(refreshAssetReportRequest);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling FuseApi#refreshAssetReport");
@@ -1873,7 +1951,157 @@ public class Example {
 
 ### Return type
 
-[**AssetReportResponse**](AssetReportResponse.md)
+[**RefreshAssetReportResponse**](RefreshAssetReportResponse.md)
+
+### Authorization
+
+[fuseApiKey](../README.md#fuseApiKey), [fuseClientId](../README.md#fuseClientId)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Response |  -  |
+
+<a id="searchFinancialInstitutions"></a>
+# **searchFinancialInstitutions**
+> SearchFinancialInstitutionsResponse searchFinancialInstitutions(searchFinancialInstitutionsRequest)
+
+
+
+Search for financial institutions given a search term.
+
+### Example
+```java
+// Import classes:
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://sandbox-api.letsfuse.com");
+    
+    // Configure API key authorization: fuseApiKey
+    ApiKeyAuth fuseApiKey = (ApiKeyAuth) defaultClient.getAuthentication("fuseApiKey");
+    fuseApiKey.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //fuseApiKey.setApiKeyPrefix("Token");
+
+    // Configure API key authorization: fuseClientId
+    ApiKeyAuth fuseClientId = (ApiKeyAuth) defaultClient.getAuthentication("fuseClientId");
+    fuseClientId.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //fuseClientId.setApiKeyPrefix("Token");
+
+    FuseApi apiInstance = new FuseApi(defaultClient);
+    SearchFinancialInstitutionsRequest searchFinancialInstitutionsRequest = new SearchFinancialInstitutionsRequest(); // SearchFinancialInstitutionsRequest | 
+    try {
+      SearchFinancialInstitutionsResponse result = apiInstance.searchFinancialInstitutions(searchFinancialInstitutionsRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling FuseApi#searchFinancialInstitutions");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **searchFinancialInstitutionsRequest** | [**SearchFinancialInstitutionsRequest**](SearchFinancialInstitutionsRequest.md)|  | [optional] |
+
+### Return type
+
+[**SearchFinancialInstitutionsResponse**](SearchFinancialInstitutionsResponse.md)
+
+### Authorization
+
+[fuseApiKey](../README.md#fuseApiKey), [fuseClientId](../README.md#fuseClientId)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Response |  -  |
+
+<a id="selectFinancialInstitutions"></a>
+# **selectFinancialInstitutions**
+> SelectFinancialInstitutionsResponse selectFinancialInstitutions(selectFinancialInstitutionsRequest)
+
+
+
+Endpoint to call when the user has selected a financial institution.
+
+### Example
+```java
+// Import classes:
+import org.fuse.client.ApiClient;
+import org.fuse.client.ApiException;
+import org.fuse.client.Configuration;
+import org.fuse.client.auth.*;
+import org.fuse.client.models.*;
+import org.fuse.client.api.FuseApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://sandbox-api.letsfuse.com");
+    
+    // Configure API key authorization: fuseApiKey
+    ApiKeyAuth fuseApiKey = (ApiKeyAuth) defaultClient.getAuthentication("fuseApiKey");
+    fuseApiKey.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //fuseApiKey.setApiKeyPrefix("Token");
+
+    // Configure API key authorization: fuseClientId
+    ApiKeyAuth fuseClientId = (ApiKeyAuth) defaultClient.getAuthentication("fuseClientId");
+    fuseClientId.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //fuseClientId.setApiKeyPrefix("Token");
+
+    FuseApi apiInstance = new FuseApi(defaultClient);
+    SelectFinancialInstitutionsRequest selectFinancialInstitutionsRequest = new SelectFinancialInstitutionsRequest(); // SelectFinancialInstitutionsRequest | 
+    try {
+      SelectFinancialInstitutionsResponse result = apiInstance.selectFinancialInstitutions(selectFinancialInstitutionsRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling FuseApi#selectFinancialInstitutions");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **selectFinancialInstitutionsRequest** | [**SelectFinancialInstitutionsRequest**](SelectFinancialInstitutionsRequest.md)|  | [optional] |
+
+### Return type
+
+[**SelectFinancialInstitutionsResponse**](SelectFinancialInstitutionsResponse.md)
 
 ### Authorization
 
