@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.fuse.client.model.FinanceScoreTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2023-09-12T15:27:34" hostname="Adibs-MacBook-Pro-2.local" time="0.001">
+<testsuite name="org.fuse.client.model.FinanceScoreTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-02-23T12:04:19" hostname="Mac-1708688289627.local" time="0.001">
   <properties/>
   <testcase name="activityAgeScoreTest()" classname="org.fuse.client.model.FinanceScoreTest" time="0.0"/>
   <testcase name="valueTest()" classname="org.fuse.client.model.FinanceScoreTest" time="0.0"/>
   <testcase name="expenseStabilityScoreTest()" classname="org.fuse.client.model.FinanceScoreTest" time="0.0"/>
   <testcase name="loanPaymentsScoreTest()" classname="org.fuse.client.model.FinanceScoreTest" time="0.0"/>
   <testcase name="repaymentsScoreTest()" classname="org.fuse.client.model.FinanceScoreTest" time="0.0"/>
-  <testcase name="incomeScoreTest()" classname="org.fuse.client.model.FinanceScoreTest" time="0.001"/>
+  <testcase name="incomeScoreTest()" classname="org.fuse.client.model.FinanceScoreTest" time="0.0"/>
   <testcase name="savingsScoreTest()" classname="org.fuse.client.model.FinanceScoreTest" time="0.0"/>
   <testcase name="testFinanceScore()" classname="org.fuse.client.model.FinanceScoreTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

@@ -45,7 +45,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -53,7 +52,7 @@ import org.fuse.client.JSON;
 /**
  * ExternalTransactionEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class ExternalTransactionEvent {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -101,6 +100,11 @@ public class ExternalTransactionEvent {
         String value =  jsonReader.nextString();
         return EventTypeEnum.fromValue(value);
       }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      EventTypeEnum.fromValue(value);
     }
   }
 
@@ -177,6 +181,11 @@ public class ExternalTransactionEvent {
         return TransactionOwnerTypeEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      TransactionOwnerTypeEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_TRANSACTION_OWNER_TYPE = "transaction_owner_type";
@@ -199,7 +208,6 @@ public class ExternalTransactionEvent {
   }
 
   public ExternalTransactionEvent id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -213,14 +221,12 @@ public class ExternalTransactionEvent {
     return id;
   }
 
-
   public void setId(String id) {
     this.id = id;
   }
 
 
   public ExternalTransactionEvent eventType(EventTypeEnum eventType) {
-    
     this.eventType = eventType;
     return this;
   }
@@ -234,14 +240,12 @@ public class ExternalTransactionEvent {
     return eventType;
   }
 
-
   public void setEventType(EventTypeEnum eventType) {
     this.eventType = eventType;
   }
 
 
   public ExternalTransactionEvent status(ExternalTransactionEventStatus status) {
-    
     this.status = status;
     return this;
   }
@@ -255,14 +259,12 @@ public class ExternalTransactionEvent {
     return status;
   }
 
-
   public void setStatus(ExternalTransactionEventStatus status) {
     this.status = status;
   }
 
 
   public ExternalTransactionEvent amount(BigDecimal amount) {
-    
     this.amount = amount;
     return this;
   }
@@ -276,14 +278,12 @@ public class ExternalTransactionEvent {
     return amount;
   }
 
-
   public void setAmount(BigDecimal amount) {
     this.amount = amount;
   }
 
 
   public ExternalTransactionEvent countryCode(String countryCode) {
-    
     this.countryCode = countryCode;
     return this;
   }
@@ -297,14 +297,12 @@ public class ExternalTransactionEvent {
     return countryCode;
   }
 
-
   public void setCountryCode(String countryCode) {
     this.countryCode = countryCode;
   }
 
 
   public ExternalTransactionEvent isoCurrencyCode(String isoCurrencyCode) {
-    
     this.isoCurrencyCode = isoCurrencyCode;
     return this;
   }
@@ -318,14 +316,12 @@ public class ExternalTransactionEvent {
     return isoCurrencyCode;
   }
 
-
   public void setIsoCurrencyCode(String isoCurrencyCode) {
     this.isoCurrencyCode = isoCurrencyCode;
   }
 
 
   public ExternalTransactionEvent transactionType(TransactionEventType transactionType) {
-    
     this.transactionType = transactionType;
     return this;
   }
@@ -339,14 +335,12 @@ public class ExternalTransactionEvent {
     return transactionType;
   }
 
-
   public void setTransactionType(TransactionEventType transactionType) {
     this.transactionType = transactionType;
   }
 
 
   public ExternalTransactionEvent transactionDescription(String transactionDescription) {
-    
     this.transactionDescription = transactionDescription;
     return this;
   }
@@ -360,14 +354,12 @@ public class ExternalTransactionEvent {
     return transactionDescription;
   }
 
-
   public void setTransactionDescription(String transactionDescription) {
     this.transactionDescription = transactionDescription;
   }
 
 
   public ExternalTransactionEvent transactionOwnerType(TransactionOwnerTypeEnum transactionOwnerType) {
-    
     this.transactionOwnerType = transactionOwnerType;
     return this;
   }
@@ -381,14 +373,12 @@ public class ExternalTransactionEvent {
     return transactionOwnerType;
   }
 
-
   public void setTransactionOwnerType(TransactionOwnerTypeEnum transactionOwnerType) {
     this.transactionOwnerType = transactionOwnerType;
   }
 
 
   public ExternalTransactionEvent merchantName(String merchantName) {
-    
     this.merchantName = merchantName;
     return this;
   }
@@ -402,14 +392,12 @@ public class ExternalTransactionEvent {
     return merchantName;
   }
 
-
   public void setMerchantName(String merchantName) {
     this.merchantName = merchantName;
   }
 
 
   public ExternalTransactionEvent timestamp(String timestamp) {
-    
     this.timestamp = timestamp;
     return this;
   }
@@ -423,14 +411,12 @@ public class ExternalTransactionEvent {
     return timestamp;
   }
 
-
   public void setTimestamp(String timestamp) {
     this.timestamp = timestamp;
   }
 
 
   public ExternalTransactionEvent balance(BigDecimal balance) {
-    
     this.balance = balance;
     return this;
   }
@@ -443,7 +429,6 @@ public class ExternalTransactionEvent {
   public BigDecimal getBalance() {
     return balance;
   }
-
 
   public void setBalance(BigDecimal balance) {
     this.balance = balance;
@@ -554,9 +539,9 @@ public class ExternalTransactionEvent {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!ExternalTransactionEvent.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ExternalTransactionEvent` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
@@ -575,17 +560,29 @@ public class ExternalTransactionEvent {
       if (!jsonObj.get("event_type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `event_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("event_type").toString()));
       }
+      // validate the required field `event_type`
+      EventTypeEnum.validateJsonElement(jsonObj.get("event_type"));
+      // validate the required field `status`
+      ExternalTransactionEventStatus.validateJsonElement(jsonObj.get("status"));
       if ((jsonObj.get("country_code") != null && !jsonObj.get("country_code").isJsonNull()) && !jsonObj.get("country_code").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `country_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("country_code").toString()));
       }
       if (!jsonObj.get("iso_currency_code").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `iso_currency_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("iso_currency_code").toString()));
       }
+      // validate the optional field `transaction_type`
+      if (jsonObj.get("transaction_type") != null && !jsonObj.get("transaction_type").isJsonNull()) {
+        TransactionEventType.validateJsonElement(jsonObj.get("transaction_type"));
+      }
       if ((jsonObj.get("transaction_description") != null && !jsonObj.get("transaction_description").isJsonNull()) && !jsonObj.get("transaction_description").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `transaction_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("transaction_description").toString()));
       }
       if ((jsonObj.get("transaction_owner_type") != null && !jsonObj.get("transaction_owner_type").isJsonNull()) && !jsonObj.get("transaction_owner_type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `transaction_owner_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("transaction_owner_type").toString()));
+      }
+      // validate the optional field `transaction_owner_type`
+      if (jsonObj.get("transaction_owner_type") != null && !jsonObj.get("transaction_owner_type").isJsonNull()) {
+        TransactionOwnerTypeEnum.validateJsonElement(jsonObj.get("transaction_owner_type"));
       }
       if (!jsonObj.get("merchant_name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `merchant_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("merchant_name").toString()));

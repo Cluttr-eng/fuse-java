@@ -42,7 +42,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -50,7 +49,7 @@ import org.fuse.client.JSON;
 /**
  * FinancialConnectionsAccountDetailsAccountNumber
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class FinancialConnectionsAccountDetailsAccountNumber {
   public static final String SERIALIZED_NAME_NUMBER = "number";
   @SerializedName(SERIALIZED_NAME_NUMBER)
@@ -80,7 +79,6 @@ public class FinancialConnectionsAccountDetailsAccountNumber {
   }
 
   public FinancialConnectionsAccountDetailsAccountNumber number(String number) {
-    
     this.number = number;
     return this;
   }
@@ -94,14 +92,12 @@ public class FinancialConnectionsAccountDetailsAccountNumber {
     return number;
   }
 
-
   public void setNumber(String number) {
     this.number = number;
   }
 
 
   public FinancialConnectionsAccountDetailsAccountNumber sortCode(String sortCode) {
-    
     this.sortCode = sortCode;
     return this;
   }
@@ -115,14 +111,12 @@ public class FinancialConnectionsAccountDetailsAccountNumber {
     return sortCode;
   }
 
-
   public void setSortCode(String sortCode) {
     this.sortCode = sortCode;
   }
 
 
   public FinancialConnectionsAccountDetailsAccountNumber iban(String iban) {
-    
     this.iban = iban;
     return this;
   }
@@ -136,14 +130,12 @@ public class FinancialConnectionsAccountDetailsAccountNumber {
     return iban;
   }
 
-
   public void setIban(String iban) {
     this.iban = iban;
   }
 
 
   public FinancialConnectionsAccountDetailsAccountNumber swiftBic(String swiftBic) {
-    
     this.swiftBic = swiftBic;
     return this;
   }
@@ -157,14 +149,12 @@ public class FinancialConnectionsAccountDetailsAccountNumber {
     return swiftBic;
   }
 
-
   public void setSwiftBic(String swiftBic) {
     this.swiftBic = swiftBic;
   }
 
 
   public FinancialConnectionsAccountDetailsAccountNumber bsb(String bsb) {
-    
     this.bsb = bsb;
     return this;
   }
@@ -178,14 +168,12 @@ public class FinancialConnectionsAccountDetailsAccountNumber {
     return bsb;
   }
 
-
   public void setBsb(String bsb) {
     this.bsb = bsb;
   }
 
 
   public FinancialConnectionsAccountDetailsAccountNumber bic(String bic) {
-    
     this.bic = bic;
     return this;
   }
@@ -198,7 +186,6 @@ public class FinancialConnectionsAccountDetailsAccountNumber {
   public String getBic() {
     return bic;
   }
-
 
   public void setBic(String bic) {
     this.bic = bic;
@@ -285,9 +272,9 @@ public class FinancialConnectionsAccountDetailsAccountNumber {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FinancialConnectionsAccountDetailsAccountNumber.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialConnectionsAccountDetailsAccountNumber` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

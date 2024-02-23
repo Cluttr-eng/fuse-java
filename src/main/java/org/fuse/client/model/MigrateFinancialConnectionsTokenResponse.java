@@ -43,7 +43,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -51,7 +50,7 @@ import org.fuse.client.JSON;
 /**
  * MigrateFinancialConnectionsTokenResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class MigrateFinancialConnectionsTokenResponse {
   public static final String SERIALIZED_NAME_CONNECTION_DATA = "connection_data";
   @SerializedName(SERIALIZED_NAME_CONNECTION_DATA)
@@ -73,7 +72,6 @@ public class MigrateFinancialConnectionsTokenResponse {
   }
 
   public MigrateFinancialConnectionsTokenResponse connectionData(MigrateFinancialConnectionsAggregatorConnectionData connectionData) {
-    
     this.connectionData = connectionData;
     return this;
   }
@@ -87,14 +85,12 @@ public class MigrateFinancialConnectionsTokenResponse {
     return connectionData;
   }
 
-
   public void setConnectionData(MigrateFinancialConnectionsAggregatorConnectionData connectionData) {
     this.connectionData = connectionData;
   }
 
 
   public MigrateFinancialConnectionsTokenResponse fuseAccessToken(String fuseAccessToken) {
-    
     this.fuseAccessToken = fuseAccessToken;
     return this;
   }
@@ -108,14 +104,12 @@ public class MigrateFinancialConnectionsTokenResponse {
     return fuseAccessToken;
   }
 
-
   public void setFuseAccessToken(String fuseAccessToken) {
     this.fuseAccessToken = fuseAccessToken;
   }
 
 
   public MigrateFinancialConnectionsTokenResponse fuseFinancialConnectionId(String fuseFinancialConnectionId) {
-    
     this.fuseFinancialConnectionId = fuseFinancialConnectionId;
     return this;
   }
@@ -129,14 +123,12 @@ public class MigrateFinancialConnectionsTokenResponse {
     return fuseFinancialConnectionId;
   }
 
-
   public void setFuseFinancialConnectionId(String fuseFinancialConnectionId) {
     this.fuseFinancialConnectionId = fuseFinancialConnectionId;
   }
 
 
   public MigrateFinancialConnectionsTokenResponse requestId(String requestId) {
-    
     this.requestId = requestId;
     return this;
   }
@@ -149,7 +141,6 @@ public class MigrateFinancialConnectionsTokenResponse {
   public String getRequestId() {
     return requestId;
   }
-
 
   public void setRequestId(String requestId) {
     this.requestId = requestId;
@@ -232,9 +223,9 @@ public class MigrateFinancialConnectionsTokenResponse {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!MigrateFinancialConnectionsTokenResponse.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `MigrateFinancialConnectionsTokenResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

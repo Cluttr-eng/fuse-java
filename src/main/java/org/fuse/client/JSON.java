@@ -13,11 +13,11 @@
 
 package org.fuse.client;
 
+import com.fasterxml.jackson.databind.util.StdDateFormat;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapter;
-import com.google.gson.internal.bind.util.ISO8601Utils;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.google.gson.JsonElement;
@@ -31,14 +31,16 @@ import java.io.StringReader;
 import java.lang.reflect.Type;
 import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.ParsePosition;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.TimeZone;
 
 /*
  * A JSON utility class
@@ -54,6 +56,11 @@ public class JSON {
     private static OffsetDateTimeTypeAdapter offsetDateTimeTypeAdapter = new OffsetDateTimeTypeAdapter();
     private static LocalDateTypeAdapter localDateTypeAdapter = new LocalDateTypeAdapter();
     private static ByteArrayAdapter byteArrayAdapter = new ByteArrayAdapter();
+
+    private static final StdDateFormat sdf = new StdDateFormat()
+        .withTimeZone(TimeZone.getTimeZone(ZoneId.systemDefault()))
+        .withColonInTimeZone(true);
+    private static final DateTimeFormatter dtf = DateTimeFormatter.ISO_OFFSET_DATE_TIME;
 
     @SuppressWarnings("unchecked")
     public static GsonBuilder createGson() {
@@ -154,6 +161,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.FinancialConnectionDetailsPlaid.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.FinancialConnectionDetailsSaltedge.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.FinancialConnectionDetailsSnaptrade.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.FinancialConnectionDetailsSophtron.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.FinancialConnectionDetailsTeller.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.FinancialConnectionDetailsTruelayer.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.FinancialConnectionsAccount.CustomTypeAdapterFactory());
@@ -190,6 +198,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetFinanceScoreResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetFinancialConnectionResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetFinancialConnectionsAccountDetailsRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetFinancialConnectionsAccountDetailsRequestOptions.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetFinancialConnectionsAccountDetailsResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetFinancialConnectionsAccountStatementRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetFinancialConnectionsAccountStatementResponse.CustomTypeAdapterFactory());
@@ -212,6 +221,8 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetInvestmentTransactionsResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetLiabilitiesRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetLiabilitiesResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetRecommendedFinancialInstitutionsRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.GetRecommendedFinancialInstitutionsResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.InAppTransactionEvent.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.Merchant.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.MerchantLogo.CustomTypeAdapterFactory());
@@ -224,6 +235,10 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.MigrateFinancialConnectionsTokenResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.RefreshAssetReportRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.RefreshAssetReportResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.SearchFinancialInstitutionsRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.SearchFinancialInstitutionsResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.SelectFinancialInstitutionsRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.SelectFinancialInstitutionsResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.SyncFinancialConnectionsDataResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.SyncTransactionsRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.fuse.client.model.SyncTransactionsResponse.CustomTypeAdapterFactory());
@@ -470,7 +485,7 @@ public class JSON {
                         if (dateFormat != null) {
                             return new java.sql.Date(dateFormat.parse(date).getTime());
                         }
-                        return new java.sql.Date(ISO8601Utils.parse(date, new ParsePosition(0)).getTime());
+                        return new java.sql.Date(sdf.parse(date).getTime());
                     } catch (ParseException e) {
                         throw new JsonParseException(e);
                     }
@@ -480,7 +495,7 @@ public class JSON {
 
     /**
      * Gson TypeAdapter for java.util.Date type
-     * If the dateFormat is null, ISO8601Utils will be used.
+     * If the dateFormat is null, DateTimeFormatter will be used.
      */
     public static class DateTypeAdapter extends TypeAdapter<Date> {
 
@@ -505,7 +520,7 @@ public class JSON {
                 if (dateFormat != null) {
                     value = dateFormat.format(date);
                 } else {
-                    value = ISO8601Utils.format(date, true);
+                    value = date.toInstant().atOffset(ZoneOffset.UTC).format(dtf);
                 }
                 out.value(value);
             }
@@ -524,7 +539,7 @@ public class JSON {
                             if (dateFormat != null) {
                                 return dateFormat.parse(date);
                             }
-                            return ISO8601Utils.parse(date, new ParsePosition(0));
+                            return sdf.parse(date);
                         } catch (ParseException e) {
                             throw new JsonParseException(e);
                         }

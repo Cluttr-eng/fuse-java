@@ -43,7 +43,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -51,7 +50,7 @@ import org.fuse.client.JSON;
 /**
  * Merchant
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class Merchant {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -69,7 +68,6 @@ public class Merchant {
   }
 
   public Merchant id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -83,14 +81,12 @@ public class Merchant {
     return id;
   }
 
-
   public void setId(String id) {
     this.id = id;
   }
 
 
   public Merchant name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -104,14 +100,12 @@ public class Merchant {
     return name;
   }
 
-
   public void setName(String name) {
     this.name = name;
   }
 
 
   public Merchant logo(MerchantLogo logo) {
-    
     this.logo = logo;
     return this;
   }
@@ -124,7 +118,6 @@ public class Merchant {
   public MerchantLogo getLogo() {
     return logo;
   }
-
 
   public void setLogo(MerchantLogo logo) {
     this.logo = logo;
@@ -203,9 +196,9 @@ public class Merchant {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Merchant.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Merchant` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

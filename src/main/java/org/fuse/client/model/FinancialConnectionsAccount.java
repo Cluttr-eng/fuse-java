@@ -20,7 +20,9 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import org.fuse.client.model.AccountSubtype;
 import org.fuse.client.model.AccountType;
 import org.fuse.client.model.FinancialConnectionsAccountCachedBalance;
@@ -47,7 +49,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -55,7 +56,7 @@ import org.fuse.client.JSON;
 /**
  * FinancialConnectionsAccount
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class FinancialConnectionsAccount {
   public static final String SERIALIZED_NAME_REMOTE_ID = "remote_id";
   @SerializedName(SERIALIZED_NAME_REMOTE_ID)
@@ -93,6 +94,10 @@ public class FinancialConnectionsAccount {
   @SerializedName(SERIALIZED_NAME_BALANCE)
   private FinancialConnectionsAccountCachedBalance balance;
 
+  public static final String SERIALIZED_NAME_ADDITIONAL_BALANCES = "additional_balances";
+  @SerializedName(SERIALIZED_NAME_ADDITIONAL_BALANCES)
+  private List<FinancialConnectionsAccountCachedBalance> additionalBalances;
+
   public static final String SERIALIZED_NAME_REMOTE_DATA = "remote_data";
   @SerializedName(SERIALIZED_NAME_REMOTE_DATA)
   private Object remoteData = null;
@@ -101,7 +106,6 @@ public class FinancialConnectionsAccount {
   }
 
   public FinancialConnectionsAccount remoteId(String remoteId) {
-    
     this.remoteId = remoteId;
     return this;
   }
@@ -115,14 +119,12 @@ public class FinancialConnectionsAccount {
     return remoteId;
   }
 
-
   public void setRemoteId(String remoteId) {
     this.remoteId = remoteId;
   }
 
 
   public FinancialConnectionsAccount currency(String currency) {
-    
     this.currency = currency;
     return this;
   }
@@ -136,14 +138,12 @@ public class FinancialConnectionsAccount {
     return currency;
   }
 
-
   public void setCurrency(String currency) {
     this.currency = currency;
   }
 
 
   public FinancialConnectionsAccount fingerprint(String fingerprint) {
-    
     this.fingerprint = fingerprint;
     return this;
   }
@@ -157,14 +157,12 @@ public class FinancialConnectionsAccount {
     return fingerprint;
   }
 
-
   public void setFingerprint(String fingerprint) {
     this.fingerprint = fingerprint;
   }
 
 
   public FinancialConnectionsAccount institution(FinancialConnectionsAccountInstitution institution) {
-    
     this.institution = institution;
     return this;
   }
@@ -178,14 +176,12 @@ public class FinancialConnectionsAccount {
     return institution;
   }
 
-
   public void setInstitution(FinancialConnectionsAccountInstitution institution) {
     this.institution = institution;
   }
 
 
   public FinancialConnectionsAccount mask(String mask) {
-    
     this.mask = mask;
     return this;
   }
@@ -199,14 +195,12 @@ public class FinancialConnectionsAccount {
     return mask;
   }
 
-
   public void setMask(String mask) {
     this.mask = mask;
   }
 
 
   public FinancialConnectionsAccount name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -220,14 +214,12 @@ public class FinancialConnectionsAccount {
     return name;
   }
 
-
   public void setName(String name) {
     this.name = name;
   }
 
 
   public FinancialConnectionsAccount type(AccountType type) {
-    
     this.type = type;
     return this;
   }
@@ -241,14 +233,12 @@ public class FinancialConnectionsAccount {
     return type;
   }
 
-
   public void setType(AccountType type) {
     this.type = type;
   }
 
 
   public FinancialConnectionsAccount subtype(AccountSubtype subtype) {
-    
     this.subtype = subtype;
     return this;
   }
@@ -262,14 +252,12 @@ public class FinancialConnectionsAccount {
     return subtype;
   }
 
-
   public void setSubtype(AccountSubtype subtype) {
     this.subtype = subtype;
   }
 
 
   public FinancialConnectionsAccount balance(FinancialConnectionsAccountCachedBalance balance) {
-    
     this.balance = balance;
     return this;
   }
@@ -283,14 +271,39 @@ public class FinancialConnectionsAccount {
     return balance;
   }
 
-
   public void setBalance(FinancialConnectionsAccountCachedBalance balance) {
     this.balance = balance;
   }
 
 
+  public FinancialConnectionsAccount additionalBalances(List<FinancialConnectionsAccountCachedBalance> additionalBalances) {
+    this.additionalBalances = additionalBalances;
+    return this;
+  }
+
+  public FinancialConnectionsAccount addAdditionalBalancesItem(FinancialConnectionsAccountCachedBalance additionalBalancesItem) {
+    if (this.additionalBalances == null) {
+      this.additionalBalances = new ArrayList<>();
+    }
+    this.additionalBalances.add(additionalBalancesItem);
+    return this;
+  }
+
+   /**
+   * An array of additional balances. This may be used for investment type accounts where the user can have multiple balances across different currencies.
+   * @return additionalBalances
+  **/
+  @javax.annotation.Nullable
+  public List<FinancialConnectionsAccountCachedBalance> getAdditionalBalances() {
+    return additionalBalances;
+  }
+
+  public void setAdditionalBalances(List<FinancialConnectionsAccountCachedBalance> additionalBalances) {
+    this.additionalBalances = additionalBalances;
+  }
+
+
   public FinancialConnectionsAccount remoteData(Object remoteData) {
-    
     this.remoteData = remoteData;
     return this;
   }
@@ -303,7 +316,6 @@ public class FinancialConnectionsAccount {
   public Object getRemoteData() {
     return remoteData;
   }
-
 
   public void setRemoteData(Object remoteData) {
     this.remoteData = remoteData;
@@ -329,6 +341,7 @@ public class FinancialConnectionsAccount {
         Objects.equals(this.type, financialConnectionsAccount.type) &&
         Objects.equals(this.subtype, financialConnectionsAccount.subtype) &&
         Objects.equals(this.balance, financialConnectionsAccount.balance) &&
+        Objects.equals(this.additionalBalances, financialConnectionsAccount.additionalBalances) &&
         Objects.equals(this.remoteData, financialConnectionsAccount.remoteData);
   }
 
@@ -338,7 +351,7 @@ public class FinancialConnectionsAccount {
 
   @Override
   public int hashCode() {
-    return Objects.hash(remoteId, currency, fingerprint, institution, mask, name, type, subtype, balance, remoteData);
+    return Objects.hash(remoteId, currency, fingerprint, institution, mask, name, type, subtype, balance, additionalBalances, remoteData);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -361,6 +374,7 @@ public class FinancialConnectionsAccount {
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    subtype: ").append(toIndentedString(subtype)).append("\n");
     sb.append("    balance: ").append(toIndentedString(balance)).append("\n");
+    sb.append("    additionalBalances: ").append(toIndentedString(additionalBalances)).append("\n");
     sb.append("    remoteData: ").append(toIndentedString(remoteData)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -393,6 +407,7 @@ public class FinancialConnectionsAccount {
     openapiFields.add("type");
     openapiFields.add("subtype");
     openapiFields.add("balance");
+    openapiFields.add("additional_balances");
     openapiFields.add("remote_data");
 
     // a set of required properties/fields (JSON key names)
@@ -419,9 +434,9 @@ public class FinancialConnectionsAccount {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FinancialConnectionsAccount.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialConnectionsAccount` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
@@ -453,8 +468,28 @@ public class FinancialConnectionsAccount {
       if (!jsonObj.get("name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
+      // validate the required field `type`
+      AccountType.validateJsonElement(jsonObj.get("type"));
+      // validate the optional field `subtype`
+      if (jsonObj.get("subtype") != null && !jsonObj.get("subtype").isJsonNull()) {
+        AccountSubtype.validateJsonElement(jsonObj.get("subtype"));
+      }
       // validate the required field `balance`
       FinancialConnectionsAccountCachedBalance.validateJsonElement(jsonObj.get("balance"));
+      if (jsonObj.get("additional_balances") != null && !jsonObj.get("additional_balances").isJsonNull()) {
+        JsonArray jsonArrayadditionalBalances = jsonObj.getAsJsonArray("additional_balances");
+        if (jsonArrayadditionalBalances != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("additional_balances").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `additional_balances` to be an array in the JSON string but got `%s`", jsonObj.get("additional_balances").toString()));
+          }
+
+          // validate the optional field `additional_balances` (array)
+          for (int i = 0; i < jsonArrayadditionalBalances.size(); i++) {
+            FinancialConnectionsAccountCachedBalance.validateJsonElement(jsonArrayadditionalBalances.get(i));
+          };
+        }
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

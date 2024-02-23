@@ -43,7 +43,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -51,7 +50,7 @@ import org.fuse.client.JSON;
 /**
  * FuseApiWarning
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class FuseApiWarning {
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
@@ -114,6 +113,11 @@ public class FuseApiWarning {
         return SourceEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      SourceEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_SOURCE = "source";
@@ -128,7 +132,6 @@ public class FuseApiWarning {
   }
 
   public FuseApiWarning title(String title) {
-    
     this.title = title;
     return this;
   }
@@ -142,14 +145,12 @@ public class FuseApiWarning {
     return title;
   }
 
-
   public void setTitle(String title) {
     this.title = title;
   }
 
 
   public FuseApiWarning details(String details) {
-    
     this.details = details;
     return this;
   }
@@ -163,14 +164,12 @@ public class FuseApiWarning {
     return details;
   }
 
-
   public void setDetails(String details) {
     this.details = details;
   }
 
 
   public FuseApiWarning code(String code) {
-    
     this.code = code;
     return this;
   }
@@ -184,14 +183,12 @@ public class FuseApiWarning {
     return code;
   }
 
-
   public void setCode(String code) {
     this.code = code;
   }
 
 
   public FuseApiWarning type(String type) {
-    
     this.type = type;
     return this;
   }
@@ -205,14 +202,12 @@ public class FuseApiWarning {
     return type;
   }
 
-
   public void setType(String type) {
     this.type = type;
   }
 
 
   public FuseApiWarning source(SourceEnum source) {
-    
     this.source = source;
     return this;
   }
@@ -226,14 +221,12 @@ public class FuseApiWarning {
     return source;
   }
 
-
   public void setSource(SourceEnum source) {
     this.source = source;
   }
 
 
   public FuseApiWarning data(FuseApiWarningData data) {
-    
     this.data = data;
     return this;
   }
@@ -246,7 +239,6 @@ public class FuseApiWarning {
   public FuseApiWarningData getData() {
     return data;
   }
-
 
   public void setData(FuseApiWarningData data) {
     this.data = data;
@@ -332,9 +324,9 @@ public class FuseApiWarning {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FuseApiWarning.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FuseApiWarning` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
@@ -354,6 +346,10 @@ public class FuseApiWarning {
       }
       if ((jsonObj.get("source") != null && !jsonObj.get("source").isJsonNull()) && !jsonObj.get("source").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `source` to be a primitive type in the JSON string but got `%s`", jsonObj.get("source").toString()));
+      }
+      // validate the optional field `source`
+      if (jsonObj.get("source") != null && !jsonObj.get("source").isJsonNull()) {
+        SourceEnum.validateJsonElement(jsonObj.get("source"));
       }
       // validate the optional field `data`
       if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {

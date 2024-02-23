@@ -32,6 +32,7 @@ import org.fuse.client.model.FinancialConnectionDetailsMx;
 import org.fuse.client.model.FinancialConnectionDetailsPlaid;
 import org.fuse.client.model.FinancialConnectionDetailsSaltedge;
 import org.fuse.client.model.FinancialConnectionDetailsSnaptrade;
+import org.fuse.client.model.FinancialConnectionDetailsSophtron;
 import org.fuse.client.model.FinancialConnectionDetailsTeller;
 import org.fuse.client.model.FinancialConnectionDetailsTruelayer;
 import org.junit.jupiter.api.Disabled;
@@ -193,6 +194,14 @@ public class FinancialConnectionDetailsTest {
     @Test
     public void saltedgeTest() {
         // TODO: test saltedge
+    }
+
+    /**
+     * Test the property 'sophtron'
+     */
+    @Test
+    public void sophtronTest() {
+        // TODO: test sophtron
     }
 
 }

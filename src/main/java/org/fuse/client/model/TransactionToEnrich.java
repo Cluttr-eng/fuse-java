@@ -43,7 +43,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -51,7 +50,7 @@ import org.fuse.client.JSON;
 /**
  * TransactionToEnrich
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class TransactionToEnrich {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -113,6 +112,11 @@ public class TransactionToEnrich {
         String value =  jsonReader.nextString();
         return DirectionEnum.fromValue(value);
       }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      DirectionEnum.fromValue(value);
     }
   }
 
@@ -177,6 +181,11 @@ public class TransactionToEnrich {
         return OwnerTypeEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      OwnerTypeEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_OWNER_TYPE = "owner_type";
@@ -187,7 +196,6 @@ public class TransactionToEnrich {
   }
 
   public TransactionToEnrich id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -201,14 +209,12 @@ public class TransactionToEnrich {
     return id;
   }
 
-
   public void setId(String id) {
     this.id = id;
   }
 
 
   public TransactionToEnrich description(String description) {
-    
     this.description = description;
     return this;
   }
@@ -222,14 +228,12 @@ public class TransactionToEnrich {
     return description;
   }
 
-
   public void setDescription(String description) {
     this.description = description;
   }
 
 
   public TransactionToEnrich mcc(String mcc) {
-    
     this.mcc = mcc;
     return this;
   }
@@ -243,14 +247,12 @@ public class TransactionToEnrich {
     return mcc;
   }
 
-
   public void setMcc(String mcc) {
     this.mcc = mcc;
   }
 
 
   public TransactionToEnrich amount(BigDecimal amount) {
-    
     this.amount = amount;
     return this;
   }
@@ -265,14 +267,12 @@ public class TransactionToEnrich {
     return amount;
   }
 
-
   public void setAmount(BigDecimal amount) {
     this.amount = amount;
   }
 
 
   public TransactionToEnrich direction(DirectionEnum direction) {
-    
     this.direction = direction;
     return this;
   }
@@ -286,14 +286,12 @@ public class TransactionToEnrich {
     return direction;
   }
 
-
   public void setDirection(DirectionEnum direction) {
     this.direction = direction;
   }
 
 
   public TransactionToEnrich countryCode(String countryCode) {
-    
     this.countryCode = countryCode;
     return this;
   }
@@ -307,14 +305,12 @@ public class TransactionToEnrich {
     return countryCode;
   }
 
-
   public void setCountryCode(String countryCode) {
     this.countryCode = countryCode;
   }
 
 
   public TransactionToEnrich isoCurrencyCode(String isoCurrencyCode) {
-    
     this.isoCurrencyCode = isoCurrencyCode;
     return this;
   }
@@ -328,14 +324,12 @@ public class TransactionToEnrich {
     return isoCurrencyCode;
   }
 
-
   public void setIsoCurrencyCode(String isoCurrencyCode) {
     this.isoCurrencyCode = isoCurrencyCode;
   }
 
 
   public TransactionToEnrich date(String date) {
-    
     this.date = date;
     return this;
   }
@@ -349,14 +343,12 @@ public class TransactionToEnrich {
     return date;
   }
 
-
   public void setDate(String date) {
     this.date = date;
   }
 
 
   public TransactionToEnrich ownerType(OwnerTypeEnum ownerType) {
-    
     this.ownerType = ownerType;
     return this;
   }
@@ -369,7 +361,6 @@ public class TransactionToEnrich {
   public OwnerTypeEnum getOwnerType() {
     return ownerType;
   }
-
 
   public void setOwnerType(OwnerTypeEnum ownerType) {
     this.ownerType = ownerType;
@@ -468,9 +459,9 @@ public class TransactionToEnrich {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!TransactionToEnrich.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `TransactionToEnrich` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
@@ -495,6 +486,8 @@ public class TransactionToEnrich {
       if (!jsonObj.get("direction").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `direction` to be a primitive type in the JSON string but got `%s`", jsonObj.get("direction").toString()));
       }
+      // validate the required field `direction`
+      DirectionEnum.validateJsonElement(jsonObj.get("direction"));
       if ((jsonObj.get("country_code") != null && !jsonObj.get("country_code").isJsonNull()) && !jsonObj.get("country_code").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `country_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("country_code").toString()));
       }
@@ -506,6 +499,10 @@ public class TransactionToEnrich {
       }
       if ((jsonObj.get("owner_type") != null && !jsonObj.get("owner_type").isJsonNull()) && !jsonObj.get("owner_type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `owner_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("owner_type").toString()));
+      }
+      // validate the optional field `owner_type`
+      if (jsonObj.get("owner_type") != null && !jsonObj.get("owner_type").isJsonNull()) {
+        OwnerTypeEnum.validateJsonElement(jsonObj.get("owner_type"));
       }
   }
 

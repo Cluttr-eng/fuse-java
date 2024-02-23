@@ -42,7 +42,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -50,7 +49,7 @@ import org.fuse.client.JSON;
 /**
  * FinancialConnectionsOwnerPhoneNumbersInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class FinancialConnectionsOwnerPhoneNumbersInner {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
@@ -107,6 +106,11 @@ public class FinancialConnectionsOwnerPhoneNumbersInner {
         return TypeEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      TypeEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_TYPE = "type";
@@ -117,7 +121,6 @@ public class FinancialConnectionsOwnerPhoneNumbersInner {
   }
 
   public FinancialConnectionsOwnerPhoneNumbersInner data(String data) {
-    
     this.data = data;
     return this;
   }
@@ -131,14 +134,12 @@ public class FinancialConnectionsOwnerPhoneNumbersInner {
     return data;
   }
 
-
   public void setData(String data) {
     this.data = data;
   }
 
 
   public FinancialConnectionsOwnerPhoneNumbersInner primary(Boolean primary) {
-    
     this.primary = primary;
     return this;
   }
@@ -152,14 +153,12 @@ public class FinancialConnectionsOwnerPhoneNumbersInner {
     return primary;
   }
 
-
   public void setPrimary(Boolean primary) {
     this.primary = primary;
   }
 
 
   public FinancialConnectionsOwnerPhoneNumbersInner type(TypeEnum type) {
-    
     this.type = type;
     return this;
   }
@@ -172,7 +171,6 @@ public class FinancialConnectionsOwnerPhoneNumbersInner {
   public TypeEnum getType() {
     return type;
   }
-
 
   public void setType(TypeEnum type) {
     this.type = type;
@@ -250,9 +248,9 @@ public class FinancialConnectionsOwnerPhoneNumbersInner {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FinancialConnectionsOwnerPhoneNumbersInner.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialConnectionsOwnerPhoneNumbersInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
@@ -270,6 +268,10 @@ public class FinancialConnectionsOwnerPhoneNumbersInner {
       }
       if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+      }
+      // validate the optional field `type`
+      if (jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) {
+        TypeEnum.validateJsonElement(jsonObj.get("type"));
       }
   }
 

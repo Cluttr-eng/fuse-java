@@ -47,7 +47,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -55,7 +54,7 @@ import org.fuse.client.JSON;
 /**
  * FinancialConnectionsInvestmentTransaction
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class FinancialConnectionsInvestmentTransaction {
   public static final String SERIALIZED_NAME_REMOTE_ID = "remote_id";
   @SerializedName(SERIALIZED_NAME_REMOTE_ID)
@@ -144,6 +143,11 @@ public class FinancialConnectionsInvestmentTransaction {
         return TypeEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      TypeEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_TYPE = "type";
@@ -170,7 +174,6 @@ public class FinancialConnectionsInvestmentTransaction {
   }
 
   public FinancialConnectionsInvestmentTransaction remoteId(String remoteId) {
-    
     this.remoteId = remoteId;
     return this;
   }
@@ -184,14 +187,12 @@ public class FinancialConnectionsInvestmentTransaction {
     return remoteId;
   }
 
-
   public void setRemoteId(String remoteId) {
     this.remoteId = remoteId;
   }
 
 
   public FinancialConnectionsInvestmentTransaction remoteAccountId(String remoteAccountId) {
-    
     this.remoteAccountId = remoteAccountId;
     return this;
   }
@@ -205,14 +206,12 @@ public class FinancialConnectionsInvestmentTransaction {
     return remoteAccountId;
   }
 
-
   public void setRemoteAccountId(String remoteAccountId) {
     this.remoteAccountId = remoteAccountId;
   }
 
 
   public FinancialConnectionsInvestmentTransaction accountName(String accountName) {
-    
     this.accountName = accountName;
     return this;
   }
@@ -226,14 +225,12 @@ public class FinancialConnectionsInvestmentTransaction {
     return accountName;
   }
 
-
   public void setAccountName(String accountName) {
     this.accountName = accountName;
   }
 
 
   public FinancialConnectionsInvestmentTransaction amount(BigDecimal amount) {
-    
     this.amount = amount;
     return this;
   }
@@ -247,14 +244,12 @@ public class FinancialConnectionsInvestmentTransaction {
     return amount;
   }
 
-
   public void setAmount(BigDecimal amount) {
     this.amount = amount;
   }
 
 
   public FinancialConnectionsInvestmentTransaction description(String description) {
-    
     this.description = description;
     return this;
   }
@@ -268,14 +263,12 @@ public class FinancialConnectionsInvestmentTransaction {
     return description;
   }
 
-
   public void setDescription(String description) {
     this.description = description;
   }
 
 
   public FinancialConnectionsInvestmentTransaction fees(BigDecimal fees) {
-    
     this.fees = fees;
     return this;
   }
@@ -289,14 +282,12 @@ public class FinancialConnectionsInvestmentTransaction {
     return fees;
   }
 
-
   public void setFees(BigDecimal fees) {
     this.fees = fees;
   }
 
 
   public FinancialConnectionsInvestmentTransaction currency(Currency currency) {
-    
     this.currency = currency;
     return this;
   }
@@ -310,14 +301,12 @@ public class FinancialConnectionsInvestmentTransaction {
     return currency;
   }
 
-
   public void setCurrency(Currency currency) {
     this.currency = currency;
   }
 
 
   public FinancialConnectionsInvestmentTransaction date(OffsetDateTime date) {
-    
     this.date = date;
     return this;
   }
@@ -331,14 +320,12 @@ public class FinancialConnectionsInvestmentTransaction {
     return date;
   }
 
-
   public void setDate(OffsetDateTime date) {
     this.date = date;
   }
 
 
   public FinancialConnectionsInvestmentTransaction type(TypeEnum type) {
-    
     this.type = type;
     return this;
   }
@@ -352,14 +339,12 @@ public class FinancialConnectionsInvestmentTransaction {
     return type;
   }
 
-
   public void setType(TypeEnum type) {
     this.type = type;
   }
 
 
   public FinancialConnectionsInvestmentTransaction subtype(FinancialConnectionsInvestmentTransactionSubtype subtype) {
-    
     this.subtype = subtype;
     return this;
   }
@@ -373,14 +358,12 @@ public class FinancialConnectionsInvestmentTransaction {
     return subtype;
   }
 
-
   public void setSubtype(FinancialConnectionsInvestmentTransactionSubtype subtype) {
     this.subtype = subtype;
   }
 
 
   public FinancialConnectionsInvestmentTransaction quantity(BigDecimal quantity) {
-    
     this.quantity = quantity;
     return this;
   }
@@ -394,14 +377,12 @@ public class FinancialConnectionsInvestmentTransaction {
     return quantity;
   }
 
-
   public void setQuantity(BigDecimal quantity) {
     this.quantity = quantity;
   }
 
 
   public FinancialConnectionsInvestmentTransaction price(BigDecimal price) {
-    
     this.price = price;
     return this;
   }
@@ -415,14 +396,12 @@ public class FinancialConnectionsInvestmentTransaction {
     return price;
   }
 
-
   public void setPrice(BigDecimal price) {
     this.price = price;
   }
 
 
   public FinancialConnectionsInvestmentTransaction security(FinancialConnectionsInvestmentSecurity security) {
-    
     this.security = security;
     return this;
   }
@@ -435,7 +414,6 @@ public class FinancialConnectionsInvestmentTransaction {
   public FinancialConnectionsInvestmentSecurity getSecurity() {
     return security;
   }
-
 
   public void setSecurity(FinancialConnectionsInvestmentSecurity security) {
     this.security = security;
@@ -553,9 +531,9 @@ public class FinancialConnectionsInvestmentTransaction {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FinancialConnectionsInvestmentTransaction.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialConnectionsInvestmentTransaction` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
@@ -584,6 +562,12 @@ public class FinancialConnectionsInvestmentTransaction {
       Currency.validateJsonElement(jsonObj.get("currency"));
       if (!jsonObj.get("type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+      }
+      // validate the required field `type`
+      TypeEnum.validateJsonElement(jsonObj.get("type"));
+      // validate the optional field `subtype`
+      if (jsonObj.get("subtype") != null && !jsonObj.get("subtype").isJsonNull()) {
+        FinancialConnectionsInvestmentTransactionSubtype.validateJsonElement(jsonObj.get("subtype"));
       }
       // validate the required field `security`
       FinancialConnectionsInvestmentSecurity.validateJsonElement(jsonObj.get("security"));

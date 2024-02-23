@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.fuse.client.model.SelectFinancialInstitutionsResponseTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-02-23T12:04:19" hostname="Mac-1708688289627.local" time="0.0">
+  <properties/>
+  <testcase name="testSelectFinancialInstitutionsResponse()" classname="org.fuse.client.model.SelectFinancialInstitutionsResponseTest" time="0.0"/>
+  <testcase name="financialInstitutionTest()" classname="org.fuse.client.model.SelectFinancialInstitutionsResponseTest" time="0.0"/>
+  <testcase name="requestIdTest()" classname="org.fuse.client.model.SelectFinancialInstitutionsResponseTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

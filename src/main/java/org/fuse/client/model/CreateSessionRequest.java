@@ -48,7 +48,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -56,7 +55,7 @@ import org.fuse.client.JSON;
 /**
  * CreateSessionRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class CreateSessionRequest {
   public static final String SERIALIZED_NAME_SUPPORTED_FINANCIAL_INSTITUTION_AGGREGATORS = "supported_financial_institution_aggregators";
   @SerializedName(SERIALIZED_NAME_SUPPORTED_FINANCIAL_INSTITUTION_AGGREGATORS)
@@ -86,7 +85,6 @@ public class CreateSessionRequest {
   }
 
   public CreateSessionRequest supportedFinancialInstitutionAggregators(List<Aggregator> supportedFinancialInstitutionAggregators) {
-    
     this.supportedFinancialInstitutionAggregators = supportedFinancialInstitutionAggregators;
     return this;
   }
@@ -108,14 +106,12 @@ public class CreateSessionRequest {
     return supportedFinancialInstitutionAggregators;
   }
 
-
   public void setSupportedFinancialInstitutionAggregators(List<Aggregator> supportedFinancialInstitutionAggregators) {
     this.supportedFinancialInstitutionAggregators = supportedFinancialInstitutionAggregators;
   }
 
 
   public CreateSessionRequest products(List<Product> products) {
-    
     this.products = products;
     return this;
   }
@@ -137,14 +133,12 @@ public class CreateSessionRequest {
     return products;
   }
 
-
   public void setProducts(List<Product> products) {
     this.products = products;
   }
 
 
   public CreateSessionRequest countryCodes(List<CountryCode> countryCodes) {
-    
     this.countryCodes = countryCodes;
     return this;
   }
@@ -166,14 +160,12 @@ public class CreateSessionRequest {
     return countryCodes;
   }
 
-
   public void setCountryCodes(List<CountryCode> countryCodes) {
     this.countryCodes = countryCodes;
   }
 
 
   public CreateSessionRequest entity(Entity entity) {
-    
     this.entity = entity;
     return this;
   }
@@ -187,14 +179,12 @@ public class CreateSessionRequest {
     return entity;
   }
 
-
   public void setEntity(Entity entity) {
     this.entity = entity;
   }
 
 
   public CreateSessionRequest accessToken(String accessToken) {
-    
     this.accessToken = accessToken;
     return this;
   }
@@ -208,14 +198,12 @@ public class CreateSessionRequest {
     return accessToken;
   }
 
-
   public void setAccessToken(String accessToken) {
     this.accessToken = accessToken;
   }
 
 
   public CreateSessionRequest isWebView(Boolean isWebView) {
-    
     this.isWebView = isWebView;
     return this;
   }
@@ -228,7 +216,6 @@ public class CreateSessionRequest {
   public Boolean getIsWebView() {
     return isWebView;
   }
-
 
   public void setIsWebView(Boolean isWebView) {
     this.isWebView = isWebView;
@@ -317,9 +304,9 @@ public class CreateSessionRequest {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!CreateSessionRequest.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CreateSessionRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.fuse.client.model.FinancialConnectionsAccountDetailsAchTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-09-12T15:27:34" hostname="Adibs-MacBook-Pro-2.local" time="0.0">
+<testsuite name="org.fuse.client.model.FinancialConnectionsAccountDetailsAchTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-02-23T12:04:19" hostname="Mac-1708688289627.local" time="0.001">
   <properties/>
   <testcase name="routingTest()" classname="org.fuse.client.model.FinancialConnectionsAccountDetailsAchTest" time="0.0"/>
-  <testcase name="wireRoutingTest()" classname="org.fuse.client.model.FinancialConnectionsAccountDetailsAchTest" time="0.0"/>
+  <testcase name="wireRoutingTest()" classname="org.fuse.client.model.FinancialConnectionsAccountDetailsAchTest" time="0.001"/>
   <testcase name="bacsRoutingTest()" classname="org.fuse.client.model.FinancialConnectionsAccountDetailsAchTest" time="0.0"/>
   <testcase name="testFinancialConnectionsAccountDetailsAch()" classname="org.fuse.client.model.FinancialConnectionsAccountDetailsAchTest" time="0.0"/>
   <testcase name="accountTest()" classname="org.fuse.client.model.FinancialConnectionsAccountDetailsAchTest" time="0.0"/>

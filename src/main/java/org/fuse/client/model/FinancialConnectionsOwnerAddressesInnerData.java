@@ -42,7 +42,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -50,7 +49,7 @@ import org.fuse.client.JSON;
 /**
  * FinancialConnectionsOwnerAddressesInnerData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class FinancialConnectionsOwnerAddressesInnerData {
   public static final String SERIALIZED_NAME_FULL_ADDRESS = "full_address";
   @SerializedName(SERIALIZED_NAME_FULL_ADDRESS)
@@ -80,7 +79,6 @@ public class FinancialConnectionsOwnerAddressesInnerData {
   }
 
   public FinancialConnectionsOwnerAddressesInnerData fullAddress(String fullAddress) {
-    
     this.fullAddress = fullAddress;
     return this;
   }
@@ -94,14 +92,12 @@ public class FinancialConnectionsOwnerAddressesInnerData {
     return fullAddress;
   }
 
-
   public void setFullAddress(String fullAddress) {
     this.fullAddress = fullAddress;
   }
 
 
   public FinancialConnectionsOwnerAddressesInnerData city(String city) {
-    
     this.city = city;
     return this;
   }
@@ -115,14 +111,12 @@ public class FinancialConnectionsOwnerAddressesInnerData {
     return city;
   }
 
-
   public void setCity(String city) {
     this.city = city;
   }
 
 
   public FinancialConnectionsOwnerAddressesInnerData country(String country) {
-    
     this.country = country;
     return this;
   }
@@ -136,14 +130,12 @@ public class FinancialConnectionsOwnerAddressesInnerData {
     return country;
   }
 
-
   public void setCountry(String country) {
     this.country = country;
   }
 
 
   public FinancialConnectionsOwnerAddressesInnerData postalCode(String postalCode) {
-    
     this.postalCode = postalCode;
     return this;
   }
@@ -157,14 +149,12 @@ public class FinancialConnectionsOwnerAddressesInnerData {
     return postalCode;
   }
 
-
   public void setPostalCode(String postalCode) {
     this.postalCode = postalCode;
   }
 
 
   public FinancialConnectionsOwnerAddressesInnerData region(String region) {
-    
     this.region = region;
     return this;
   }
@@ -178,14 +168,12 @@ public class FinancialConnectionsOwnerAddressesInnerData {
     return region;
   }
 
-
   public void setRegion(String region) {
     this.region = region;
   }
 
 
   public FinancialConnectionsOwnerAddressesInnerData street(String street) {
-    
     this.street = street;
     return this;
   }
@@ -198,7 +186,6 @@ public class FinancialConnectionsOwnerAddressesInnerData {
   public String getStreet() {
     return street;
   }
-
 
   public void setStreet(String street) {
     this.street = street;
@@ -284,9 +271,9 @@ public class FinancialConnectionsOwnerAddressesInnerData {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FinancialConnectionsOwnerAddressesInnerData.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialConnectionsOwnerAddressesInnerData` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

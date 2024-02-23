@@ -42,7 +42,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -50,7 +49,7 @@ import org.fuse.client.JSON;
 /**
  * FinancialConnectionsAccountDetailsAch
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class FinancialConnectionsAccountDetailsAch {
   public static final String SERIALIZED_NAME_ACCOUNT = "account";
   @SerializedName(SERIALIZED_NAME_ACCOUNT)
@@ -72,7 +71,6 @@ public class FinancialConnectionsAccountDetailsAch {
   }
 
   public FinancialConnectionsAccountDetailsAch account(String account) {
-    
     this.account = account;
     return this;
   }
@@ -86,14 +84,12 @@ public class FinancialConnectionsAccountDetailsAch {
     return account;
   }
 
-
   public void setAccount(String account) {
     this.account = account;
   }
 
 
   public FinancialConnectionsAccountDetailsAch routing(String routing) {
-    
     this.routing = routing;
     return this;
   }
@@ -107,14 +103,12 @@ public class FinancialConnectionsAccountDetailsAch {
     return routing;
   }
 
-
   public void setRouting(String routing) {
     this.routing = routing;
   }
 
 
   public FinancialConnectionsAccountDetailsAch wireRouting(String wireRouting) {
-    
     this.wireRouting = wireRouting;
     return this;
   }
@@ -128,14 +122,12 @@ public class FinancialConnectionsAccountDetailsAch {
     return wireRouting;
   }
 
-
   public void setWireRouting(String wireRouting) {
     this.wireRouting = wireRouting;
   }
 
 
   public FinancialConnectionsAccountDetailsAch bacsRouting(String bacsRouting) {
-    
     this.bacsRouting = bacsRouting;
     return this;
   }
@@ -148,7 +140,6 @@ public class FinancialConnectionsAccountDetailsAch {
   public String getBacsRouting() {
     return bacsRouting;
   }
-
 
   public void setBacsRouting(String bacsRouting) {
     this.bacsRouting = bacsRouting;
@@ -228,9 +219,9 @@ public class FinancialConnectionsAccountDetailsAch {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FinancialConnectionsAccountDetailsAch.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialConnectionsAccountDetailsAch` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

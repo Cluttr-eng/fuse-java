@@ -48,7 +48,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -56,7 +55,7 @@ import org.fuse.client.JSON;
 /**
  * FinancialConnectionsOwner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class FinancialConnectionsOwner {
   public static final String SERIALIZED_NAME_ADDRESSES = "addresses";
   @SerializedName(SERIALIZED_NAME_ADDRESSES)
@@ -78,7 +77,6 @@ public class FinancialConnectionsOwner {
   }
 
   public FinancialConnectionsOwner addresses(List<FinancialConnectionsOwnerAddressesInner> addresses) {
-    
     this.addresses = addresses;
     return this;
   }
@@ -100,14 +98,12 @@ public class FinancialConnectionsOwner {
     return addresses;
   }
 
-
   public void setAddresses(List<FinancialConnectionsOwnerAddressesInner> addresses) {
     this.addresses = addresses;
   }
 
 
   public FinancialConnectionsOwner emails(List<FinancialConnectionsOwnerEmailsInner> emails) {
-    
     this.emails = emails;
     return this;
   }
@@ -129,14 +125,12 @@ public class FinancialConnectionsOwner {
     return emails;
   }
 
-
   public void setEmails(List<FinancialConnectionsOwnerEmailsInner> emails) {
     this.emails = emails;
   }
 
 
   public FinancialConnectionsOwner names(List<FinancialConnectionsOwnerNamesInner> names) {
-    
     this.names = names;
     return this;
   }
@@ -158,14 +152,12 @@ public class FinancialConnectionsOwner {
     return names;
   }
 
-
   public void setNames(List<FinancialConnectionsOwnerNamesInner> names) {
     this.names = names;
   }
 
 
   public FinancialConnectionsOwner phoneNumbers(List<FinancialConnectionsOwnerPhoneNumbersInner> phoneNumbers) {
-    
     this.phoneNumbers = phoneNumbers;
     return this;
   }
@@ -186,7 +178,6 @@ public class FinancialConnectionsOwner {
   public List<FinancialConnectionsOwnerPhoneNumbersInner> getPhoneNumbers() {
     return phoneNumbers;
   }
-
 
   public void setPhoneNumbers(List<FinancialConnectionsOwnerPhoneNumbersInner> phoneNumbers) {
     this.phoneNumbers = phoneNumbers;
@@ -270,9 +261,9 @@ public class FinancialConnectionsOwner {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FinancialConnectionsOwner.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialConnectionsOwner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

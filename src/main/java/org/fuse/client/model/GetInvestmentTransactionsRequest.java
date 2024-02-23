@@ -43,7 +43,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -51,7 +50,7 @@ import org.fuse.client.JSON;
 /**
  * GetInvestmentTransactionsRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class GetInvestmentTransactionsRequest {
   public static final String SERIALIZED_NAME_ACCESS_TOKEN = "access_token";
   @SerializedName(SERIALIZED_NAME_ACCESS_TOKEN)
@@ -81,7 +80,6 @@ public class GetInvestmentTransactionsRequest {
   }
 
   public GetInvestmentTransactionsRequest accessToken(String accessToken) {
-    
     this.accessToken = accessToken;
     return this;
   }
@@ -95,14 +93,12 @@ public class GetInvestmentTransactionsRequest {
     return accessToken;
   }
 
-
   public void setAccessToken(String accessToken) {
     this.accessToken = accessToken;
   }
 
 
   public GetInvestmentTransactionsRequest startDate(String startDate) {
-    
     this.startDate = startDate;
     return this;
   }
@@ -116,14 +112,12 @@ public class GetInvestmentTransactionsRequest {
     return startDate;
   }
 
-
   public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
 
 
   public GetInvestmentTransactionsRequest endDate(String endDate) {
-    
     this.endDate = endDate;
     return this;
   }
@@ -137,14 +131,12 @@ public class GetInvestmentTransactionsRequest {
     return endDate;
   }
 
-
   public void setEndDate(String endDate) {
     this.endDate = endDate;
   }
 
 
   public GetInvestmentTransactionsRequest page(Integer page) {
-    
     this.page = page;
     return this;
   }
@@ -159,14 +151,12 @@ public class GetInvestmentTransactionsRequest {
     return page;
   }
 
-
   public void setPage(Integer page) {
     this.page = page;
   }
 
 
   public GetInvestmentTransactionsRequest recordsPerPage(Integer recordsPerPage) {
-    
     this.recordsPerPage = recordsPerPage;
     return this;
   }
@@ -182,14 +172,12 @@ public class GetInvestmentTransactionsRequest {
     return recordsPerPage;
   }
 
-
   public void setRecordsPerPage(Integer recordsPerPage) {
     this.recordsPerPage = recordsPerPage;
   }
 
 
   public GetInvestmentTransactionsRequest options(GetInvestmentTransactionsRequestOptions options) {
-    
     this.options = options;
     return this;
   }
@@ -202,7 +190,6 @@ public class GetInvestmentTransactionsRequest {
   public GetInvestmentTransactionsRequestOptions getOptions() {
     return options;
   }
-
 
   public void setOptions(GetInvestmentTransactionsRequestOptions options) {
     this.options = options;
@@ -293,9 +280,9 @@ public class GetInvestmentTransactionsRequest {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!GetInvestmentTransactionsRequest.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GetInvestmentTransactionsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

@@ -43,7 +43,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -51,7 +50,7 @@ import org.fuse.client.JSON;
 /**
  * GetInvestmentHoldingsRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class GetInvestmentHoldingsRequest {
   public static final String SERIALIZED_NAME_ACCESS_TOKEN = "access_token";
   @SerializedName(SERIALIZED_NAME_ACCESS_TOKEN)
@@ -65,7 +64,6 @@ public class GetInvestmentHoldingsRequest {
   }
 
   public GetInvestmentHoldingsRequest accessToken(String accessToken) {
-    
     this.accessToken = accessToken;
     return this;
   }
@@ -79,14 +77,12 @@ public class GetInvestmentHoldingsRequest {
     return accessToken;
   }
 
-
   public void setAccessToken(String accessToken) {
     this.accessToken = accessToken;
   }
 
 
   public GetInvestmentHoldingsRequest options(GetInvestmentHoldingsRequestOptions options) {
-    
     this.options = options;
     return this;
   }
@@ -99,7 +95,6 @@ public class GetInvestmentHoldingsRequest {
   public GetInvestmentHoldingsRequestOptions getOptions() {
     return options;
   }
-
 
   public void setOptions(GetInvestmentHoldingsRequestOptions options) {
     this.options = options;
@@ -174,9 +169,9 @@ public class GetInvestmentHoldingsRequest {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!GetInvestmentHoldingsRequest.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GetInvestmentHoldingsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

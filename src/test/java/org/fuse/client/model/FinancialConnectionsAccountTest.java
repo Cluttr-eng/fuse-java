@@ -19,7 +19,9 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import org.fuse.client.model.AccountSubtype;
 import org.fuse.client.model.AccountType;
 import org.fuse.client.model.FinancialConnectionsAccountCachedBalance;
@@ -112,6 +114,14 @@ public class FinancialConnectionsAccountTest {
     @Test
     public void balanceTest() {
         // TODO: test balance
+    }
+
+    /**
+     * Test the property 'additionalBalances'
+     */
+    @Test
+    public void additionalBalancesTest() {
+        // TODO: test additionalBalances
     }
 
     /**

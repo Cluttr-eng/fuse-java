@@ -44,7 +44,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -52,7 +51,7 @@ import org.fuse.client.JSON;
 /**
  * CreateConsumerRiskReportCustomizationRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class CreateConsumerRiskReportCustomizationRequest {
   public static final String SERIALIZED_NAME_TIMEFRAME = "timeframe";
   @SerializedName(SERIALIZED_NAME_TIMEFRAME)
@@ -74,7 +73,6 @@ public class CreateConsumerRiskReportCustomizationRequest {
   }
 
   public CreateConsumerRiskReportCustomizationRequest timeframe(ConsumerRiskReportTimeFrame timeframe) {
-    
     this.timeframe = timeframe;
     return this;
   }
@@ -88,14 +86,12 @@ public class CreateConsumerRiskReportCustomizationRequest {
     return timeframe;
   }
 
-
   public void setTimeframe(ConsumerRiskReportTimeFrame timeframe) {
     this.timeframe = timeframe;
   }
 
 
   public CreateConsumerRiskReportCustomizationRequest minLimit(BigDecimal minLimit) {
-    
     this.minLimit = minLimit;
     return this;
   }
@@ -110,14 +106,12 @@ public class CreateConsumerRiskReportCustomizationRequest {
     return minLimit;
   }
 
-
   public void setMinLimit(BigDecimal minLimit) {
     this.minLimit = minLimit;
   }
 
 
   public CreateConsumerRiskReportCustomizationRequest maxLimit(BigDecimal maxLimit) {
-    
     this.maxLimit = maxLimit;
     return this;
   }
@@ -132,14 +126,12 @@ public class CreateConsumerRiskReportCustomizationRequest {
     return maxLimit;
   }
 
-
   public void setMaxLimit(BigDecimal maxLimit) {
     this.maxLimit = maxLimit;
   }
 
 
   public CreateConsumerRiskReportCustomizationRequest riskTolerance(BigDecimal riskTolerance) {
-    
     this.riskTolerance = riskTolerance;
     return this;
   }
@@ -154,7 +146,6 @@ public class CreateConsumerRiskReportCustomizationRequest {
   public BigDecimal getRiskTolerance() {
     return riskTolerance;
   }
-
 
   public void setRiskTolerance(BigDecimal riskTolerance) {
     this.riskTolerance = riskTolerance;
@@ -238,9 +229,9 @@ public class CreateConsumerRiskReportCustomizationRequest {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!CreateConsumerRiskReportCustomizationRequest.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CreateConsumerRiskReportCustomizationRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
@@ -253,6 +244,8 @@ public class CreateConsumerRiskReportCustomizationRequest {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `timeframe`
+      ConsumerRiskReportTimeFrame.validateJsonElement(jsonObj.get("timeframe"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

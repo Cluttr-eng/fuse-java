@@ -51,7 +51,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -59,7 +58,7 @@ import org.fuse.client.JSON;
 /**
  * FinancialConnectionsAccountLiability
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class FinancialConnectionsAccountLiability {
   public static final String SERIALIZED_NAME_REMOTE_ID = "remote_id";
   @SerializedName(SERIALIZED_NAME_REMOTE_ID)
@@ -97,9 +96,13 @@ public class FinancialConnectionsAccountLiability {
   @SerializedName(SERIALIZED_NAME_BALANCE)
   private FinancialConnectionsAccountCachedBalance balance;
 
+  public static final String SERIALIZED_NAME_ADDITIONAL_BALANCES = "additional_balances";
+  @SerializedName(SERIALIZED_NAME_ADDITIONAL_BALANCES)
+  private List<FinancialConnectionsAccountCachedBalance> additionalBalances;
+
   public static final String SERIALIZED_NAME_REMOTE_DATA = "remote_data";
   @SerializedName(SERIALIZED_NAME_REMOTE_DATA)
-  private Object remoteData = null;
+  private Object remoteData;
 
   public static final String SERIALIZED_NAME_APRS = "aprs";
   @SerializedName(SERIALIZED_NAME_APRS)
@@ -133,7 +136,6 @@ public class FinancialConnectionsAccountLiability {
   }
 
   public FinancialConnectionsAccountLiability remoteId(String remoteId) {
-    
     this.remoteId = remoteId;
     return this;
   }
@@ -147,14 +149,12 @@ public class FinancialConnectionsAccountLiability {
     return remoteId;
   }
 
-
   public void setRemoteId(String remoteId) {
     this.remoteId = remoteId;
   }
 
 
   public FinancialConnectionsAccountLiability currency(String currency) {
-    
     this.currency = currency;
     return this;
   }
@@ -168,14 +168,12 @@ public class FinancialConnectionsAccountLiability {
     return currency;
   }
 
-
   public void setCurrency(String currency) {
     this.currency = currency;
   }
 
 
   public FinancialConnectionsAccountLiability fingerprint(String fingerprint) {
-    
     this.fingerprint = fingerprint;
     return this;
   }
@@ -189,14 +187,12 @@ public class FinancialConnectionsAccountLiability {
     return fingerprint;
   }
 
-
   public void setFingerprint(String fingerprint) {
     this.fingerprint = fingerprint;
   }
 
 
   public FinancialConnectionsAccountLiability institution(FinancialConnectionsAccountInstitution institution) {
-    
     this.institution = institution;
     return this;
   }
@@ -210,14 +206,12 @@ public class FinancialConnectionsAccountLiability {
     return institution;
   }
 
-
   public void setInstitution(FinancialConnectionsAccountInstitution institution) {
     this.institution = institution;
   }
 
 
   public FinancialConnectionsAccountLiability mask(String mask) {
-    
     this.mask = mask;
     return this;
   }
@@ -231,14 +225,12 @@ public class FinancialConnectionsAccountLiability {
     return mask;
   }
 
-
   public void setMask(String mask) {
     this.mask = mask;
   }
 
 
   public FinancialConnectionsAccountLiability name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -252,14 +244,12 @@ public class FinancialConnectionsAccountLiability {
     return name;
   }
 
-
   public void setName(String name) {
     this.name = name;
   }
 
 
   public FinancialConnectionsAccountLiability type(AccountType type) {
-    
     this.type = type;
     return this;
   }
@@ -273,14 +263,12 @@ public class FinancialConnectionsAccountLiability {
     return type;
   }
 
-
   public void setType(AccountType type) {
     this.type = type;
   }
 
 
   public FinancialConnectionsAccountLiability subtype(AccountSubtype subtype) {
-    
     this.subtype = subtype;
     return this;
   }
@@ -294,14 +282,12 @@ public class FinancialConnectionsAccountLiability {
     return subtype;
   }
 
-
   public void setSubtype(AccountSubtype subtype) {
     this.subtype = subtype;
   }
 
 
   public FinancialConnectionsAccountLiability balance(FinancialConnectionsAccountCachedBalance balance) {
-    
     this.balance = balance;
     return this;
   }
@@ -315,14 +301,39 @@ public class FinancialConnectionsAccountLiability {
     return balance;
   }
 
-
   public void setBalance(FinancialConnectionsAccountCachedBalance balance) {
     this.balance = balance;
   }
 
 
+  public FinancialConnectionsAccountLiability additionalBalances(List<FinancialConnectionsAccountCachedBalance> additionalBalances) {
+    this.additionalBalances = additionalBalances;
+    return this;
+  }
+
+  public FinancialConnectionsAccountLiability addAdditionalBalancesItem(FinancialConnectionsAccountCachedBalance additionalBalancesItem) {
+    if (this.additionalBalances == null) {
+      this.additionalBalances = new ArrayList<>();
+    }
+    this.additionalBalances.add(additionalBalancesItem);
+    return this;
+  }
+
+   /**
+   * An array of additional balances. This may be used for investment type accounts where the user can have multiple balances across different currencies.
+   * @return additionalBalances
+  **/
+  @javax.annotation.Nullable
+  public List<FinancialConnectionsAccountCachedBalance> getAdditionalBalances() {
+    return additionalBalances;
+  }
+
+  public void setAdditionalBalances(List<FinancialConnectionsAccountCachedBalance> additionalBalances) {
+    this.additionalBalances = additionalBalances;
+  }
+
+
   public FinancialConnectionsAccountLiability remoteData(Object remoteData) {
-    
     this.remoteData = remoteData;
     return this;
   }
@@ -331,11 +342,10 @@ public class FinancialConnectionsAccountLiability {
    * Get remoteData
    * @return remoteData
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   public Object getRemoteData() {
     return remoteData;
   }
-
 
   public void setRemoteData(Object remoteData) {
     this.remoteData = remoteData;
@@ -343,7 +353,6 @@ public class FinancialConnectionsAccountLiability {
 
 
   public FinancialConnectionsAccountLiability aprs(List<FinancialConnectionsAccountLiabilityAllOfAprs> aprs) {
-    
     this.aprs = aprs;
     return this;
   }
@@ -365,14 +374,12 @@ public class FinancialConnectionsAccountLiability {
     return aprs;
   }
 
-
   public void setAprs(List<FinancialConnectionsAccountLiabilityAllOfAprs> aprs) {
     this.aprs = aprs;
   }
 
 
   public FinancialConnectionsAccountLiability interestRatePercentage(BigDecimal interestRatePercentage) {
-    
     this.interestRatePercentage = interestRatePercentage;
     return this;
   }
@@ -386,14 +393,12 @@ public class FinancialConnectionsAccountLiability {
     return interestRatePercentage;
   }
 
-
   public void setInterestRatePercentage(BigDecimal interestRatePercentage) {
     this.interestRatePercentage = interestRatePercentage;
   }
 
 
   public FinancialConnectionsAccountLiability originationPrincipalAmount(BigDecimal originationPrincipalAmount) {
-    
     this.originationPrincipalAmount = originationPrincipalAmount;
     return this;
   }
@@ -407,14 +412,12 @@ public class FinancialConnectionsAccountLiability {
     return originationPrincipalAmount;
   }
 
-
   public void setOriginationPrincipalAmount(BigDecimal originationPrincipalAmount) {
     this.originationPrincipalAmount = originationPrincipalAmount;
   }
 
 
   public FinancialConnectionsAccountLiability nextPaymentDueDate(String nextPaymentDueDate) {
-    
     this.nextPaymentDueDate = nextPaymentDueDate;
     return this;
   }
@@ -428,14 +431,12 @@ public class FinancialConnectionsAccountLiability {
     return nextPaymentDueDate;
   }
 
-
   public void setNextPaymentDueDate(String nextPaymentDueDate) {
     this.nextPaymentDueDate = nextPaymentDueDate;
   }
 
 
   public FinancialConnectionsAccountLiability lastPaymentDate(String lastPaymentDate) {
-    
     this.lastPaymentDate = lastPaymentDate;
     return this;
   }
@@ -449,14 +450,12 @@ public class FinancialConnectionsAccountLiability {
     return lastPaymentDate;
   }
 
-
   public void setLastPaymentDate(String lastPaymentDate) {
     this.lastPaymentDate = lastPaymentDate;
   }
 
 
   public FinancialConnectionsAccountLiability lastPaymentAmount(BigDecimal lastPaymentAmount) {
-    
     this.lastPaymentAmount = lastPaymentAmount;
     return this;
   }
@@ -470,14 +469,12 @@ public class FinancialConnectionsAccountLiability {
     return lastPaymentAmount;
   }
 
-
   public void setLastPaymentAmount(BigDecimal lastPaymentAmount) {
     this.lastPaymentAmount = lastPaymentAmount;
   }
 
 
   public FinancialConnectionsAccountLiability minimumPaymentAmount(BigDecimal minimumPaymentAmount) {
-    
     this.minimumPaymentAmount = minimumPaymentAmount;
     return this;
   }
@@ -490,7 +487,6 @@ public class FinancialConnectionsAccountLiability {
   public BigDecimal getMinimumPaymentAmount() {
     return minimumPaymentAmount;
   }
-
 
   public void setMinimumPaymentAmount(BigDecimal minimumPaymentAmount) {
     this.minimumPaymentAmount = minimumPaymentAmount;
@@ -516,6 +512,7 @@ public class FinancialConnectionsAccountLiability {
         Objects.equals(this.type, financialConnectionsAccountLiability.type) &&
         Objects.equals(this.subtype, financialConnectionsAccountLiability.subtype) &&
         Objects.equals(this.balance, financialConnectionsAccountLiability.balance) &&
+        Objects.equals(this.additionalBalances, financialConnectionsAccountLiability.additionalBalances) &&
         Objects.equals(this.remoteData, financialConnectionsAccountLiability.remoteData) &&
         Objects.equals(this.aprs, financialConnectionsAccountLiability.aprs) &&
         Objects.equals(this.interestRatePercentage, financialConnectionsAccountLiability.interestRatePercentage) &&
@@ -532,7 +529,7 @@ public class FinancialConnectionsAccountLiability {
 
   @Override
   public int hashCode() {
-    return Objects.hash(remoteId, currency, fingerprint, institution, mask, name, type, subtype, balance, remoteData, aprs, interestRatePercentage, originationPrincipalAmount, nextPaymentDueDate, lastPaymentDate, lastPaymentAmount, minimumPaymentAmount);
+    return Objects.hash(remoteId, currency, fingerprint, institution, mask, name, type, subtype, balance, additionalBalances, remoteData, aprs, interestRatePercentage, originationPrincipalAmount, nextPaymentDueDate, lastPaymentDate, lastPaymentAmount, minimumPaymentAmount);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -555,6 +552,7 @@ public class FinancialConnectionsAccountLiability {
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    subtype: ").append(toIndentedString(subtype)).append("\n");
     sb.append("    balance: ").append(toIndentedString(balance)).append("\n");
+    sb.append("    additionalBalances: ").append(toIndentedString(additionalBalances)).append("\n");
     sb.append("    remoteData: ").append(toIndentedString(remoteData)).append("\n");
     sb.append("    aprs: ").append(toIndentedString(aprs)).append("\n");
     sb.append("    interestRatePercentage: ").append(toIndentedString(interestRatePercentage)).append("\n");
@@ -594,6 +592,7 @@ public class FinancialConnectionsAccountLiability {
     openapiFields.add("type");
     openapiFields.add("subtype");
     openapiFields.add("balance");
+    openapiFields.add("additional_balances");
     openapiFields.add("remote_data");
     openapiFields.add("aprs");
     openapiFields.add("interest_rate_percentage");
@@ -627,9 +626,9 @@ public class FinancialConnectionsAccountLiability {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FinancialConnectionsAccountLiability.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialConnectionsAccountLiability` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
@@ -661,8 +660,28 @@ public class FinancialConnectionsAccountLiability {
       if (!jsonObj.get("name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
+      // validate the required field `type`
+      AccountType.validateJsonElement(jsonObj.get("type"));
+      // validate the optional field `subtype`
+      if (jsonObj.get("subtype") != null && !jsonObj.get("subtype").isJsonNull()) {
+        AccountSubtype.validateJsonElement(jsonObj.get("subtype"));
+      }
       // validate the required field `balance`
       FinancialConnectionsAccountCachedBalance.validateJsonElement(jsonObj.get("balance"));
+      if (jsonObj.get("additional_balances") != null && !jsonObj.get("additional_balances").isJsonNull()) {
+        JsonArray jsonArrayadditionalBalances = jsonObj.getAsJsonArray("additional_balances");
+        if (jsonArrayadditionalBalances != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("additional_balances").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `additional_balances` to be an array in the JSON string but got `%s`", jsonObj.get("additional_balances").toString()));
+          }
+
+          // validate the optional field `additional_balances` (array)
+          for (int i = 0; i < jsonArrayadditionalBalances.size(); i++) {
+            FinancialConnectionsAccountCachedBalance.validateJsonElement(jsonArrayadditionalBalances.get(i));
+          };
+        }
+      }
       if (jsonObj.get("aprs") != null && !jsonObj.get("aprs").isJsonNull()) {
         JsonArray jsonArrayaprs = jsonObj.getAsJsonArray("aprs");
         if (jsonArrayaprs != null) {

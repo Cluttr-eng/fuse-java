@@ -44,7 +44,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -52,7 +51,7 @@ import org.fuse.client.JSON;
 /**
  * FinancialConnectionsAccountDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class FinancialConnectionsAccountDetails {
   public static final String SERIALIZED_NAME_REMOTE_ID = "remote_id";
   @SerializedName(SERIALIZED_NAME_REMOTE_ID)
@@ -74,7 +73,6 @@ public class FinancialConnectionsAccountDetails {
   }
 
   public FinancialConnectionsAccountDetails remoteId(String remoteId) {
-    
     this.remoteId = remoteId;
     return this;
   }
@@ -88,14 +86,12 @@ public class FinancialConnectionsAccountDetails {
     return remoteId;
   }
 
-
   public void setRemoteId(String remoteId) {
     this.remoteId = remoteId;
   }
 
 
   public FinancialConnectionsAccountDetails ach(FinancialConnectionsAccountDetailsAch ach) {
-    
     this.ach = ach;
     return this;
   }
@@ -109,14 +105,12 @@ public class FinancialConnectionsAccountDetails {
     return ach;
   }
 
-
   public void setAch(FinancialConnectionsAccountDetailsAch ach) {
     this.ach = ach;
   }
 
 
   public FinancialConnectionsAccountDetails accountNumber(FinancialConnectionsAccountDetailsAccountNumber accountNumber) {
-    
     this.accountNumber = accountNumber;
     return this;
   }
@@ -130,14 +124,12 @@ public class FinancialConnectionsAccountDetails {
     return accountNumber;
   }
 
-
   public void setAccountNumber(FinancialConnectionsAccountDetailsAccountNumber accountNumber) {
     this.accountNumber = accountNumber;
   }
 
 
   public FinancialConnectionsAccountDetails remoteData(Object remoteData) {
-    
     this.remoteData = remoteData;
     return this;
   }
@@ -150,7 +142,6 @@ public class FinancialConnectionsAccountDetails {
   public Object getRemoteData() {
     return remoteData;
   }
-
 
   public void setRemoteData(Object remoteData) {
     this.remoteData = remoteData;
@@ -232,9 +223,9 @@ public class FinancialConnectionsAccountDetails {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FinancialConnectionsAccountDetails.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialConnectionsAccountDetails` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

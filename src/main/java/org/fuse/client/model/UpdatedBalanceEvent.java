@@ -44,7 +44,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -52,7 +51,7 @@ import org.fuse.client.JSON;
 /**
  * UpdatedBalanceEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class UpdatedBalanceEvent {
   /**
    * Gets or Sets eventType
@@ -97,6 +96,11 @@ public class UpdatedBalanceEvent {
         return EventTypeEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      EventTypeEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_EVENT_TYPE = "event_type";
@@ -123,7 +127,6 @@ public class UpdatedBalanceEvent {
   }
 
   public UpdatedBalanceEvent eventType(EventTypeEnum eventType) {
-    
     this.eventType = eventType;
     return this;
   }
@@ -137,14 +140,12 @@ public class UpdatedBalanceEvent {
     return eventType;
   }
 
-
   public void setEventType(EventTypeEnum eventType) {
     this.eventType = eventType;
   }
 
 
   public UpdatedBalanceEvent isoCurrencyCode(String isoCurrencyCode) {
-    
     this.isoCurrencyCode = isoCurrencyCode;
     return this;
   }
@@ -158,14 +159,12 @@ public class UpdatedBalanceEvent {
     return isoCurrencyCode;
   }
 
-
   public void setIsoCurrencyCode(String isoCurrencyCode) {
     this.isoCurrencyCode = isoCurrencyCode;
   }
 
 
   public UpdatedBalanceEvent timestamp(String timestamp) {
-    
     this.timestamp = timestamp;
     return this;
   }
@@ -179,14 +178,12 @@ public class UpdatedBalanceEvent {
     return timestamp;
   }
 
-
   public void setTimestamp(String timestamp) {
     this.timestamp = timestamp;
   }
 
 
   public UpdatedBalanceEvent available(BigDecimal available) {
-    
     this.available = available;
     return this;
   }
@@ -200,14 +197,12 @@ public class UpdatedBalanceEvent {
     return available;
   }
 
-
   public void setAvailable(BigDecimal available) {
     this.available = available;
   }
 
 
   public UpdatedBalanceEvent current(BigDecimal current) {
-    
     this.current = current;
     return this;
   }
@@ -220,7 +215,6 @@ public class UpdatedBalanceEvent {
   public BigDecimal getCurrent() {
     return current;
   }
-
 
   public void setCurrent(BigDecimal current) {
     this.current = current;
@@ -317,9 +311,9 @@ public class UpdatedBalanceEvent {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!UpdatedBalanceEvent.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UpdatedBalanceEvent` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
@@ -335,6 +329,8 @@ public class UpdatedBalanceEvent {
       if (!jsonObj.get("event_type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `event_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("event_type").toString()));
       }
+      // validate the required field `event_type`
+      EventTypeEnum.validateJsonElement(jsonObj.get("event_type"));
       if (!jsonObj.get("iso_currency_code").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `iso_currency_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("iso_currency_code").toString()));
       }

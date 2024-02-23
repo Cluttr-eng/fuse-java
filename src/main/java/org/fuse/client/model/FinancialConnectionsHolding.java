@@ -44,7 +44,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -52,7 +51,7 @@ import org.fuse.client.JSON;
 /**
  * FinancialConnectionsHolding
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class FinancialConnectionsHolding {
   public static final String SERIALIZED_NAME_REMOTE_ACCOUNT_ID = "remote_account_id";
   @SerializedName(SERIALIZED_NAME_REMOTE_ACCOUNT_ID)
@@ -82,7 +81,6 @@ public class FinancialConnectionsHolding {
   }
 
   public FinancialConnectionsHolding remoteAccountId(String remoteAccountId) {
-    
     this.remoteAccountId = remoteAccountId;
     return this;
   }
@@ -96,14 +94,12 @@ public class FinancialConnectionsHolding {
     return remoteAccountId;
   }
 
-
   public void setRemoteAccountId(String remoteAccountId) {
     this.remoteAccountId = remoteAccountId;
   }
 
 
   public FinancialConnectionsHolding costBasis(BigDecimal costBasis) {
-    
     this.costBasis = costBasis;
     return this;
   }
@@ -117,14 +113,12 @@ public class FinancialConnectionsHolding {
     return costBasis;
   }
 
-
   public void setCostBasis(BigDecimal costBasis) {
     this.costBasis = costBasis;
   }
 
 
   public FinancialConnectionsHolding value(BigDecimal value) {
-    
     this.value = value;
     return this;
   }
@@ -138,14 +132,12 @@ public class FinancialConnectionsHolding {
     return value;
   }
 
-
   public void setValue(BigDecimal value) {
     this.value = value;
   }
 
 
   public FinancialConnectionsHolding quantity(BigDecimal quantity) {
-    
     this.quantity = quantity;
     return this;
   }
@@ -159,14 +151,12 @@ public class FinancialConnectionsHolding {
     return quantity;
   }
 
-
   public void setQuantity(BigDecimal quantity) {
     this.quantity = quantity;
   }
 
 
   public FinancialConnectionsHolding institutionPrice(BigDecimal institutionPrice) {
-    
     this.institutionPrice = institutionPrice;
     return this;
   }
@@ -180,14 +170,12 @@ public class FinancialConnectionsHolding {
     return institutionPrice;
   }
 
-
   public void setInstitutionPrice(BigDecimal institutionPrice) {
     this.institutionPrice = institutionPrice;
   }
 
 
   public FinancialConnectionsHolding security(FinancialConnectionsInvestmentSecurity security) {
-    
     this.security = security;
     return this;
   }
@@ -200,7 +188,6 @@ public class FinancialConnectionsHolding {
   public FinancialConnectionsInvestmentSecurity getSecurity() {
     return security;
   }
-
 
   public void setSecurity(FinancialConnectionsInvestmentSecurity security) {
     this.security = security;
@@ -292,9 +279,9 @@ public class FinancialConnectionsHolding {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FinancialConnectionsHolding.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialConnectionsHolding` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

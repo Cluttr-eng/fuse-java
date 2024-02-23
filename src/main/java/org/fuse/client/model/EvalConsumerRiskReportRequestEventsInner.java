@@ -43,7 +43,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -51,7 +50,7 @@ import org.fuse.client.JSON;
 /**
  * EvalConsumerRiskReportRequestEventsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class EvalConsumerRiskReportRequestEventsInner {
   public static final String SERIALIZED_NAME_ACCOUNT_ID = "account_id";
   @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
@@ -65,7 +64,6 @@ public class EvalConsumerRiskReportRequestEventsInner {
   }
 
   public EvalConsumerRiskReportRequestEventsInner accountId(String accountId) {
-    
     this.accountId = accountId;
     return this;
   }
@@ -79,14 +77,12 @@ public class EvalConsumerRiskReportRequestEventsInner {
     return accountId;
   }
 
-
   public void setAccountId(String accountId) {
     this.accountId = accountId;
   }
 
 
   public EvalConsumerRiskReportRequestEventsInner event(AddAccountEventsRequestEventsInner event) {
-    
     this.event = event;
     return this;
   }
@@ -99,7 +95,6 @@ public class EvalConsumerRiskReportRequestEventsInner {
   public AddAccountEventsRequestEventsInner getEvent() {
     return event;
   }
-
 
   public void setEvent(AddAccountEventsRequestEventsInner event) {
     this.event = event;
@@ -175,9 +170,9 @@ public class EvalConsumerRiskReportRequestEventsInner {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!EvalConsumerRiskReportRequestEventsInner.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EvalConsumerRiskReportRequestEventsInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

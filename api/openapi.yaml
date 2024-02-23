@@ -276,7 +276,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetAssetReportResponse'
+                $ref: '#/components/schemas/RefreshAssetReportResponse'
           description: Response
       tags:
       - Fuse
@@ -301,7 +301,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RefreshAssetReportResponse'
+                $ref: '#/components/schemas/GetAssetReportResponse'
           description: Response
       tags:
       - Fuse
@@ -664,6 +664,91 @@ paths:
       x-content-type: application/json
       x-accepts: application/json
     summary: Migrate financial connection
+  /v1/financial_connections/institutions/recommended:
+    post:
+      description: Get the default recommended list of institutions that will be displayed
+        when the user is not searching for anything
+      operationId: getRecommendedFinancialInstitutions
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetRecommendedFinancialInstitutionsRequest'
+      responses:
+        "200":
+          content:
+            application/json:
+              example:
+                financial_institutions:
+                - id: institution-id-1
+                  name: my-institution
+                  logo:
+                    image: https://my-image-url.com
+                    type: url
+              schema:
+                $ref: '#/components/schemas/GetRecommendedFinancialInstitutionsResponse'
+          description: Response
+      tags:
+      - Fuse
+      x-content-type: application/json
+      x-accepts: application/json
+    summary: Get Recommended Financial Institutions
+  /v1/financial_connections/institutions/search:
+    post:
+      description: Search for financial institutions given a search term.
+      operationId: searchFinancialInstitutions
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SearchFinancialInstitutionsRequest'
+      responses:
+        "200":
+          content:
+            application/json:
+              example:
+                financial_institutions:
+                - id: institution-id-1
+                  name: my-institution
+                  logo:
+                    image: https://my-image-url.com
+                    type: url
+              schema:
+                $ref: '#/components/schemas/SearchFinancialInstitutionsResponse'
+          description: Response
+      tags:
+      - Fuse
+      x-content-type: application/json
+      x-accepts: application/json
+    summary: Search Financial Institutions
+  /v1/financial_connections/institutions/select:
+    post:
+      description: Endpoint to call when the user has selected a financial institution.
+      operationId: selectFinancialInstitutions
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SelectFinancialInstitutionsRequest'
+      responses:
+        "200":
+          content:
+            application/json:
+              example:
+                financial_institution:
+                  id: institution-id-1
+                  name: my-institution
+                  logo:
+                    image: https://my-image-url.com
+                    type: url
+              schema:
+                $ref: '#/components/schemas/SelectFinancialInstitutionsResponse'
+          description: Response
+      tags:
+      - Fuse
+      x-content-type: application/json
+      x-accepts: application/json
+    summary: Select Financial Institution
   /v1/financial_connections/investments/holdings:
     post:
       operationId: getInvestmentHoldings
@@ -1019,6 +1104,15 @@ components:
         currency: currency
         type: null
         mask: mask
+        additional_balances:
+        - current: 6.027456183070403
+          available: 0.8008281904610115
+          iso_currency_code: iso_currency_code
+          last_updated_date: last_updated_date
+        - current: 6.027456183070403
+          available: 0.8008281904610115
+          iso_currency_code: iso_currency_code
+          last_updated_date: last_updated_date
         remote_data: ""
       properties:
         remote_id:
@@ -1036,6 +1130,7 @@ components:
           $ref: '#/components/schemas/FinancialConnectionsAccount_institution'
         mask:
           description: The partial account number.
+          nullable: true
           type: string
         name:
           description: "The account's name, ie 'My Checking'"
@@ -1046,6 +1141,13 @@ components:
           $ref: '#/components/schemas/AccountSubtype'
         balance:
           $ref: '#/components/schemas/FinancialConnectionsAccountCachedBalance'
+        additional_balances:
+          description: An array of additional balances. This may be used for investment
+            type accounts where the user can have multiple balances across different
+            currencies.
+          items:
+            $ref: '#/components/schemas/FinancialConnectionsAccountCachedBalance'
+          type: array
         remote_data: {}
       required:
       - balance
@@ -1232,6 +1334,8 @@ components:
       - missing_akoya_client_secret_header
       - missing_saltedge_app_id_header
       - missing_saltedge_app_secret_header
+      - missing_sophtron_user_id_header
+      - missing_sophtron_access_key_header
       - aggregator_error
       - aggregator_disconnected_error
       - aggregator_connection_finished_error
@@ -1437,6 +1541,7 @@ components:
       - plaid
       - saltedge
       - snaptrade
+      - sophtron
       - teller
       - truelayer
       type: string
@@ -1756,6 +1861,8 @@ components:
         finicity:
           institution_login_id: institution_login_id
           customer_id: customer_id
+        sophtron:
+          user_institution_id: user_institution_id
         truelayer:
           access_token: access_token
         id: id
@@ -1808,6 +1915,8 @@ components:
           $ref: '#/components/schemas/FinancialConnectionDetails_akoya'
         saltedge:
           $ref: '#/components/schemas/FinancialConnectionDetails_saltedge'
+        sophtron:
+          $ref: '#/components/schemas/FinancialConnectionDetails_sophtron'
       required:
       - aggregator
       - connection_status
@@ -3769,6 +3878,19 @@ components:
       - posted
       type: string
     ExternalTransactionEvent:
+      example:
+        country_code: US
+        amount: 0.8008281904610115
+        event_type: external_transaction
+        balance: 6.027456183070403
+        iso_currency_code: iso_currency_code
+        merchant_name: merchant_name
+        id: id
+        transaction_type: null
+        transaction_description: transaction_description
+        transaction_owner_type: consumer
+        status: null
+        timestamp: timestamp
       properties:
         id:
           description: ID of the transaction
@@ -3862,10 +3984,16 @@ components:
     GetFinancialConnectionsAccountDetailsRequest:
       example:
         access_token: access_token
+        options:
+          remote_account_ids:
+          - remote_account_ids
+          - remote_account_ids
       properties:
         access_token:
           description: Access token for authentication
           type: string
+        options:
+          $ref: '#/components/schemas/GetFinancialConnectionsAccountDetailsRequest_options'
       required:
       - access_token
       type: object
@@ -4190,6 +4318,15 @@ components:
           currency: currency
           type: null
           mask: mask
+          additional_balances:
+          - current: 6.027456183070403
+            available: 0.8008281904610115
+            iso_currency_code: iso_currency_code
+            last_updated_date: last_updated_date
+          - current: 6.027456183070403
+            available: 0.8008281904610115
+            iso_currency_code: iso_currency_code
+            last_updated_date: last_updated_date
           remote_data: ""
         - institution:
             name: name
@@ -4205,6 +4342,15 @@ components:
           currency: currency
           type: null
           mask: mask
+          additional_balances:
+          - current: 6.027456183070403
+            available: 0.8008281904610115
+            iso_currency_code: iso_currency_code
+            last_updated_date: last_updated_date
+          - current: 6.027456183070403
+            available: 0.8008281904610115
+            iso_currency_code: iso_currency_code
+            last_updated_date: last_updated_date
           remote_data: ""
         request_id: request_id
       properties:
@@ -4644,6 +4790,8 @@ components:
           finicity:
             institution_login_id: institution_login_id
             customer_id: customer_id
+          sophtron:
+            user_institution_id: user_institution_id
           truelayer:
             access_token: access_token
           id: id
@@ -4686,6 +4834,8 @@ components:
           finicity:
             institution_login_id: institution_login_id
             customer_id: customer_id
+          sophtron:
+            user_institution_id: user_institution_id
           truelayer:
             access_token: access_token
           id: id
@@ -4824,11 +4974,66 @@ components:
     AddAccountEventsRequest:
       example:
         events:
-        - null
-        - null
-        - null
-        - null
-        - null
+        - country_code: US
+          amount: 0.8008281904610115
+          event_type: external_transaction
+          balance: 6.027456183070403
+          iso_currency_code: iso_currency_code
+          merchant_name: merchant_name
+          id: id
+          transaction_type: null
+          transaction_description: transaction_description
+          transaction_owner_type: consumer
+          status: null
+          timestamp: timestamp
+        - country_code: US
+          amount: 0.8008281904610115
+          event_type: external_transaction
+          balance: 6.027456183070403
+          iso_currency_code: iso_currency_code
+          merchant_name: merchant_name
+          id: id
+          transaction_type: null
+          transaction_description: transaction_description
+          transaction_owner_type: consumer
+          status: null
+          timestamp: timestamp
+        - country_code: US
+          amount: 0.8008281904610115
+          event_type: external_transaction
+          balance: 6.027456183070403
+          iso_currency_code: iso_currency_code
+          merchant_name: merchant_name
+          id: id
+          transaction_type: null
+          transaction_description: transaction_description
+          transaction_owner_type: consumer
+          status: null
+          timestamp: timestamp
+        - country_code: US
+          amount: 0.8008281904610115
+          event_type: external_transaction
+          balance: 6.027456183070403
+          iso_currency_code: iso_currency_code
+          merchant_name: merchant_name
+          id: id
+          transaction_type: null
+          transaction_description: transaction_description
+          transaction_owner_type: consumer
+          status: null
+          timestamp: timestamp
+        - country_code: US
+          amount: 0.8008281904610115
+          event_type: external_transaction
+          balance: 6.027456183070403
+          iso_currency_code: iso_currency_code
+          merchant_name: merchant_name
+          id: id
+          transaction_type: null
+          transaction_description: transaction_description
+          transaction_owner_type: consumer
+          status: null
+          timestamp: timestamp
       properties:
         events:
           items:
@@ -5123,6 +5328,8 @@ components:
           finicity:
             institution_login_id: institution_login_id
             customer_id: customer_id
+          sophtron:
+            user_institution_id: user_institution_id
           truelayer:
             access_token: access_token
           id: id
@@ -5141,6 +5348,142 @@ components:
       required:
       - financial_connection
       - request_id
+      type: object
+    GetRecommendedFinancialInstitutionsRequest:
+      example:
+        session_client_secret: session_client_secret
+      properties:
+        session_client_secret:
+          description: The session client secret created.
+          type: string
+      required:
+      - session_client_secret
+      type: object
+    GetRecommendedFinancialInstitutionsResponse:
+      example:
+        financial_institutions:
+        - website: website
+          name: name
+          logo:
+            image: image
+            format: png
+            type: base64
+          country_codes:
+          - null
+          - null
+          id: id
+        - website: website
+          name: name
+          logo:
+            image: image
+            format: png
+            type: base64
+          country_codes:
+          - null
+          - null
+          id: id
+        request_id: request_id
+      properties:
+        financial_institutions:
+          items:
+            $ref: '#/components/schemas/FinancialInstitution'
+          type: array
+        request_id:
+          description: An identifier that is exclusive to the request and can serve
+            as a means for investigating and resolving issues.
+          type: string
+      required:
+      - financial_institutions
+      type: object
+    SearchFinancialInstitutionsRequest:
+      example:
+        search_term: search_term
+        session_client_secret: session_client_secret
+      properties:
+        session_client_secret:
+          description: The session client secret created.
+          type: string
+        search_term:
+          description: "The search term, ie wells fargo."
+          type: string
+      required:
+      - search_term
+      - session_client_secret
+      type: object
+    SearchFinancialInstitutionsResponse:
+      example:
+        financial_institutions:
+        - website: website
+          name: name
+          logo:
+            image: image
+            format: png
+            type: base64
+          country_codes:
+          - null
+          - null
+          id: id
+        - website: website
+          name: name
+          logo:
+            image: image
+            format: png
+            type: base64
+          country_codes:
+          - null
+          - null
+          id: id
+        request_id: request_id
+      properties:
+        financial_institutions:
+          items:
+            $ref: '#/components/schemas/FinancialInstitution'
+          type: array
+        request_id:
+          description: An identifier that is exclusive to the request and can serve
+            as a means for investigating and resolving issues.
+          type: string
+      required:
+      - financial_institutions
+      type: object
+    SelectFinancialInstitutionsRequest:
+      example:
+        session_client_secret: session_client_secret
+        financial_institution_id: financial_institution_id
+      properties:
+        session_client_secret:
+          description: The session client secret created.
+          type: string
+        financial_institution_id:
+          description: The selected financial institution id
+          type: string
+      required:
+      - financial_institution_id
+      - session_client_secret
+      type: object
+    SelectFinancialInstitutionsResponse:
+      example:
+        financial_institution:
+          website: website
+          name: name
+          logo:
+            image: image
+            format: png
+            type: base64
+          country_codes:
+          - null
+          - null
+          id: id
+        request_id: request_id
+      properties:
+        financial_institution:
+          $ref: '#/components/schemas/FinancialInstitution'
+        request_id:
+          description: An identifier that is exclusive to the request and can serve
+            as a means for investigating and resolving issues.
+          type: string
+      required:
+      - financial_institution
       type: object
     GetInvestmentHoldingsRequest:
       example:
@@ -5499,6 +5842,15 @@ components:
           currency: currency
           type: null
           mask: mask
+          additional_balances:
+          - current: 6.027456183070403
+            available: 0.8008281904610115
+            iso_currency_code: iso_currency_code
+            last_updated_date: last_updated_date
+          - current: 6.027456183070403
+            available: 0.8008281904610115
+            iso_currency_code: iso_currency_code
+            last_updated_date: last_updated_date
           remote_data: ""
         - institution:
             name: name
@@ -5514,6 +5866,15 @@ components:
           currency: currency
           type: null
           mask: mask
+          additional_balances:
+          - current: 6.027456183070403
+            available: 0.8008281904610115
+            iso_currency_code: iso_currency_code
+            last_updated_date: last_updated_date
+          - current: 6.027456183070403
+            available: 0.8008281904610115
+            iso_currency_code: iso_currency_code
+            last_updated_date: last_updated_date
           remote_data: ""
         holdings:
         - cost_basis: 0.8008281904610115
@@ -5593,6 +5954,15 @@ components:
           currency: currency
           type: null
           mask: mask
+          additional_balances:
+          - current: 6.027456183070403
+            available: 0.8008281904610115
+            iso_currency_code: iso_currency_code
+            last_updated_date: last_updated_date
+          - current: 6.027456183070403
+            available: 0.8008281904610115
+            iso_currency_code: iso_currency_code
+            last_updated_date: last_updated_date
           remote_data: ""
         - institution:
             name: name
@@ -5608,6 +5978,15 @@ components:
           currency: currency
           type: null
           mask: mask
+          additional_balances:
+          - current: 6.027456183070403
+            available: 0.8008281904610115
+            iso_currency_code: iso_currency_code
+            last_updated_date: last_updated_date
+          - current: 6.027456183070403
+            available: 0.8008281904610115
+            iso_currency_code: iso_currency_code
+            last_updated_date: last_updated_date
           remote_data: ""
         investment_transactions:
         - date: 2000-01-23T04:56:07.000+00:00
@@ -5734,11 +6113,115 @@ components:
               to any debt account.
             type: number
         type: object
+      example:
+        origination_principal_amount: 1.4658129805029452
+        remote_id: remote_id
+        last_payment_date: last_payment_date
+        type: null
+        last_payment_amount: 5.962133916683182
+        remote_data: ""
+        institution:
+          name: name
+        balance:
+          current: 6.027456183070403
+          available: 0.8008281904610115
+          iso_currency_code: iso_currency_code
+          last_updated_date: last_updated_date
+        subtype: null
+        interest_rate_percentage: 6.027456183070403
+        fingerprint: fingerprint
+        name: name
+        currency: currency
+        minimum_payment_amount: 5.637376656633329
+        aprs:
+        - apr_percentage: 0.8008281904610115
+          apr_type: apr_type
+        - apr_percentage: 0.8008281904610115
+          apr_type: apr_type
+        next_payment_due_date: next_payment_due_date
+        mask: mask
+        additional_balances:
+        - current: 6.027456183070403
+          available: 0.8008281904610115
+          iso_currency_code: iso_currency_code
+          last_updated_date: last_updated_date
+        - current: 6.027456183070403
+          available: 0.8008281904610115
+          iso_currency_code: iso_currency_code
+          last_updated_date: last_updated_date
     GetLiabilitiesResponse:
       example:
         liabilities:
-        - null
-        - null
+        - origination_principal_amount: 1.4658129805029452
+          remote_id: remote_id
+          last_payment_date: last_payment_date
+          type: null
+          last_payment_amount: 5.962133916683182
+          remote_data: ""
+          institution:
+            name: name
+          balance:
+            current: 6.027456183070403
+            available: 0.8008281904610115
+            iso_currency_code: iso_currency_code
+            last_updated_date: last_updated_date
+          subtype: null
+          interest_rate_percentage: 6.027456183070403
+          fingerprint: fingerprint
+          name: name
+          currency: currency
+          minimum_payment_amount: 5.637376656633329
+          aprs:
+          - apr_percentage: 0.8008281904610115
+            apr_type: apr_type
+          - apr_percentage: 0.8008281904610115
+            apr_type: apr_type
+          next_payment_due_date: next_payment_due_date
+          mask: mask
+          additional_balances:
+          - current: 6.027456183070403
+            available: 0.8008281904610115
+            iso_currency_code: iso_currency_code
+            last_updated_date: last_updated_date
+          - current: 6.027456183070403
+            available: 0.8008281904610115
+            iso_currency_code: iso_currency_code
+            last_updated_date: last_updated_date
+        - origination_principal_amount: 1.4658129805029452
+          remote_id: remote_id
+          last_payment_date: last_payment_date
+          type: null
+          last_payment_amount: 5.962133916683182
+          remote_data: ""
+          institution:
+            name: name
+          balance:
+            current: 6.027456183070403
+            available: 0.8008281904610115
+            iso_currency_code: iso_currency_code
+            last_updated_date: last_updated_date
+          subtype: null
+          interest_rate_percentage: 6.027456183070403
+          fingerprint: fingerprint
+          name: name
+          currency: currency
+          minimum_payment_amount: 5.637376656633329
+          aprs:
+          - apr_percentage: 0.8008281904610115
+            apr_type: apr_type
+          - apr_percentage: 0.8008281904610115
+            apr_type: apr_type
+          next_payment_due_date: next_payment_due_date
+          mask: mask
+          additional_balances:
+          - current: 6.027456183070403
+            available: 0.8008281904610115
+            iso_currency_code: iso_currency_code
+            last_updated_date: last_updated_date
+          - current: 6.027456183070403
+            available: 0.8008281904610115
+            iso_currency_code: iso_currency_code
+            last_updated_date: last_updated_date
         request_id: request_id
       properties:
         liabilities:
@@ -5761,8 +6244,8 @@ components:
           config:
             selectAccount: disabled
             accountFilter:
-              depository: null
-              credit: null
+              depository: all
+              credit: all
         mx:
           config: "{}"
         plaid:
@@ -6614,6 +7097,16 @@ components:
       required:
       - connection_id
       type: object
+    FinancialConnectionDetails_sophtron:
+      description: Data needed to query data from Sophtron.
+      example:
+        user_institution_id: user_institution_id
+      properties:
+        user_institution_id:
+          type: string
+      required:
+      - user_institution_id
+      type: object
     Transaction_merchant:
       example:
         name: name
@@ -6630,12 +7123,15 @@ components:
       properties:
         available:
           description: Amount after factoring in pending balances
+          nullable: true
           type: number
         current:
           description: Amount without factoring in pending balances
+          nullable: true
           type: number
         iso_currency_code:
           description: The ISO-4217 currency code of the balance.
+          nullable: true
           type: string
       type: object
     AssetReport_accounts_inner_historical_balances_inner:
@@ -6722,6 +7218,19 @@ components:
         url:
           description: The URL of the logo.
           type: string
+      type: object
+    GetFinancialConnectionsAccountDetailsRequest_options:
+      example:
+        remote_account_ids:
+        - remote_account_ids
+        - remote_account_ids
+      properties:
+        remote_account_ids:
+          description: An array of remote account ids to retrieve account details
+            for.
+          items:
+            type: string
+          type: array
       type: object
     FinancialConnectionsAccountDetails_ach:
       example:
@@ -6983,6 +7492,9 @@ components:
           type: string
       type: object
     FinancialConnectionsAccountLiability_allOf_aprs:
+      example:
+        apr_percentage: 0.8008281904610115
+        apr_type: apr_type
       properties:
         apr_percentage:
           description: Annual Percentage Rate applied.
@@ -6991,7 +7503,6 @@ components:
           description: The type of balance to which the APR applies.
           type: string
       type: object
-      example: null
     CreateLinkTokenRequest_mx:
       description: An object specifying information about the MX configuration to
         use for deciding which MX supported financial institutions to display.
@@ -7054,8 +7565,8 @@ components:
       description: Filter the types of account returned by Teller when enrolling a
         customer
       example:
-        depository: null
-        credit: null
+        depository: all
+        credit: all
       properties:
         depository:
           $ref: '#/components/schemas/CreateLinkTokenRequest_teller_config_accountFilter_depository'
@@ -7066,8 +7577,8 @@ components:
       example:
         selectAccount: disabled
         accountFilter:
-          depository: null
-          credit: null
+          depository: all
+          credit: all
       properties:
         selectAccount:
           description: |-
@@ -7090,8 +7601,8 @@ components:
         config:
           selectAccount: disabled
           accountFilter:
-            depository: null
-            credit: null
+            depository: all
+            credit: all
       properties:
         config:
           $ref: '#/components/schemas/CreateLinkTokenRequest_teller_config'

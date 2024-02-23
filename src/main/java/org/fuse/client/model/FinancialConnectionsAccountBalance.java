@@ -44,7 +44,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -52,7 +51,7 @@ import org.fuse.client.JSON;
 /**
  * FinancialConnectionsAccountBalance
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class FinancialConnectionsAccountBalance {
   public static final String SERIALIZED_NAME_REMOTE_ACCOUNT_ID = "remote_account_id";
   @SerializedName(SERIALIZED_NAME_REMOTE_ACCOUNT_ID)
@@ -78,7 +77,6 @@ public class FinancialConnectionsAccountBalance {
   }
 
   public FinancialConnectionsAccountBalance remoteAccountId(String remoteAccountId) {
-    
     this.remoteAccountId = remoteAccountId;
     return this;
   }
@@ -92,14 +90,12 @@ public class FinancialConnectionsAccountBalance {
     return remoteAccountId;
   }
 
-
   public void setRemoteAccountId(String remoteAccountId) {
     this.remoteAccountId = remoteAccountId;
   }
 
 
   public FinancialConnectionsAccountBalance available(BigDecimal available) {
-    
     this.available = available;
     return this;
   }
@@ -113,14 +109,12 @@ public class FinancialConnectionsAccountBalance {
     return available;
   }
 
-
   public void setAvailable(BigDecimal available) {
     this.available = available;
   }
 
 
   public FinancialConnectionsAccountBalance current(BigDecimal current) {
-    
     this.current = current;
     return this;
   }
@@ -134,14 +128,12 @@ public class FinancialConnectionsAccountBalance {
     return current;
   }
 
-
   public void setCurrent(BigDecimal current) {
     this.current = current;
   }
 
 
   public FinancialConnectionsAccountBalance isoCurrencyCode(String isoCurrencyCode) {
-    
     this.isoCurrencyCode = isoCurrencyCode;
     return this;
   }
@@ -155,14 +147,12 @@ public class FinancialConnectionsAccountBalance {
     return isoCurrencyCode;
   }
 
-
   public void setIsoCurrencyCode(String isoCurrencyCode) {
     this.isoCurrencyCode = isoCurrencyCode;
   }
 
 
   public FinancialConnectionsAccountBalance lastUpdatedDate(String lastUpdatedDate) {
-    
     this.lastUpdatedDate = lastUpdatedDate;
     return this;
   }
@@ -175,7 +165,6 @@ public class FinancialConnectionsAccountBalance {
   public String getLastUpdatedDate() {
     return lastUpdatedDate;
   }
-
 
   public void setLastUpdatedDate(String lastUpdatedDate) {
     this.lastUpdatedDate = lastUpdatedDate;
@@ -270,9 +259,9 @@ public class FinancialConnectionsAccountBalance {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FinancialConnectionsAccountBalance.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialConnectionsAccountBalance` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
