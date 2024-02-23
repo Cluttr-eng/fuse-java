@@ -20,6 +20,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
+import org.fuse.client.model.GetFinancialConnectionsAccountDetailsRequestOptions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -43,6 +44,14 @@ public class GetFinancialConnectionsAccountDetailsRequestTest {
     @Test
     public void accessTokenTest() {
         // TODO: test accessToken
+    }
+
+    /**
+     * Test the property 'options'
+     */
+    @Test
+    public void optionsTest() {
+        // TODO: test options
     }
 
 }

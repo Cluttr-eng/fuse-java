@@ -43,7 +43,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -51,7 +50,7 @@ import org.fuse.client.JSON;
 /**
  * FinanceScore
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class FinanceScore {
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
@@ -85,7 +84,6 @@ public class FinanceScore {
   }
 
   public FinanceScore value(BigDecimal value) {
-    
     this.value = value;
     return this;
   }
@@ -99,14 +97,12 @@ public class FinanceScore {
     return value;
   }
 
-
   public void setValue(BigDecimal value) {
     this.value = value;
   }
 
 
   public FinanceScore savingsScore(BigDecimal savingsScore) {
-    
     this.savingsScore = savingsScore;
     return this;
   }
@@ -120,14 +116,12 @@ public class FinanceScore {
     return savingsScore;
   }
 
-
   public void setSavingsScore(BigDecimal savingsScore) {
     this.savingsScore = savingsScore;
   }
 
 
   public FinanceScore expenseStabilityScore(BigDecimal expenseStabilityScore) {
-    
     this.expenseStabilityScore = expenseStabilityScore;
     return this;
   }
@@ -141,14 +135,12 @@ public class FinanceScore {
     return expenseStabilityScore;
   }
 
-
   public void setExpenseStabilityScore(BigDecimal expenseStabilityScore) {
     this.expenseStabilityScore = expenseStabilityScore;
   }
 
 
   public FinanceScore activityAgeScore(BigDecimal activityAgeScore) {
-    
     this.activityAgeScore = activityAgeScore;
     return this;
   }
@@ -162,14 +154,12 @@ public class FinanceScore {
     return activityAgeScore;
   }
 
-
   public void setActivityAgeScore(BigDecimal activityAgeScore) {
     this.activityAgeScore = activityAgeScore;
   }
 
 
   public FinanceScore incomeScore(BigDecimal incomeScore) {
-    
     this.incomeScore = incomeScore;
     return this;
   }
@@ -183,14 +173,12 @@ public class FinanceScore {
     return incomeScore;
   }
 
-
   public void setIncomeScore(BigDecimal incomeScore) {
     this.incomeScore = incomeScore;
   }
 
 
   public FinanceScore loanPaymentsScore(BigDecimal loanPaymentsScore) {
-    
     this.loanPaymentsScore = loanPaymentsScore;
     return this;
   }
@@ -204,14 +192,12 @@ public class FinanceScore {
     return loanPaymentsScore;
   }
 
-
   public void setLoanPaymentsScore(BigDecimal loanPaymentsScore) {
     this.loanPaymentsScore = loanPaymentsScore;
   }
 
 
   public FinanceScore repaymentsScore(BigDecimal repaymentsScore) {
-    
     this.repaymentsScore = repaymentsScore;
     return this;
   }
@@ -224,7 +210,6 @@ public class FinanceScore {
   public BigDecimal getRepaymentsScore() {
     return repaymentsScore;
   }
-
 
   public void setRepaymentsScore(BigDecimal repaymentsScore) {
     this.repaymentsScore = repaymentsScore;
@@ -320,9 +305,9 @@ public class FinanceScore {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FinanceScore.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinanceScore` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

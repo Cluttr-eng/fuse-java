@@ -42,7 +42,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -50,7 +49,7 @@ import org.fuse.client.JSON;
 /**
  * FinancialConnectionsInvestmentSecurityExchange
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class FinancialConnectionsInvestmentSecurityExchange {
   public static final String SERIALIZED_NAME_MIC_CODE = "mic_code";
   @SerializedName(SERIALIZED_NAME_MIC_CODE)
@@ -64,7 +63,6 @@ public class FinancialConnectionsInvestmentSecurityExchange {
   }
 
   public FinancialConnectionsInvestmentSecurityExchange micCode(String micCode) {
-    
     this.micCode = micCode;
     return this;
   }
@@ -78,14 +76,12 @@ public class FinancialConnectionsInvestmentSecurityExchange {
     return micCode;
   }
 
-
   public void setMicCode(String micCode) {
     this.micCode = micCode;
   }
 
 
   public FinancialConnectionsInvestmentSecurityExchange suffix(String suffix) {
-    
     this.suffix = suffix;
     return this;
   }
@@ -98,7 +94,6 @@ public class FinancialConnectionsInvestmentSecurityExchange {
   public String getSuffix() {
     return suffix;
   }
-
 
   public void setSuffix(String suffix) {
     this.suffix = suffix;
@@ -172,9 +167,9 @@ public class FinancialConnectionsInvestmentSecurityExchange {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FinancialConnectionsInvestmentSecurityExchange.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialConnectionsInvestmentSecurityExchange` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.fuse.client.model.TransactionTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2023-09-12T15:27:34" hostname="Adibs-MacBook-Pro-2.local" time="0.001">
+<testsuite name="org.fuse.client.model.TransactionTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2024-02-23T12:04:19" hostname="Mac-1708688289627.local" time="0.007">
   <properties/>
-  <testcase name="amountTest()" classname="org.fuse.client.model.TransactionTest" time="0.0"/>
+  <testcase name="amountTest()" classname="org.fuse.client.model.TransactionTest" time="0.001"/>
   <testcase name="typeTest()" classname="org.fuse.client.model.TransactionTest" time="0.0"/>
-  <testcase name="isoCurrencyCodeTest()" classname="org.fuse.client.model.TransactionTest" time="0.0"/>
+  <testcase name="isoCurrencyCodeTest()" classname="org.fuse.client.model.TransactionTest" time="0.001"/>
   <testcase name="remoteIdTest()" classname="org.fuse.client.model.TransactionTest" time="0.0"/>
-  <testcase name="remoteAccountIdTest()" classname="org.fuse.client.model.TransactionTest" time="0.0"/>
+  <testcase name="remoteAccountIdTest()" classname="org.fuse.client.model.TransactionTest" time="0.001"/>
   <testcase name="statusTest()" classname="org.fuse.client.model.TransactionTest" time="0.0"/>
   <testcase name="categoryTest()" classname="org.fuse.client.model.TransactionTest" time="0.0"/>
-  <testcase name="fingerprintTest()" classname="org.fuse.client.model.TransactionTest" time="0.0"/>
+  <testcase name="fingerprintTest()" classname="org.fuse.client.model.TransactionTest" time="0.001"/>
   <testcase name="remoteDataTest()" classname="org.fuse.client.model.TransactionTest" time="0.0"/>
   <testcase name="merchantTest()" classname="org.fuse.client.model.TransactionTest" time="0.0"/>
   <testcase name="descriptionTest()" classname="org.fuse.client.model.TransactionTest" time="0.0"/>

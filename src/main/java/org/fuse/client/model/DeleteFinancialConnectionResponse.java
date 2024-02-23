@@ -42,7 +42,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -50,7 +49,7 @@ import org.fuse.client.JSON;
 /**
  * DeleteFinancialConnectionResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class DeleteFinancialConnectionResponse {
   public static final String SERIALIZED_NAME_FINANCIAL_CONNECTION_ID = "financial_connection_id";
   @SerializedName(SERIALIZED_NAME_FINANCIAL_CONNECTION_ID)
@@ -68,7 +67,6 @@ public class DeleteFinancialConnectionResponse {
   }
 
   public DeleteFinancialConnectionResponse financialConnectionId(String financialConnectionId) {
-    
     this.financialConnectionId = financialConnectionId;
     return this;
   }
@@ -82,14 +80,12 @@ public class DeleteFinancialConnectionResponse {
     return financialConnectionId;
   }
 
-
   public void setFinancialConnectionId(String financialConnectionId) {
     this.financialConnectionId = financialConnectionId;
   }
 
 
   public DeleteFinancialConnectionResponse accessToken(String accessToken) {
-    
     this.accessToken = accessToken;
     return this;
   }
@@ -103,14 +99,12 @@ public class DeleteFinancialConnectionResponse {
     return accessToken;
   }
 
-
   public void setAccessToken(String accessToken) {
     this.accessToken = accessToken;
   }
 
 
   public DeleteFinancialConnectionResponse requestId(String requestId) {
-    
     this.requestId = requestId;
     return this;
   }
@@ -123,7 +117,6 @@ public class DeleteFinancialConnectionResponse {
   public String getRequestId() {
     return requestId;
   }
-
 
   public void setRequestId(String requestId) {
     this.requestId = requestId;
@@ -203,9 +196,9 @@ public class DeleteFinancialConnectionResponse {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!DeleteFinancialConnectionResponse.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `DeleteFinancialConnectionResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

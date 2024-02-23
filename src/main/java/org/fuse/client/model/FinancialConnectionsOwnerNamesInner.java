@@ -42,7 +42,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -50,7 +49,7 @@ import org.fuse.client.JSON;
 /**
  * FinancialConnectionsOwnerNamesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class FinancialConnectionsOwnerNamesInner {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
@@ -64,7 +63,6 @@ public class FinancialConnectionsOwnerNamesInner {
   }
 
   public FinancialConnectionsOwnerNamesInner data(String data) {
-    
     this.data = data;
     return this;
   }
@@ -78,14 +76,12 @@ public class FinancialConnectionsOwnerNamesInner {
     return data;
   }
 
-
   public void setData(String data) {
     this.data = data;
   }
 
 
   public FinancialConnectionsOwnerNamesInner type(String type) {
-    
     this.type = type;
     return this;
   }
@@ -98,7 +94,6 @@ public class FinancialConnectionsOwnerNamesInner {
   public String getType() {
     return type;
   }
-
 
   public void setType(String type) {
     this.type = type;
@@ -173,9 +168,9 @@ public class FinancialConnectionsOwnerNamesInner {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FinancialConnectionsOwnerNamesInner.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialConnectionsOwnerNamesInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

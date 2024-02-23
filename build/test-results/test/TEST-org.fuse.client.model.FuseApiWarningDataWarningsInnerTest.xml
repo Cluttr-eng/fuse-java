@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.fuse.client.model.FuseApiWarningDataWarningsInnerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-09-12T15:27:34" hostname="Adibs-MacBook-Pro-2.local" time="0.001">
+<testsuite name="org.fuse.client.model.FuseApiWarningDataWarningsInnerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2024-02-23T12:04:19" hostname="Mac-1708688289627.local" time="0.006">
   <properties/>
   <testcase name="titleTest()" classname="org.fuse.client.model.FuseApiWarningDataWarningsInnerTest" time="0.0"/>
   <testcase name="detailsTest()" classname="org.fuse.client.model.FuseApiWarningDataWarningsInnerTest" time="0.0"/>
   <testcase name="testFuseApiWarningDataWarningsInner()" classname="org.fuse.client.model.FuseApiWarningDataWarningsInnerTest" time="0.0"/>
-  <testcase name="sourceTest()" classname="org.fuse.client.model.FuseApiWarningDataWarningsInnerTest" time="0.0"/>
+  <testcase name="sourceTest()" classname="org.fuse.client.model.FuseApiWarningDataWarningsInnerTest" time="0.001"/>
   <testcase name="codeTest()" classname="org.fuse.client.model.FuseApiWarningDataWarningsInnerTest" time="0.0"/>
   <testcase name="typeTest()" classname="org.fuse.client.model.FuseApiWarningDataWarningsInnerTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

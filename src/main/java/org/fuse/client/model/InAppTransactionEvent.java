@@ -45,7 +45,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -53,7 +52,7 @@ import org.fuse.client.JSON;
 /**
  * InAppTransactionEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class InAppTransactionEvent {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -102,6 +101,11 @@ public class InAppTransactionEvent {
         return EventTypeEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      EventTypeEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_EVENT_TYPE = "event_type";
@@ -140,7 +144,6 @@ public class InAppTransactionEvent {
   }
 
   public InAppTransactionEvent id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -154,14 +157,12 @@ public class InAppTransactionEvent {
     return id;
   }
 
-
   public void setId(String id) {
     this.id = id;
   }
 
 
   public InAppTransactionEvent eventType(EventTypeEnum eventType) {
-    
     this.eventType = eventType;
     return this;
   }
@@ -175,14 +176,12 @@ public class InAppTransactionEvent {
     return eventType;
   }
 
-
   public void setEventType(EventTypeEnum eventType) {
     this.eventType = eventType;
   }
 
 
   public InAppTransactionEvent status(InAppTransactionEventStatus status) {
-    
     this.status = status;
     return this;
   }
@@ -196,14 +195,12 @@ public class InAppTransactionEvent {
     return status;
   }
 
-
   public void setStatus(InAppTransactionEventStatus status) {
     this.status = status;
   }
 
 
   public InAppTransactionEvent amount(BigDecimal amount) {
-    
     this.amount = amount;
     return this;
   }
@@ -217,14 +214,12 @@ public class InAppTransactionEvent {
     return amount;
   }
 
-
   public void setAmount(BigDecimal amount) {
     this.amount = amount;
   }
 
 
   public InAppTransactionEvent isoCurrencyCode(String isoCurrencyCode) {
-    
     this.isoCurrencyCode = isoCurrencyCode;
     return this;
   }
@@ -238,14 +233,12 @@ public class InAppTransactionEvent {
     return isoCurrencyCode;
   }
 
-
   public void setIsoCurrencyCode(String isoCurrencyCode) {
     this.isoCurrencyCode = isoCurrencyCode;
   }
 
 
   public InAppTransactionEvent transactionType(TransactionEventType transactionType) {
-    
     this.transactionType = transactionType;
     return this;
   }
@@ -259,14 +252,12 @@ public class InAppTransactionEvent {
     return transactionType;
   }
 
-
   public void setTransactionType(TransactionEventType transactionType) {
     this.transactionType = transactionType;
   }
 
 
   public InAppTransactionEvent merchantName(String merchantName) {
-    
     this.merchantName = merchantName;
     return this;
   }
@@ -280,14 +271,12 @@ public class InAppTransactionEvent {
     return merchantName;
   }
 
-
   public void setMerchantName(String merchantName) {
     this.merchantName = merchantName;
   }
 
 
   public InAppTransactionEvent timestamp(String timestamp) {
-    
     this.timestamp = timestamp;
     return this;
   }
@@ -301,14 +290,12 @@ public class InAppTransactionEvent {
     return timestamp;
   }
 
-
   public void setTimestamp(String timestamp) {
     this.timestamp = timestamp;
   }
 
 
   public InAppTransactionEvent balance(BigDecimal balance) {
-    
     this.balance = balance;
     return this;
   }
@@ -321,7 +308,6 @@ public class InAppTransactionEvent {
   public BigDecimal getBalance() {
     return balance;
   }
-
 
   public void setBalance(BigDecimal balance) {
     this.balance = balance;
@@ -423,9 +409,9 @@ public class InAppTransactionEvent {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!InAppTransactionEvent.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `InAppTransactionEvent` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
@@ -444,8 +430,16 @@ public class InAppTransactionEvent {
       if (!jsonObj.get("event_type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `event_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("event_type").toString()));
       }
+      // validate the required field `event_type`
+      EventTypeEnum.validateJsonElement(jsonObj.get("event_type"));
+      // validate the required field `status`
+      InAppTransactionEventStatus.validateJsonElement(jsonObj.get("status"));
       if (!jsonObj.get("iso_currency_code").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `iso_currency_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("iso_currency_code").toString()));
+      }
+      // validate the optional field `transaction_type`
+      if (jsonObj.get("transaction_type") != null && !jsonObj.get("transaction_type").isJsonNull()) {
+        TransactionEventType.validateJsonElement(jsonObj.get("transaction_type"));
       }
       if (!jsonObj.get("merchant_name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `merchant_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("merchant_name").toString()));

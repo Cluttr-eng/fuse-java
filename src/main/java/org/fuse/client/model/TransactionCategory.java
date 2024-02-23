@@ -44,7 +44,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -52,7 +51,7 @@ import org.fuse.client.JSON;
 /**
  * TransactionCategory
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class TransactionCategory {
   public static final String SERIALIZED_NAME_PRIMARY = "primary";
   @SerializedName(SERIALIZED_NAME_PRIMARY)
@@ -66,7 +65,6 @@ public class TransactionCategory {
   }
 
   public TransactionCategory primary(TransactionCategoryPrimary primary) {
-    
     this.primary = primary;
     return this;
   }
@@ -80,14 +78,12 @@ public class TransactionCategory {
     return primary;
   }
 
-
   public void setPrimary(TransactionCategoryPrimary primary) {
     this.primary = primary;
   }
 
 
   public TransactionCategory detailed(TransactionCategoryDetailed detailed) {
-    
     this.detailed = detailed;
     return this;
   }
@@ -100,7 +96,6 @@ public class TransactionCategory {
   public TransactionCategoryDetailed getDetailed() {
     return detailed;
   }
-
 
   public void setDetailed(TransactionCategoryDetailed detailed) {
     this.detailed = detailed;
@@ -176,9 +171,9 @@ public class TransactionCategory {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!TransactionCategory.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `TransactionCategory` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
@@ -191,6 +186,10 @@ public class TransactionCategory {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `primary`
+      TransactionCategoryPrimary.validateJsonElement(jsonObj.get("primary"));
+      // validate the required field `detailed`
+      TransactionCategoryDetailed.validateJsonElement(jsonObj.get("detailed"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

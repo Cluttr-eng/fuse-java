@@ -43,7 +43,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -51,7 +50,7 @@ import org.fuse.client.JSON;
 /**
  * An object specifying information about the SnapTrade configuration to use when creating a link token. 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class CreateLinkTokenRequestSnaptrade {
   public static final String SERIALIZED_NAME_CONFIG = "config";
   @SerializedName(SERIALIZED_NAME_CONFIG)
@@ -61,7 +60,6 @@ public class CreateLinkTokenRequestSnaptrade {
   }
 
   public CreateLinkTokenRequestSnaptrade config(CreateLinkTokenRequestSnaptradeConfig config) {
-    
     this.config = config;
     return this;
   }
@@ -74,7 +72,6 @@ public class CreateLinkTokenRequestSnaptrade {
   public CreateLinkTokenRequestSnaptradeConfig getConfig() {
     return config;
   }
-
 
   public void setConfig(CreateLinkTokenRequestSnaptradeConfig config) {
     this.config = config;
@@ -145,9 +142,9 @@ public class CreateLinkTokenRequestSnaptrade {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!CreateLinkTokenRequestSnaptrade.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CreateLinkTokenRequestSnaptrade` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

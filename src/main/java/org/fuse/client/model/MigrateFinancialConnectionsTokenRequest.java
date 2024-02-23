@@ -47,7 +47,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -55,7 +54,7 @@ import org.fuse.client.JSON;
 /**
  * MigrateFinancialConnectionsTokenRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class MigrateFinancialConnectionsTokenRequest {
   public static final String SERIALIZED_NAME_CONNECTION_DATA = "connection_data";
   @SerializedName(SERIALIZED_NAME_CONNECTION_DATA)
@@ -108,6 +107,11 @@ public class MigrateFinancialConnectionsTokenRequest {
         return AggregatorEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      AggregatorEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_AGGREGATOR = "aggregator";
@@ -126,7 +130,6 @@ public class MigrateFinancialConnectionsTokenRequest {
   }
 
   public MigrateFinancialConnectionsTokenRequest connectionData(MigrateFinancialConnectionsAggregatorConnectionData connectionData) {
-    
     this.connectionData = connectionData;
     return this;
   }
@@ -140,14 +143,12 @@ public class MigrateFinancialConnectionsTokenRequest {
     return connectionData;
   }
 
-
   public void setConnectionData(MigrateFinancialConnectionsAggregatorConnectionData connectionData) {
     this.connectionData = connectionData;
   }
 
 
   public MigrateFinancialConnectionsTokenRequest aggregator(AggregatorEnum aggregator) {
-    
     this.aggregator = aggregator;
     return this;
   }
@@ -161,14 +162,12 @@ public class MigrateFinancialConnectionsTokenRequest {
     return aggregator;
   }
 
-
   public void setAggregator(AggregatorEnum aggregator) {
     this.aggregator = aggregator;
   }
 
 
   public MigrateFinancialConnectionsTokenRequest entity(MigrateFinancialConnectionsTokenRequestEntity entity) {
-    
     this.entity = entity;
     return this;
   }
@@ -182,14 +181,12 @@ public class MigrateFinancialConnectionsTokenRequest {
     return entity;
   }
 
-
   public void setEntity(MigrateFinancialConnectionsTokenRequestEntity entity) {
     this.entity = entity;
   }
 
 
   public MigrateFinancialConnectionsTokenRequest fuseProducts(List<Product> fuseProducts) {
-    
     this.fuseProducts = fuseProducts;
     return this;
   }
@@ -210,7 +207,6 @@ public class MigrateFinancialConnectionsTokenRequest {
   public List<Product> getFuseProducts() {
     return fuseProducts;
   }
-
 
   public void setFuseProducts(List<Product> fuseProducts) {
     this.fuseProducts = fuseProducts;
@@ -294,9 +290,9 @@ public class MigrateFinancialConnectionsTokenRequest {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!MigrateFinancialConnectionsTokenRequest.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `MigrateFinancialConnectionsTokenRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
@@ -314,6 +310,8 @@ public class MigrateFinancialConnectionsTokenRequest {
       if (!jsonObj.get("aggregator").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `aggregator` to be a primitive type in the JSON string but got `%s`", jsonObj.get("aggregator").toString()));
       }
+      // validate the required field `aggregator`
+      AggregatorEnum.validateJsonElement(jsonObj.get("aggregator"));
       // validate the required field `entity`
       MigrateFinancialConnectionsTokenRequestEntity.validateJsonElement(jsonObj.get("entity"));
       // ensure the required json array is present

@@ -69,10 +69,16 @@ import org.fuse.client.model.GetInvestmentTransactionsRequest;
 import org.fuse.client.model.GetInvestmentTransactionsResponse;
 import org.fuse.client.model.GetLiabilitiesRequest;
 import org.fuse.client.model.GetLiabilitiesResponse;
+import org.fuse.client.model.GetRecommendedFinancialInstitutionsRequest;
+import org.fuse.client.model.GetRecommendedFinancialInstitutionsResponse;
 import org.fuse.client.model.MigrateFinancialConnectionsTokenRequest;
 import org.fuse.client.model.MigrateFinancialConnectionsTokenResponse;
 import org.fuse.client.model.RefreshAssetReportRequest;
 import org.fuse.client.model.RefreshAssetReportResponse;
+import org.fuse.client.model.SearchFinancialInstitutionsRequest;
+import org.fuse.client.model.SearchFinancialInstitutionsResponse;
+import org.fuse.client.model.SelectFinancialInstitutionsRequest;
+import org.fuse.client.model.SelectFinancialInstitutionsResponse;
 import org.fuse.client.model.SyncFinancialConnectionsDataResponse;
 import org.fuse.client.model.UpdateConsumerRiskReportCustomizationRequest;
 import org.fuse.client.model.UpdateConsumerRiskReportCustomizationResponse;
@@ -1290,7 +1296,7 @@ public class FuseApi {
      * 
      * Retrieves the Asset Report in JSON format. For Plaid, you will need to have the assets product enabled on your plaid account.
      * @param getAssetReportRequest  (optional)
-     * @return RefreshAssetReportResponse
+     * @return AssetReportResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1298,8 +1304,8 @@ public class FuseApi {
         <tr><td> 200 </td><td> Response </td><td>  -  </td></tr>
      </table>
      */
-    public RefreshAssetReportResponse getAssetReport(GetAssetReportRequest getAssetReportRequest) throws ApiException {
-        ApiResponse<RefreshAssetReportResponse> localVarResp = getAssetReportWithHttpInfo(getAssetReportRequest);
+    public AssetReportResponse getAssetReport(GetAssetReportRequest getAssetReportRequest) throws ApiException {
+        ApiResponse<AssetReportResponse> localVarResp = getAssetReportWithHttpInfo(getAssetReportRequest);
         return localVarResp.getData();
     }
 
@@ -1307,7 +1313,7 @@ public class FuseApi {
      * 
      * Retrieves the Asset Report in JSON format. For Plaid, you will need to have the assets product enabled on your plaid account.
      * @param getAssetReportRequest  (optional)
-     * @return ApiResponse&lt;RefreshAssetReportResponse&gt;
+     * @return ApiResponse&lt;AssetReportResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1315,9 +1321,9 @@ public class FuseApi {
         <tr><td> 200 </td><td> Response </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<RefreshAssetReportResponse> getAssetReportWithHttpInfo(GetAssetReportRequest getAssetReportRequest) throws ApiException {
+    public ApiResponse<AssetReportResponse> getAssetReportWithHttpInfo(GetAssetReportRequest getAssetReportRequest) throws ApiException {
         okhttp3.Call localVarCall = getAssetReportValidateBeforeCall(getAssetReportRequest, null);
-        Type localVarReturnType = new TypeToken<RefreshAssetReportResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<AssetReportResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1334,10 +1340,10 @@ public class FuseApi {
         <tr><td> 200 </td><td> Response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAssetReportAsync(GetAssetReportRequest getAssetReportRequest, final ApiCallback<RefreshAssetReportResponse> _callback) throws ApiException {
+    public okhttp3.Call getAssetReportAsync(GetAssetReportRequest getAssetReportRequest, final ApiCallback<AssetReportResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAssetReportValidateBeforeCall(getAssetReportRequest, _callback);
-        Type localVarReturnType = new TypeToken<RefreshAssetReportResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<AssetReportResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2944,6 +2950,124 @@ public class FuseApi {
         return localVarCall;
     }
     /**
+     * Build call for getRecommendedFinancialInstitutions
+     * @param getRecommendedFinancialInstitutionsRequest  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getRecommendedFinancialInstitutionsCall(GetRecommendedFinancialInstitutionsRequest getRecommendedFinancialInstitutionsRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = getRecommendedFinancialInstitutionsRequest;
+
+        // create path and map variables
+        String localVarPath = "/v1/financial_connections/institutions/recommended";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "fuseApiKey", "fuseClientId" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getRecommendedFinancialInstitutionsValidateBeforeCall(GetRecommendedFinancialInstitutionsRequest getRecommendedFinancialInstitutionsRequest, final ApiCallback _callback) throws ApiException {
+        return getRecommendedFinancialInstitutionsCall(getRecommendedFinancialInstitutionsRequest, _callback);
+
+    }
+
+    /**
+     * 
+     * Get the default recommended list of institutions that will be displayed when the user is not searching for anything
+     * @param getRecommendedFinancialInstitutionsRequest  (optional)
+     * @return GetRecommendedFinancialInstitutionsResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Response </td><td>  -  </td></tr>
+     </table>
+     */
+    public GetRecommendedFinancialInstitutionsResponse getRecommendedFinancialInstitutions(GetRecommendedFinancialInstitutionsRequest getRecommendedFinancialInstitutionsRequest) throws ApiException {
+        ApiResponse<GetRecommendedFinancialInstitutionsResponse> localVarResp = getRecommendedFinancialInstitutionsWithHttpInfo(getRecommendedFinancialInstitutionsRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * Get the default recommended list of institutions that will be displayed when the user is not searching for anything
+     * @param getRecommendedFinancialInstitutionsRequest  (optional)
+     * @return ApiResponse&lt;GetRecommendedFinancialInstitutionsResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Response </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<GetRecommendedFinancialInstitutionsResponse> getRecommendedFinancialInstitutionsWithHttpInfo(GetRecommendedFinancialInstitutionsRequest getRecommendedFinancialInstitutionsRequest) throws ApiException {
+        okhttp3.Call localVarCall = getRecommendedFinancialInstitutionsValidateBeforeCall(getRecommendedFinancialInstitutionsRequest, null);
+        Type localVarReturnType = new TypeToken<GetRecommendedFinancialInstitutionsResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * Get the default recommended list of institutions that will be displayed when the user is not searching for anything
+     * @param getRecommendedFinancialInstitutionsRequest  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getRecommendedFinancialInstitutionsAsync(GetRecommendedFinancialInstitutionsRequest getRecommendedFinancialInstitutionsRequest, final ApiCallback<GetRecommendedFinancialInstitutionsResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getRecommendedFinancialInstitutionsValidateBeforeCall(getRecommendedFinancialInstitutionsRequest, _callback);
+        Type localVarReturnType = new TypeToken<GetRecommendedFinancialInstitutionsResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for migrateFinancialConnection
      * @param migrateFinancialConnectionsTokenRequest  (optional)
      * @param _callback Callback for upload/download progress
@@ -3128,7 +3252,7 @@ public class FuseApi {
      * 
      * Refreshes the Asset Report in JSON format. For Plaid, you will need to have the assets product enabled on your plaid account.
      * @param refreshAssetReportRequest  (optional)
-     * @return AssetReportResponse
+     * @return RefreshAssetReportResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -3136,8 +3260,8 @@ public class FuseApi {
         <tr><td> 200 </td><td> Response </td><td>  -  </td></tr>
      </table>
      */
-    public AssetReportResponse refreshAssetReport(RefreshAssetReportRequest refreshAssetReportRequest) throws ApiException {
-        ApiResponse<AssetReportResponse> localVarResp = refreshAssetReportWithHttpInfo(refreshAssetReportRequest);
+    public RefreshAssetReportResponse refreshAssetReport(RefreshAssetReportRequest refreshAssetReportRequest) throws ApiException {
+        ApiResponse<RefreshAssetReportResponse> localVarResp = refreshAssetReportWithHttpInfo(refreshAssetReportRequest);
         return localVarResp.getData();
     }
 
@@ -3145,7 +3269,7 @@ public class FuseApi {
      * 
      * Refreshes the Asset Report in JSON format. For Plaid, you will need to have the assets product enabled on your plaid account.
      * @param refreshAssetReportRequest  (optional)
-     * @return ApiResponse&lt;AssetReportResponse&gt;
+     * @return ApiResponse&lt;RefreshAssetReportResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -3153,9 +3277,9 @@ public class FuseApi {
         <tr><td> 200 </td><td> Response </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<AssetReportResponse> refreshAssetReportWithHttpInfo(RefreshAssetReportRequest refreshAssetReportRequest) throws ApiException {
+    public ApiResponse<RefreshAssetReportResponse> refreshAssetReportWithHttpInfo(RefreshAssetReportRequest refreshAssetReportRequest) throws ApiException {
         okhttp3.Call localVarCall = refreshAssetReportValidateBeforeCall(refreshAssetReportRequest, null);
-        Type localVarReturnType = new TypeToken<AssetReportResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<RefreshAssetReportResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -3172,10 +3296,246 @@ public class FuseApi {
         <tr><td> 200 </td><td> Response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call refreshAssetReportAsync(RefreshAssetReportRequest refreshAssetReportRequest, final ApiCallback<AssetReportResponse> _callback) throws ApiException {
+    public okhttp3.Call refreshAssetReportAsync(RefreshAssetReportRequest refreshAssetReportRequest, final ApiCallback<RefreshAssetReportResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = refreshAssetReportValidateBeforeCall(refreshAssetReportRequest, _callback);
-        Type localVarReturnType = new TypeToken<AssetReportResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<RefreshAssetReportResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for searchFinancialInstitutions
+     * @param searchFinancialInstitutionsRequest  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call searchFinancialInstitutionsCall(SearchFinancialInstitutionsRequest searchFinancialInstitutionsRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = searchFinancialInstitutionsRequest;
+
+        // create path and map variables
+        String localVarPath = "/v1/financial_connections/institutions/search";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "fuseApiKey", "fuseClientId" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call searchFinancialInstitutionsValidateBeforeCall(SearchFinancialInstitutionsRequest searchFinancialInstitutionsRequest, final ApiCallback _callback) throws ApiException {
+        return searchFinancialInstitutionsCall(searchFinancialInstitutionsRequest, _callback);
+
+    }
+
+    /**
+     * 
+     * Search for financial institutions given a search term.
+     * @param searchFinancialInstitutionsRequest  (optional)
+     * @return SearchFinancialInstitutionsResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Response </td><td>  -  </td></tr>
+     </table>
+     */
+    public SearchFinancialInstitutionsResponse searchFinancialInstitutions(SearchFinancialInstitutionsRequest searchFinancialInstitutionsRequest) throws ApiException {
+        ApiResponse<SearchFinancialInstitutionsResponse> localVarResp = searchFinancialInstitutionsWithHttpInfo(searchFinancialInstitutionsRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * Search for financial institutions given a search term.
+     * @param searchFinancialInstitutionsRequest  (optional)
+     * @return ApiResponse&lt;SearchFinancialInstitutionsResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Response </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<SearchFinancialInstitutionsResponse> searchFinancialInstitutionsWithHttpInfo(SearchFinancialInstitutionsRequest searchFinancialInstitutionsRequest) throws ApiException {
+        okhttp3.Call localVarCall = searchFinancialInstitutionsValidateBeforeCall(searchFinancialInstitutionsRequest, null);
+        Type localVarReturnType = new TypeToken<SearchFinancialInstitutionsResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * Search for financial institutions given a search term.
+     * @param searchFinancialInstitutionsRequest  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call searchFinancialInstitutionsAsync(SearchFinancialInstitutionsRequest searchFinancialInstitutionsRequest, final ApiCallback<SearchFinancialInstitutionsResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = searchFinancialInstitutionsValidateBeforeCall(searchFinancialInstitutionsRequest, _callback);
+        Type localVarReturnType = new TypeToken<SearchFinancialInstitutionsResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for selectFinancialInstitutions
+     * @param selectFinancialInstitutionsRequest  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call selectFinancialInstitutionsCall(SelectFinancialInstitutionsRequest selectFinancialInstitutionsRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = selectFinancialInstitutionsRequest;
+
+        // create path and map variables
+        String localVarPath = "/v1/financial_connections/institutions/select";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "fuseApiKey", "fuseClientId" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call selectFinancialInstitutionsValidateBeforeCall(SelectFinancialInstitutionsRequest selectFinancialInstitutionsRequest, final ApiCallback _callback) throws ApiException {
+        return selectFinancialInstitutionsCall(selectFinancialInstitutionsRequest, _callback);
+
+    }
+
+    /**
+     * 
+     * Endpoint to call when the user has selected a financial institution.
+     * @param selectFinancialInstitutionsRequest  (optional)
+     * @return SelectFinancialInstitutionsResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Response </td><td>  -  </td></tr>
+     </table>
+     */
+    public SelectFinancialInstitutionsResponse selectFinancialInstitutions(SelectFinancialInstitutionsRequest selectFinancialInstitutionsRequest) throws ApiException {
+        ApiResponse<SelectFinancialInstitutionsResponse> localVarResp = selectFinancialInstitutionsWithHttpInfo(selectFinancialInstitutionsRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * Endpoint to call when the user has selected a financial institution.
+     * @param selectFinancialInstitutionsRequest  (optional)
+     * @return ApiResponse&lt;SelectFinancialInstitutionsResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Response </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<SelectFinancialInstitutionsResponse> selectFinancialInstitutionsWithHttpInfo(SelectFinancialInstitutionsRequest selectFinancialInstitutionsRequest) throws ApiException {
+        okhttp3.Call localVarCall = selectFinancialInstitutionsValidateBeforeCall(selectFinancialInstitutionsRequest, null);
+        Type localVarReturnType = new TypeToken<SelectFinancialInstitutionsResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * Endpoint to call when the user has selected a financial institution.
+     * @param selectFinancialInstitutionsRequest  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call selectFinancialInstitutionsAsync(SelectFinancialInstitutionsRequest selectFinancialInstitutionsRequest, final ApiCallback<SelectFinancialInstitutionsResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = selectFinancialInstitutionsValidateBeforeCall(selectFinancialInstitutionsRequest, _callback);
+        Type localVarReturnType = new TypeToken<SelectFinancialInstitutionsResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

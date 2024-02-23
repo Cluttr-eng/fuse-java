@@ -42,7 +42,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -50,7 +49,7 @@ import org.fuse.client.JSON;
 /**
  * CreateLinkTokenRequestSnaptradeConfig
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class CreateLinkTokenRequestSnaptradeConfig {
   /**
    * SnapTrade connection type. Defaults to &#39;read&#39;
@@ -97,6 +96,11 @@ public class CreateLinkTokenRequestSnaptradeConfig {
         return ConnectionTypeEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      ConnectionTypeEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_CONNECTION_TYPE = "connectionType";
@@ -107,7 +111,6 @@ public class CreateLinkTokenRequestSnaptradeConfig {
   }
 
   public CreateLinkTokenRequestSnaptradeConfig connectionType(ConnectionTypeEnum connectionType) {
-    
     this.connectionType = connectionType;
     return this;
   }
@@ -120,7 +123,6 @@ public class CreateLinkTokenRequestSnaptradeConfig {
   public ConnectionTypeEnum getConnectionType() {
     return connectionType;
   }
-
 
   public void setConnectionType(ConnectionTypeEnum connectionType) {
     this.connectionType = connectionType;
@@ -191,9 +193,9 @@ public class CreateLinkTokenRequestSnaptradeConfig {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!CreateLinkTokenRequestSnaptradeConfig.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CreateLinkTokenRequestSnaptradeConfig` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
@@ -201,6 +203,10 @@ public class CreateLinkTokenRequestSnaptradeConfig {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("connectionType") != null && !jsonObj.get("connectionType").isJsonNull()) && !jsonObj.get("connectionType").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `connectionType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connectionType").toString()));
+      }
+      // validate the optional field `connectionType`
+      if (jsonObj.get("connectionType") != null && !jsonObj.get("connectionType").isJsonNull()) {
+        ConnectionTypeEnum.validateJsonElement(jsonObj.get("connectionType"));
       }
   }
 

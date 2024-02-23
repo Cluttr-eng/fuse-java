@@ -16,6 +16,7 @@
 |**type** | **AccountType** |  |  |
 |**subtype** | **AccountSubtype** |  |  [optional] |
 |**balance** | [**FinancialConnectionsAccountCachedBalance**](FinancialConnectionsAccountCachedBalance.md) |  |  |
+|**additionalBalances** | [**List&lt;FinancialConnectionsAccountCachedBalance&gt;**](FinancialConnectionsAccountCachedBalance.md) | An array of additional balances. This may be used for investment type accounts where the user can have multiple balances across different currencies. |  [optional] |
 |**remoteData** | **Object** |  |  |
 
 

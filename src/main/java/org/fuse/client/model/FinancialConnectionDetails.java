@@ -33,6 +33,7 @@ import org.fuse.client.model.FinancialConnectionDetailsMx;
 import org.fuse.client.model.FinancialConnectionDetailsPlaid;
 import org.fuse.client.model.FinancialConnectionDetailsSaltedge;
 import org.fuse.client.model.FinancialConnectionDetailsSnaptrade;
+import org.fuse.client.model.FinancialConnectionDetailsSophtron;
 import org.fuse.client.model.FinancialConnectionDetailsTeller;
 import org.fuse.client.model.FinancialConnectionDetailsTruelayer;
 
@@ -56,7 +57,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -64,7 +64,7 @@ import org.fuse.client.JSON;
 /**
  * FinancialConnectionDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class FinancialConnectionDetails {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -116,6 +116,11 @@ public class FinancialConnectionDetails {
         String value =  jsonReader.nextString();
         return ConnectionStatusEnum.fromValue(value);
       }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      ConnectionStatusEnum.fromValue(value);
     }
   }
 
@@ -187,11 +192,14 @@ public class FinancialConnectionDetails {
   @SerializedName(SERIALIZED_NAME_SALTEDGE)
   private FinancialConnectionDetailsSaltedge saltedge;
 
+  public static final String SERIALIZED_NAME_SOPHTRON = "sophtron";
+  @SerializedName(SERIALIZED_NAME_SOPHTRON)
+  private FinancialConnectionDetailsSophtron sophtron;
+
   public FinancialConnectionDetails() {
   }
 
   public FinancialConnectionDetails id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -205,14 +213,12 @@ public class FinancialConnectionDetails {
     return id;
   }
 
-
   public void setId(String id) {
     this.id = id;
   }
 
 
   public FinancialConnectionDetails connectionStatus(ConnectionStatusEnum connectionStatus) {
-    
     this.connectionStatus = connectionStatus;
     return this;
   }
@@ -226,14 +232,12 @@ public class FinancialConnectionDetails {
     return connectionStatus;
   }
 
-
   public void setConnectionStatus(ConnectionStatusEnum connectionStatus) {
     this.connectionStatus = connectionStatus;
   }
 
 
   public FinancialConnectionDetails connectionStatusUpdatedAt(String connectionStatusUpdatedAt) {
-    
     this.connectionStatusUpdatedAt = connectionStatusUpdatedAt;
     return this;
   }
@@ -247,14 +251,12 @@ public class FinancialConnectionDetails {
     return connectionStatusUpdatedAt;
   }
 
-
   public void setConnectionStatusUpdatedAt(String connectionStatusUpdatedAt) {
     this.connectionStatusUpdatedAt = connectionStatusUpdatedAt;
   }
 
 
   public FinancialConnectionDetails isOauth(Boolean isOauth) {
-    
     this.isOauth = isOauth;
     return this;
   }
@@ -268,14 +270,12 @@ public class FinancialConnectionDetails {
     return isOauth;
   }
 
-
   public void setIsOauth(Boolean isOauth) {
     this.isOauth = isOauth;
   }
 
 
   public FinancialConnectionDetails aggregator(Aggregator aggregator) {
-    
     this.aggregator = aggregator;
     return this;
   }
@@ -289,14 +289,12 @@ public class FinancialConnectionDetails {
     return aggregator;
   }
 
-
   public void setAggregator(Aggregator aggregator) {
     this.aggregator = aggregator;
   }
 
 
   public FinancialConnectionDetails plaid(FinancialConnectionDetailsPlaid plaid) {
-    
     this.plaid = plaid;
     return this;
   }
@@ -310,14 +308,12 @@ public class FinancialConnectionDetails {
     return plaid;
   }
 
-
   public void setPlaid(FinancialConnectionDetailsPlaid plaid) {
     this.plaid = plaid;
   }
 
 
   public FinancialConnectionDetails teller(FinancialConnectionDetailsTeller teller) {
-    
     this.teller = teller;
     return this;
   }
@@ -331,14 +327,12 @@ public class FinancialConnectionDetails {
     return teller;
   }
 
-
   public void setTeller(FinancialConnectionDetailsTeller teller) {
     this.teller = teller;
   }
 
 
   public FinancialConnectionDetails mx(FinancialConnectionDetailsMx mx) {
-    
     this.mx = mx;
     return this;
   }
@@ -352,14 +346,12 @@ public class FinancialConnectionDetails {
     return mx;
   }
 
-
   public void setMx(FinancialConnectionDetailsMx mx) {
     this.mx = mx;
   }
 
 
   public FinancialConnectionDetails snaptrade(FinancialConnectionDetailsSnaptrade snaptrade) {
-    
     this.snaptrade = snaptrade;
     return this;
   }
@@ -373,14 +365,12 @@ public class FinancialConnectionDetails {
     return snaptrade;
   }
 
-
   public void setSnaptrade(FinancialConnectionDetailsSnaptrade snaptrade) {
     this.snaptrade = snaptrade;
   }
 
 
   public FinancialConnectionDetails flinks(FinancialConnectionDetailsFlinks flinks) {
-    
     this.flinks = flinks;
     return this;
   }
@@ -394,14 +384,12 @@ public class FinancialConnectionDetails {
     return flinks;
   }
 
-
   public void setFlinks(FinancialConnectionDetailsFlinks flinks) {
     this.flinks = flinks;
   }
 
 
   public FinancialConnectionDetails mono(FinancialConnectionDetailsMono mono) {
-    
     this.mono = mono;
     return this;
   }
@@ -415,14 +403,12 @@ public class FinancialConnectionDetails {
     return mono;
   }
 
-
   public void setMono(FinancialConnectionDetailsMono mono) {
     this.mono = mono;
   }
 
 
   public FinancialConnectionDetails truelayer(FinancialConnectionDetailsTruelayer truelayer) {
-    
     this.truelayer = truelayer;
     return this;
   }
@@ -436,14 +422,12 @@ public class FinancialConnectionDetails {
     return truelayer;
   }
 
-
   public void setTruelayer(FinancialConnectionDetailsTruelayer truelayer) {
     this.truelayer = truelayer;
   }
 
 
   public FinancialConnectionDetails finverse(FinancialConnectionDetailsFinverse finverse) {
-    
     this.finverse = finverse;
     return this;
   }
@@ -457,14 +441,12 @@ public class FinancialConnectionDetails {
     return finverse;
   }
 
-
   public void setFinverse(FinancialConnectionDetailsFinverse finverse) {
     this.finverse = finverse;
   }
 
 
   public FinancialConnectionDetails basiq(FinancialConnectionDetailsBasiq basiq) {
-    
     this.basiq = basiq;
     return this;
   }
@@ -478,14 +460,12 @@ public class FinancialConnectionDetails {
     return basiq;
   }
 
-
   public void setBasiq(FinancialConnectionDetailsBasiq basiq) {
     this.basiq = basiq;
   }
 
 
   public FinancialConnectionDetails belvo(FinancialConnectionDetailsBelvo belvo) {
-    
     this.belvo = belvo;
     return this;
   }
@@ -499,14 +479,12 @@ public class FinancialConnectionDetails {
     return belvo;
   }
 
-
   public void setBelvo(FinancialConnectionDetailsBelvo belvo) {
     this.belvo = belvo;
   }
 
 
   public FinancialConnectionDetails finicity(FinancialConnectionDetailsFinicity finicity) {
-    
     this.finicity = finicity;
     return this;
   }
@@ -520,14 +498,12 @@ public class FinancialConnectionDetails {
     return finicity;
   }
 
-
   public void setFinicity(FinancialConnectionDetailsFinicity finicity) {
     this.finicity = finicity;
   }
 
 
   public FinancialConnectionDetails akoya(FinancialConnectionDetailsAkoya akoya) {
-    
     this.akoya = akoya;
     return this;
   }
@@ -541,14 +517,12 @@ public class FinancialConnectionDetails {
     return akoya;
   }
 
-
   public void setAkoya(FinancialConnectionDetailsAkoya akoya) {
     this.akoya = akoya;
   }
 
 
   public FinancialConnectionDetails saltedge(FinancialConnectionDetailsSaltedge saltedge) {
-    
     this.saltedge = saltedge;
     return this;
   }
@@ -562,9 +536,27 @@ public class FinancialConnectionDetails {
     return saltedge;
   }
 
-
   public void setSaltedge(FinancialConnectionDetailsSaltedge saltedge) {
     this.saltedge = saltedge;
+  }
+
+
+  public FinancialConnectionDetails sophtron(FinancialConnectionDetailsSophtron sophtron) {
+    this.sophtron = sophtron;
+    return this;
+  }
+
+   /**
+   * Get sophtron
+   * @return sophtron
+  **/
+  @javax.annotation.Nullable
+  public FinancialConnectionDetailsSophtron getSophtron() {
+    return sophtron;
+  }
+
+  public void setSophtron(FinancialConnectionDetailsSophtron sophtron) {
+    this.sophtron = sophtron;
   }
 
 
@@ -595,12 +587,13 @@ public class FinancialConnectionDetails {
         Objects.equals(this.belvo, financialConnectionDetails.belvo) &&
         Objects.equals(this.finicity, financialConnectionDetails.finicity) &&
         Objects.equals(this.akoya, financialConnectionDetails.akoya) &&
-        Objects.equals(this.saltedge, financialConnectionDetails.saltedge);
+        Objects.equals(this.saltedge, financialConnectionDetails.saltedge) &&
+        Objects.equals(this.sophtron, financialConnectionDetails.sophtron);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, connectionStatus, connectionStatusUpdatedAt, isOauth, aggregator, plaid, teller, mx, snaptrade, flinks, mono, truelayer, finverse, basiq, belvo, finicity, akoya, saltedge);
+    return Objects.hash(id, connectionStatus, connectionStatusUpdatedAt, isOauth, aggregator, plaid, teller, mx, snaptrade, flinks, mono, truelayer, finverse, basiq, belvo, finicity, akoya, saltedge, sophtron);
   }
 
   @Override
@@ -625,6 +618,7 @@ public class FinancialConnectionDetails {
     sb.append("    finicity: ").append(toIndentedString(finicity)).append("\n");
     sb.append("    akoya: ").append(toIndentedString(akoya)).append("\n");
     sb.append("    saltedge: ").append(toIndentedString(saltedge)).append("\n");
+    sb.append("    sophtron: ").append(toIndentedString(sophtron)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -665,6 +659,7 @@ public class FinancialConnectionDetails {
     openapiFields.add("finicity");
     openapiFields.add("akoya");
     openapiFields.add("saltedge");
+    openapiFields.add("sophtron");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -688,9 +683,9 @@ public class FinancialConnectionDetails {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FinancialConnectionDetails.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialConnectionDetails` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
@@ -709,9 +704,13 @@ public class FinancialConnectionDetails {
       if (!jsonObj.get("connection_status").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `connection_status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connection_status").toString()));
       }
+      // validate the required field `connection_status`
+      ConnectionStatusEnum.validateJsonElement(jsonObj.get("connection_status"));
       if (!jsonObj.get("connection_status_updated_at").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `connection_status_updated_at` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connection_status_updated_at").toString()));
       }
+      // validate the required field `aggregator`
+      Aggregator.validateJsonElement(jsonObj.get("aggregator"));
       // validate the optional field `plaid`
       if (jsonObj.get("plaid") != null && !jsonObj.get("plaid").isJsonNull()) {
         FinancialConnectionDetailsPlaid.validateJsonElement(jsonObj.get("plaid"));
@@ -763,6 +762,10 @@ public class FinancialConnectionDetails {
       // validate the optional field `saltedge`
       if (jsonObj.get("saltedge") != null && !jsonObj.get("saltedge").isJsonNull()) {
         FinancialConnectionDetailsSaltedge.validateJsonElement(jsonObj.get("saltedge"));
+      }
+      // validate the optional field `sophtron`
+      if (jsonObj.get("sophtron") != null && !jsonObj.get("sophtron").isJsonNull()) {
+        FinancialConnectionDetailsSophtron.validateJsonElement(jsonObj.get("sophtron"));
       }
   }
 

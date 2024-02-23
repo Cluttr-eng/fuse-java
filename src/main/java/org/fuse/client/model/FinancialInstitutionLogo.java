@@ -42,7 +42,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -50,7 +49,7 @@ import org.fuse.client.JSON;
 /**
  * FinancialInstitutionLogo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class FinancialInstitutionLogo {
   public static final String SERIALIZED_NAME_IMAGE = "image";
   @SerializedName(SERIALIZED_NAME_IMAGE)
@@ -100,6 +99,11 @@ public class FinancialInstitutionLogo {
         String value =  jsonReader.nextString();
         return TypeEnum.fromValue(value);
       }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      TypeEnum.fromValue(value);
     }
   }
 
@@ -156,6 +160,11 @@ public class FinancialInstitutionLogo {
         return FormatEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      FormatEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_FORMAT = "format";
@@ -166,7 +175,6 @@ public class FinancialInstitutionLogo {
   }
 
   public FinancialInstitutionLogo image(String image) {
-    
     this.image = image;
     return this;
   }
@@ -180,14 +188,12 @@ public class FinancialInstitutionLogo {
     return image;
   }
 
-
   public void setImage(String image) {
     this.image = image;
   }
 
 
   public FinancialInstitutionLogo type(TypeEnum type) {
-    
     this.type = type;
     return this;
   }
@@ -201,14 +207,12 @@ public class FinancialInstitutionLogo {
     return type;
   }
 
-
   public void setType(TypeEnum type) {
     this.type = type;
   }
 
 
   public FinancialInstitutionLogo format(FormatEnum format) {
-    
     this.format = format;
     return this;
   }
@@ -221,7 +225,6 @@ public class FinancialInstitutionLogo {
   public FormatEnum getFormat() {
     return format;
   }
-
 
   public void setFormat(FormatEnum format) {
     this.format = format;
@@ -300,9 +303,9 @@ public class FinancialInstitutionLogo {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FinancialInstitutionLogo.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialInstitutionLogo` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
@@ -321,8 +324,14 @@ public class FinancialInstitutionLogo {
       if (!jsonObj.get("type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
+      // validate the required field `type`
+      TypeEnum.validateJsonElement(jsonObj.get("type"));
       if ((jsonObj.get("format") != null && !jsonObj.get("format").isJsonNull()) && !jsonObj.get("format").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `format` to be a primitive type in the JSON string but got `%s`", jsonObj.get("format").toString()));
+      }
+      // validate the optional field `format`
+      if (jsonObj.get("format") != null && !jsonObj.get("format").isJsonNull()) {
+        FormatEnum.validateJsonElement(jsonObj.get("format"));
       }
   }
 

@@ -45,7 +45,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -53,7 +52,7 @@ import org.fuse.client.JSON;
 /**
  * FuseApiError
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class FuseApiError {
   public static final String SERIALIZED_NAME_REQUEST_ID = "request_id";
   @SerializedName(SERIALIZED_NAME_REQUEST_ID)
@@ -120,6 +119,11 @@ public class FuseApiError {
         return SourceEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      SourceEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_SOURCE = "source";
@@ -134,7 +138,6 @@ public class FuseApiError {
   }
 
   public FuseApiError requestId(String requestId) {
-    
     this.requestId = requestId;
     return this;
   }
@@ -148,14 +151,12 @@ public class FuseApiError {
     return requestId;
   }
 
-
   public void setRequestId(String requestId) {
     this.requestId = requestId;
   }
 
 
   public FuseApiError title(String title) {
-    
     this.title = title;
     return this;
   }
@@ -169,14 +170,12 @@ public class FuseApiError {
     return title;
   }
 
-
   public void setTitle(String title) {
     this.title = title;
   }
 
 
   public FuseApiError details(String details) {
-    
     this.details = details;
     return this;
   }
@@ -190,14 +189,12 @@ public class FuseApiError {
     return details;
   }
 
-
   public void setDetails(String details) {
     this.details = details;
   }
 
 
   public FuseApiError code(FuseApiErrorCode code) {
-    
     this.code = code;
     return this;
   }
@@ -211,14 +208,12 @@ public class FuseApiError {
     return code;
   }
 
-
   public void setCode(FuseApiErrorCode code) {
     this.code = code;
   }
 
 
   public FuseApiError type(FuseApiErrorType type) {
-    
     this.type = type;
     return this;
   }
@@ -232,14 +227,12 @@ public class FuseApiError {
     return type;
   }
 
-
   public void setType(FuseApiErrorType type) {
     this.type = type;
   }
 
 
   public FuseApiError source(SourceEnum source) {
-    
     this.source = source;
     return this;
   }
@@ -253,14 +246,12 @@ public class FuseApiError {
     return source;
   }
 
-
   public void setSource(SourceEnum source) {
     this.source = source;
   }
 
 
   public FuseApiError data(FuseApiErrorData data) {
-    
     this.data = data;
     return this;
   }
@@ -273,7 +264,6 @@ public class FuseApiError {
   public FuseApiErrorData getData() {
     return data;
   }
-
 
   public void setData(FuseApiErrorData data) {
     this.data = data;
@@ -368,9 +358,9 @@ public class FuseApiError {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FuseApiError.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FuseApiError` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
@@ -392,9 +382,15 @@ public class FuseApiError {
       if (!jsonObj.get("details").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `details` to be a primitive type in the JSON string but got `%s`", jsonObj.get("details").toString()));
       }
+      // validate the required field `code`
+      FuseApiErrorCode.validateJsonElement(jsonObj.get("code"));
+      // validate the required field `type`
+      FuseApiErrorType.validateJsonElement(jsonObj.get("type"));
       if (!jsonObj.get("source").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `source` to be a primitive type in the JSON string but got `%s`", jsonObj.get("source").toString()));
       }
+      // validate the required field `source`
+      SourceEnum.validateJsonElement(jsonObj.get("source"));
       // validate the optional field `data`
       if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
         FuseApiErrorData.validateJsonElement(jsonObj.get("data"));

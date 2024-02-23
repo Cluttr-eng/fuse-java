@@ -45,7 +45,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -53,7 +52,7 @@ import org.fuse.client.JSON;
 /**
  * The input data for the financial connections to be migrated into the unified Fuse API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class MigrateFinancialConnectionsAggregatorConnectionData {
   public static final String SERIALIZED_NAME_PLAID = "plaid";
   @SerializedName(SERIALIZED_NAME_PLAID)
@@ -71,7 +70,6 @@ public class MigrateFinancialConnectionsAggregatorConnectionData {
   }
 
   public MigrateFinancialConnectionsAggregatorConnectionData plaid(MigrateFinancialConnectionsAggregatorConnectionDataPlaid plaid) {
-    
     this.plaid = plaid;
     return this;
   }
@@ -85,14 +83,12 @@ public class MigrateFinancialConnectionsAggregatorConnectionData {
     return plaid;
   }
 
-
   public void setPlaid(MigrateFinancialConnectionsAggregatorConnectionDataPlaid plaid) {
     this.plaid = plaid;
   }
 
 
   public MigrateFinancialConnectionsAggregatorConnectionData mx(MigrateFinancialConnectionsAggregatorConnectionDataMx mx) {
-    
     this.mx = mx;
     return this;
   }
@@ -106,14 +102,12 @@ public class MigrateFinancialConnectionsAggregatorConnectionData {
     return mx;
   }
 
-
   public void setMx(MigrateFinancialConnectionsAggregatorConnectionDataMx mx) {
     this.mx = mx;
   }
 
 
   public MigrateFinancialConnectionsAggregatorConnectionData teller(MigrateFinancialConnectionsAggregatorConnectionDataTeller teller) {
-    
     this.teller = teller;
     return this;
   }
@@ -126,7 +120,6 @@ public class MigrateFinancialConnectionsAggregatorConnectionData {
   public MigrateFinancialConnectionsAggregatorConnectionDataTeller getTeller() {
     return teller;
   }
-
 
   public void setTeller(MigrateFinancialConnectionsAggregatorConnectionDataTeller teller) {
     this.teller = teller;
@@ -203,9 +196,9 @@ public class MigrateFinancialConnectionsAggregatorConnectionData {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!MigrateFinancialConnectionsAggregatorConnectionData.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `MigrateFinancialConnectionsAggregatorConnectionData` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

@@ -42,7 +42,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -50,7 +49,7 @@ import org.fuse.client.JSON;
 /**
  * Data needed to query data from SnapTrade
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class FinancialConnectionDetailsSnaptrade {
   public static final String SERIALIZED_NAME_BROKERAGE_AUTHORIZATION_ID = "brokerage_authorization_id";
   @SerializedName(SERIALIZED_NAME_BROKERAGE_AUTHORIZATION_ID)
@@ -68,7 +67,6 @@ public class FinancialConnectionDetailsSnaptrade {
   }
 
   public FinancialConnectionDetailsSnaptrade brokerageAuthorizationId(String brokerageAuthorizationId) {
-    
     this.brokerageAuthorizationId = brokerageAuthorizationId;
     return this;
   }
@@ -82,14 +80,12 @@ public class FinancialConnectionDetailsSnaptrade {
     return brokerageAuthorizationId;
   }
 
-
   public void setBrokerageAuthorizationId(String brokerageAuthorizationId) {
     this.brokerageAuthorizationId = brokerageAuthorizationId;
   }
 
 
   public FinancialConnectionDetailsSnaptrade userId(String userId) {
-    
     this.userId = userId;
     return this;
   }
@@ -103,14 +99,12 @@ public class FinancialConnectionDetailsSnaptrade {
     return userId;
   }
 
-
   public void setUserId(String userId) {
     this.userId = userId;
   }
 
 
   public FinancialConnectionDetailsSnaptrade userSecret(String userSecret) {
-    
     this.userSecret = userSecret;
     return this;
   }
@@ -123,7 +117,6 @@ public class FinancialConnectionDetailsSnaptrade {
   public String getUserSecret() {
     return userSecret;
   }
-
 
   public void setUserSecret(String userSecret) {
     this.userSecret = userSecret;
@@ -203,9 +196,9 @@ public class FinancialConnectionDetailsSnaptrade {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FinancialConnectionDetailsSnaptrade.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialConnectionDetailsSnaptrade` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

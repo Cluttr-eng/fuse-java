@@ -47,7 +47,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -55,7 +54,7 @@ import org.fuse.client.JSON;
 /**
  * CreateLinkTokenRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class CreateLinkTokenRequest {
   public static final String SERIALIZED_NAME_INSTITUTION_ID = "institution_id";
   @SerializedName(SERIALIZED_NAME_INSTITUTION_ID)
@@ -97,7 +96,6 @@ public class CreateLinkTokenRequest {
   }
 
   public CreateLinkTokenRequest institutionId(String institutionId) {
-    
     this.institutionId = institutionId;
     return this;
   }
@@ -111,14 +109,12 @@ public class CreateLinkTokenRequest {
     return institutionId;
   }
 
-
   public void setInstitutionId(String institutionId) {
     this.institutionId = institutionId;
   }
 
 
   public CreateLinkTokenRequest entity(Entity entity) {
-    
     this.entity = entity;
     return this;
   }
@@ -132,14 +128,12 @@ public class CreateLinkTokenRequest {
     return entity;
   }
 
-
   public void setEntity(Entity entity) {
     this.entity = entity;
   }
 
 
   public CreateLinkTokenRequest clientName(String clientName) {
-    
     this.clientName = clientName;
     return this;
   }
@@ -153,14 +147,12 @@ public class CreateLinkTokenRequest {
     return clientName;
   }
 
-
   public void setClientName(String clientName) {
     this.clientName = clientName;
   }
 
 
   public CreateLinkTokenRequest sessionClientSecret(String sessionClientSecret) {
-    
     this.sessionClientSecret = sessionClientSecret;
     return this;
   }
@@ -174,14 +166,12 @@ public class CreateLinkTokenRequest {
     return sessionClientSecret;
   }
 
-
   public void setSessionClientSecret(String sessionClientSecret) {
     this.sessionClientSecret = sessionClientSecret;
   }
 
 
   public CreateLinkTokenRequest webhookUrl(String webhookUrl) {
-    
     this.webhookUrl = webhookUrl;
     return this;
   }
@@ -195,14 +185,12 @@ public class CreateLinkTokenRequest {
     return webhookUrl;
   }
 
-
   public void setWebhookUrl(String webhookUrl) {
     this.webhookUrl = webhookUrl;
   }
 
 
   public CreateLinkTokenRequest mx(CreateLinkTokenRequestMx mx) {
-    
     this.mx = mx;
     return this;
   }
@@ -216,14 +204,12 @@ public class CreateLinkTokenRequest {
     return mx;
   }
 
-
   public void setMx(CreateLinkTokenRequestMx mx) {
     this.mx = mx;
   }
 
 
   public CreateLinkTokenRequest plaid(CreateLinkTokenRequestPlaid plaid) {
-    
     this.plaid = plaid;
     return this;
   }
@@ -237,14 +223,12 @@ public class CreateLinkTokenRequest {
     return plaid;
   }
 
-
   public void setPlaid(CreateLinkTokenRequestPlaid plaid) {
     this.plaid = plaid;
   }
 
 
   public CreateLinkTokenRequest teller(CreateLinkTokenRequestTeller teller) {
-    
     this.teller = teller;
     return this;
   }
@@ -258,14 +242,12 @@ public class CreateLinkTokenRequest {
     return teller;
   }
 
-
   public void setTeller(CreateLinkTokenRequestTeller teller) {
     this.teller = teller;
   }
 
 
   public CreateLinkTokenRequest snaptrade(CreateLinkTokenRequestSnaptrade snaptrade) {
-    
     this.snaptrade = snaptrade;
     return this;
   }
@@ -278,7 +260,6 @@ public class CreateLinkTokenRequest {
   public CreateLinkTokenRequestSnaptrade getSnaptrade() {
     return snaptrade;
   }
-
 
   public void setSnaptrade(CreateLinkTokenRequestSnaptrade snaptrade) {
     this.snaptrade = snaptrade;
@@ -377,9 +358,9 @@ public class CreateLinkTokenRequest {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!CreateLinkTokenRequest.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CreateLinkTokenRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

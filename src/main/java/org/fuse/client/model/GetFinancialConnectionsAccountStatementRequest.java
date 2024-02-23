@@ -42,7 +42,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -50,7 +49,7 @@ import org.fuse.client.JSON;
 /**
  * GetFinancialConnectionsAccountStatementRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class GetFinancialConnectionsAccountStatementRequest {
   public static final String SERIALIZED_NAME_ACCESS_TOKEN = "access_token";
   @SerializedName(SERIALIZED_NAME_ACCESS_TOKEN)
@@ -68,7 +67,6 @@ public class GetFinancialConnectionsAccountStatementRequest {
   }
 
   public GetFinancialConnectionsAccountStatementRequest accessToken(String accessToken) {
-    
     this.accessToken = accessToken;
     return this;
   }
@@ -82,14 +80,12 @@ public class GetFinancialConnectionsAccountStatementRequest {
     return accessToken;
   }
 
-
   public void setAccessToken(String accessToken) {
     this.accessToken = accessToken;
   }
 
 
   public GetFinancialConnectionsAccountStatementRequest remoteAccountId(String remoteAccountId) {
-    
     this.remoteAccountId = remoteAccountId;
     return this;
   }
@@ -103,14 +99,12 @@ public class GetFinancialConnectionsAccountStatementRequest {
     return remoteAccountId;
   }
 
-
   public void setRemoteAccountId(String remoteAccountId) {
     this.remoteAccountId = remoteAccountId;
   }
 
 
   public GetFinancialConnectionsAccountStatementRequest date(String date) {
-    
     this.date = date;
     return this;
   }
@@ -123,7 +117,6 @@ public class GetFinancialConnectionsAccountStatementRequest {
   public String getDate() {
     return date;
   }
-
 
   public void setDate(String date) {
     this.date = date;
@@ -202,9 +195,9 @@ public class GetFinancialConnectionsAccountStatementRequest {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!GetFinancialConnectionsAccountStatementRequest.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GetFinancialConnectionsAccountStatementRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

@@ -47,7 +47,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -55,7 +54,7 @@ import org.fuse.client.JSON;
 /**
  * GetInvestmentTransactionsResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class GetInvestmentTransactionsResponse {
   public static final String SERIALIZED_NAME_ACCOUNTS = "accounts";
   @SerializedName(SERIALIZED_NAME_ACCOUNTS)
@@ -77,7 +76,6 @@ public class GetInvestmentTransactionsResponse {
   }
 
   public GetInvestmentTransactionsResponse accounts(List<FinancialConnectionsAccount> accounts) {
-    
     this.accounts = accounts;
     return this;
   }
@@ -99,14 +97,12 @@ public class GetInvestmentTransactionsResponse {
     return accounts;
   }
 
-
   public void setAccounts(List<FinancialConnectionsAccount> accounts) {
     this.accounts = accounts;
   }
 
 
   public GetInvestmentTransactionsResponse investmentTransactions(List<FinancialConnectionsInvestmentTransaction> investmentTransactions) {
-    
     this.investmentTransactions = investmentTransactions;
     return this;
   }
@@ -128,14 +124,12 @@ public class GetInvestmentTransactionsResponse {
     return investmentTransactions;
   }
 
-
   public void setInvestmentTransactions(List<FinancialConnectionsInvestmentTransaction> investmentTransactions) {
     this.investmentTransactions = investmentTransactions;
   }
 
 
   public GetInvestmentTransactionsResponse totalTransactions(BigDecimal totalTransactions) {
-    
     this.totalTransactions = totalTransactions;
     return this;
   }
@@ -149,14 +143,12 @@ public class GetInvestmentTransactionsResponse {
     return totalTransactions;
   }
 
-
   public void setTotalTransactions(BigDecimal totalTransactions) {
     this.totalTransactions = totalTransactions;
   }
 
 
   public GetInvestmentTransactionsResponse requestId(String requestId) {
-    
     this.requestId = requestId;
     return this;
   }
@@ -169,7 +161,6 @@ public class GetInvestmentTransactionsResponse {
   public String getRequestId() {
     return requestId;
   }
-
 
   public void setRequestId(String requestId) {
     this.requestId = requestId;
@@ -252,9 +243,9 @@ public class GetInvestmentTransactionsResponse {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!GetInvestmentTransactionsResponse.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GetInvestmentTransactionsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

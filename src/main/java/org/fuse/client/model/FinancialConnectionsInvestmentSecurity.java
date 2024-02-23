@@ -46,7 +46,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -54,7 +53,7 @@ import org.fuse.client.JSON;
 /**
  * FinancialConnectionsInvestmentSecurity
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class FinancialConnectionsInvestmentSecurity {
   public static final String SERIALIZED_NAME_REMOTE_ID = "remote_id";
   @SerializedName(SERIALIZED_NAME_REMOTE_ID)
@@ -100,7 +99,6 @@ public class FinancialConnectionsInvestmentSecurity {
   }
 
   public FinancialConnectionsInvestmentSecurity remoteId(String remoteId) {
-    
     this.remoteId = remoteId;
     return this;
   }
@@ -114,14 +112,12 @@ public class FinancialConnectionsInvestmentSecurity {
     return remoteId;
   }
 
-
   public void setRemoteId(String remoteId) {
     this.remoteId = remoteId;
   }
 
 
   public FinancialConnectionsInvestmentSecurity symbol(String symbol) {
-    
     this.symbol = symbol;
     return this;
   }
@@ -135,14 +131,12 @@ public class FinancialConnectionsInvestmentSecurity {
     return symbol;
   }
 
-
   public void setSymbol(String symbol) {
     this.symbol = symbol;
   }
 
 
   public FinancialConnectionsInvestmentSecurity isin(String isin) {
-    
     this.isin = isin;
     return this;
   }
@@ -156,14 +150,12 @@ public class FinancialConnectionsInvestmentSecurity {
     return isin;
   }
 
-
   public void setIsin(String isin) {
     this.isin = isin;
   }
 
 
   public FinancialConnectionsInvestmentSecurity sedol(String sedol) {
-    
     this.sedol = sedol;
     return this;
   }
@@ -177,14 +169,12 @@ public class FinancialConnectionsInvestmentSecurity {
     return sedol;
   }
 
-
   public void setSedol(String sedol) {
     this.sedol = sedol;
   }
 
 
   public FinancialConnectionsInvestmentSecurity cusip(String cusip) {
-    
     this.cusip = cusip;
     return this;
   }
@@ -198,14 +188,12 @@ public class FinancialConnectionsInvestmentSecurity {
     return cusip;
   }
 
-
   public void setCusip(String cusip) {
     this.cusip = cusip;
   }
 
 
   public FinancialConnectionsInvestmentSecurity closePrice(BigDecimal closePrice) {
-    
     this.closePrice = closePrice;
     return this;
   }
@@ -219,14 +207,12 @@ public class FinancialConnectionsInvestmentSecurity {
     return closePrice;
   }
 
-
   public void setClosePrice(BigDecimal closePrice) {
     this.closePrice = closePrice;
   }
 
 
   public FinancialConnectionsInvestmentSecurity currency(Currency currency) {
-    
     this.currency = currency;
     return this;
   }
@@ -240,14 +226,12 @@ public class FinancialConnectionsInvestmentSecurity {
     return currency;
   }
 
-
   public void setCurrency(Currency currency) {
     this.currency = currency;
   }
 
 
   public FinancialConnectionsInvestmentSecurity name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -261,14 +245,12 @@ public class FinancialConnectionsInvestmentSecurity {
     return name;
   }
 
-
   public void setName(String name) {
     this.name = name;
   }
 
 
   public FinancialConnectionsInvestmentSecurity type(FinancialConnectionsInvestmentSecurityType type) {
-    
     this.type = type;
     return this;
   }
@@ -282,14 +264,12 @@ public class FinancialConnectionsInvestmentSecurity {
     return type;
   }
 
-
   public void setType(FinancialConnectionsInvestmentSecurityType type) {
     this.type = type;
   }
 
 
   public FinancialConnectionsInvestmentSecurity exchange(FinancialConnectionsInvestmentSecurityExchange exchange) {
-    
     this.exchange = exchange;
     return this;
   }
@@ -302,7 +282,6 @@ public class FinancialConnectionsInvestmentSecurity {
   public FinancialConnectionsInvestmentSecurityExchange getExchange() {
     return exchange;
   }
-
 
   public void setExchange(FinancialConnectionsInvestmentSecurityExchange exchange) {
     this.exchange = exchange;
@@ -403,9 +382,9 @@ public class FinancialConnectionsInvestmentSecurity {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FinancialConnectionsInvestmentSecurity.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialConnectionsInvestmentSecurity` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
@@ -437,6 +416,10 @@ public class FinancialConnectionsInvestmentSecurity {
       Currency.validateJsonElement(jsonObj.get("currency"));
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+      }
+      // validate the optional field `type`
+      if (jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) {
+        FinancialConnectionsInvestmentSecurityType.validateJsonElement(jsonObj.get("type"));
       }
       // validate the optional field `exchange`
       if (jsonObj.get("exchange") != null && !jsonObj.get("exchange").isJsonNull()) {

@@ -46,7 +46,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -54,7 +53,7 @@ import org.fuse.client.JSON;
 /**
  * WebhookEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class WebhookEvent {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -109,6 +108,11 @@ public class WebhookEvent {
         return EnvironmentEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      EnvironmentEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_ENVIRONMENT = "environment";
@@ -143,7 +147,6 @@ public class WebhookEvent {
   }
 
   public WebhookEvent type(WebhookType type) {
-    
     this.type = type;
     return this;
   }
@@ -157,14 +160,12 @@ public class WebhookEvent {
     return type;
   }
 
-
   public void setType(WebhookType type) {
     this.type = type;
   }
 
 
   public WebhookEvent financialConnectionId(String financialConnectionId) {
-    
     this.financialConnectionId = financialConnectionId;
     return this;
   }
@@ -178,14 +179,12 @@ public class WebhookEvent {
     return financialConnectionId;
   }
 
-
   public void setFinancialConnectionId(String financialConnectionId) {
     this.financialConnectionId = financialConnectionId;
   }
 
 
   public WebhookEvent environment(EnvironmentEnum environment) {
-    
     this.environment = environment;
     return this;
   }
@@ -199,14 +198,12 @@ public class WebhookEvent {
     return environment;
   }
 
-
   public void setEnvironment(EnvironmentEnum environment) {
     this.environment = environment;
   }
 
 
   public WebhookEvent source(WebhookSource source) {
-    
     this.source = source;
     return this;
   }
@@ -220,14 +217,12 @@ public class WebhookEvent {
     return source;
   }
 
-
   public void setSource(WebhookSource source) {
     this.source = source;
   }
 
 
   public WebhookEvent verificationToken(String verificationToken) {
-    
     this.verificationToken = verificationToken;
     return this;
   }
@@ -241,14 +236,12 @@ public class WebhookEvent {
     return verificationToken;
   }
 
-
   public void setVerificationToken(String verificationToken) {
     this.verificationToken = verificationToken;
   }
 
 
   public WebhookEvent assetReportId(String assetReportId) {
-    
     this.assetReportId = assetReportId;
     return this;
   }
@@ -262,14 +255,12 @@ public class WebhookEvent {
     return assetReportId;
   }
 
-
   public void setAssetReportId(String assetReportId) {
     this.assetReportId = assetReportId;
   }
 
 
   public WebhookEvent historicalTransactionsAvailable(Boolean historicalTransactionsAvailable) {
-    
     this.historicalTransactionsAvailable = historicalTransactionsAvailable;
     return this;
   }
@@ -283,14 +274,12 @@ public class WebhookEvent {
     return historicalTransactionsAvailable;
   }
 
-
   public void setHistoricalTransactionsAvailable(Boolean historicalTransactionsAvailable) {
     this.historicalTransactionsAvailable = historicalTransactionsAvailable;
   }
 
 
   public WebhookEvent removedTransactionIds(List<String> removedTransactionIds) {
-    
     this.removedTransactionIds = removedTransactionIds;
     return this;
   }
@@ -312,14 +301,12 @@ public class WebhookEvent {
     return removedTransactionIds;
   }
 
-
   public void setRemovedTransactionIds(List<String> removedTransactionIds) {
     this.removedTransactionIds = removedTransactionIds;
   }
 
 
   public WebhookEvent remoteData(Object remoteData) {
-    
     this.remoteData = remoteData;
     return this;
   }
@@ -332,7 +319,6 @@ public class WebhookEvent {
   public Object getRemoteData() {
     return remoteData;
   }
-
 
   public void setRemoteData(Object remoteData) {
     this.remoteData = remoteData;
@@ -432,9 +418,9 @@ public class WebhookEvent {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!WebhookEvent.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `WebhookEvent` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
@@ -447,12 +433,18 @@ public class WebhookEvent {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `type`
+      WebhookType.validateJsonElement(jsonObj.get("type"));
       if (!jsonObj.get("financial_connection_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `financial_connection_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("financial_connection_id").toString()));
       }
       if (!jsonObj.get("environment").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `environment` to be a primitive type in the JSON string but got `%s`", jsonObj.get("environment").toString()));
       }
+      // validate the required field `environment`
+      EnvironmentEnum.validateJsonElement(jsonObj.get("environment"));
+      // validate the required field `source`
+      WebhookSource.validateJsonElement(jsonObj.get("source"));
       if ((jsonObj.get("verification_token") != null && !jsonObj.get("verification_token").isJsonNull()) && !jsonObj.get("verification_token").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `verification_token` to be a primitive type in the JSON string but got `%s`", jsonObj.get("verification_token").toString()));
       }

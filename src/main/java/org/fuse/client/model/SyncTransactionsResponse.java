@@ -46,7 +46,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -54,7 +53,7 @@ import org.fuse.client.JSON;
 /**
  * SyncTransactionsResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class SyncTransactionsResponse {
   public static final String SERIALIZED_NAME_ADDED = "added";
   @SerializedName(SERIALIZED_NAME_ADDED)
@@ -84,7 +83,6 @@ public class SyncTransactionsResponse {
   }
 
   public SyncTransactionsResponse added(List<Transaction> added) {
-    
     this.added = added;
     return this;
   }
@@ -106,14 +104,12 @@ public class SyncTransactionsResponse {
     return added;
   }
 
-
   public void setAdded(List<Transaction> added) {
     this.added = added;
   }
 
 
   public SyncTransactionsResponse modified(List<Transaction> modified) {
-    
     this.modified = modified;
     return this;
   }
@@ -135,14 +131,12 @@ public class SyncTransactionsResponse {
     return modified;
   }
 
-
   public void setModified(List<Transaction> modified) {
     this.modified = modified;
   }
 
 
   public SyncTransactionsResponse removed(List<SyncTransactionsResponseRemovedInner> removed) {
-    
     this.removed = removed;
     return this;
   }
@@ -164,14 +158,12 @@ public class SyncTransactionsResponse {
     return removed;
   }
 
-
   public void setRemoved(List<SyncTransactionsResponseRemovedInner> removed) {
     this.removed = removed;
   }
 
 
   public SyncTransactionsResponse nextCursor(String nextCursor) {
-    
     this.nextCursor = nextCursor;
     return this;
   }
@@ -185,14 +177,12 @@ public class SyncTransactionsResponse {
     return nextCursor;
   }
 
-
   public void setNextCursor(String nextCursor) {
     this.nextCursor = nextCursor;
   }
 
 
   public SyncTransactionsResponse hasNext(Boolean hasNext) {
-    
     this.hasNext = hasNext;
     return this;
   }
@@ -206,14 +196,12 @@ public class SyncTransactionsResponse {
     return hasNext;
   }
 
-
   public void setHasNext(Boolean hasNext) {
     this.hasNext = hasNext;
   }
 
 
   public SyncTransactionsResponse requestId(String requestId) {
-    
     this.requestId = requestId;
     return this;
   }
@@ -226,7 +214,6 @@ public class SyncTransactionsResponse {
   public String getRequestId() {
     return requestId;
   }
-
 
   public void setRequestId(String requestId) {
     this.requestId = requestId;
@@ -312,9 +299,9 @@ public class SyncTransactionsResponse {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!SyncTransactionsResponse.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `SyncTransactionsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

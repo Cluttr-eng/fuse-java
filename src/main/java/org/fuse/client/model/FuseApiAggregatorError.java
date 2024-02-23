@@ -43,7 +43,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -51,7 +50,7 @@ import org.fuse.client.JSON;
 /**
  * FuseApiAggregatorError
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class FuseApiAggregatorError {
   public static final String SERIALIZED_NAME_REQUEST_ID = "request_id";
   @SerializedName(SERIALIZED_NAME_REQUEST_ID)
@@ -81,7 +80,6 @@ public class FuseApiAggregatorError {
   }
 
   public FuseApiAggregatorError requestId(String requestId) {
-    
     this.requestId = requestId;
     return this;
   }
@@ -95,14 +93,12 @@ public class FuseApiAggregatorError {
     return requestId;
   }
 
-
   public void setRequestId(String requestId) {
     this.requestId = requestId;
   }
 
 
   public FuseApiAggregatorError title(String title) {
-    
     this.title = title;
     return this;
   }
@@ -116,14 +112,12 @@ public class FuseApiAggregatorError {
     return title;
   }
 
-
   public void setTitle(String title) {
     this.title = title;
   }
 
 
   public FuseApiAggregatorError details(String details) {
-    
     this.details = details;
     return this;
   }
@@ -137,14 +131,12 @@ public class FuseApiAggregatorError {
     return details;
   }
 
-
   public void setDetails(String details) {
     this.details = details;
   }
 
 
   public FuseApiAggregatorError code(String code) {
-    
     this.code = code;
     return this;
   }
@@ -158,14 +150,12 @@ public class FuseApiAggregatorError {
     return code;
   }
 
-
   public void setCode(String code) {
     this.code = code;
   }
 
 
   public FuseApiAggregatorError type(String type) {
-    
     this.type = type;
     return this;
   }
@@ -179,14 +169,12 @@ public class FuseApiAggregatorError {
     return type;
   }
 
-
   public void setType(String type) {
     this.type = type;
   }
 
 
   public FuseApiAggregatorError path(String path) {
-    
     this.path = path;
     return this;
   }
@@ -199,7 +187,6 @@ public class FuseApiAggregatorError {
   public String getPath() {
     return path;
   }
-
 
   public void setPath(String path) {
     this.path = path;
@@ -296,9 +283,9 @@ public class FuseApiAggregatorError {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FuseApiAggregatorError.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FuseApiAggregatorError` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

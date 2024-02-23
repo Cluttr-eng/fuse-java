@@ -46,7 +46,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -54,7 +53,7 @@ import org.fuse.client.JSON;
 /**
  * AssetReportTransaction
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class AssetReportTransaction {
   public static final String SERIALIZED_NAME_REMOTE_ID = "remote_id";
   @SerializedName(SERIALIZED_NAME_REMOTE_ID)
@@ -1327,6 +1326,11 @@ public class AssetReportTransaction {
         return CategoryEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      CategoryEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_CATEGORY = "category";
@@ -1382,6 +1386,11 @@ public class AssetReportTransaction {
         return StatusEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      StatusEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_STATUS = "status";
@@ -1400,7 +1409,6 @@ public class AssetReportTransaction {
   }
 
   public AssetReportTransaction remoteId(String remoteId) {
-    
     this.remoteId = remoteId;
     return this;
   }
@@ -1414,14 +1422,12 @@ public class AssetReportTransaction {
     return remoteId;
   }
 
-
   public void setRemoteId(String remoteId) {
     this.remoteId = remoteId;
   }
 
 
   public AssetReportTransaction remoteAccountId(String remoteAccountId) {
-    
     this.remoteAccountId = remoteAccountId;
     return this;
   }
@@ -1435,14 +1441,12 @@ public class AssetReportTransaction {
     return remoteAccountId;
   }
 
-
   public void setRemoteAccountId(String remoteAccountId) {
     this.remoteAccountId = remoteAccountId;
   }
 
 
   public AssetReportTransaction amount(BigDecimal amount) {
-    
     this.amount = amount;
     return this;
   }
@@ -1456,14 +1460,12 @@ public class AssetReportTransaction {
     return amount;
   }
 
-
   public void setAmount(BigDecimal amount) {
     this.amount = amount;
   }
 
 
   public AssetReportTransaction date(String date) {
-    
     this.date = date;
     return this;
   }
@@ -1477,14 +1479,12 @@ public class AssetReportTransaction {
     return date;
   }
 
-
   public void setDate(String date) {
     this.date = date;
   }
 
 
   public AssetReportTransaction description(String description) {
-    
     this.description = description;
     return this;
   }
@@ -1498,14 +1498,12 @@ public class AssetReportTransaction {
     return description;
   }
 
-
   public void setDescription(String description) {
     this.description = description;
   }
 
 
   public AssetReportTransaction category(List<CategoryEnum> category) {
-    
     this.category = category;
     return this;
   }
@@ -1527,14 +1525,12 @@ public class AssetReportTransaction {
     return category;
   }
 
-
   public void setCategory(List<CategoryEnum> category) {
     this.category = category;
   }
 
 
   public AssetReportTransaction merchant(TransactionMerchant merchant) {
-    
     this.merchant = merchant;
     return this;
   }
@@ -1548,14 +1544,12 @@ public class AssetReportTransaction {
     return merchant;
   }
 
-
   public void setMerchant(TransactionMerchant merchant) {
     this.merchant = merchant;
   }
 
 
   public AssetReportTransaction status(StatusEnum status) {
-    
     this.status = status;
     return this;
   }
@@ -1569,14 +1563,12 @@ public class AssetReportTransaction {
     return status;
   }
 
-
   public void setStatus(StatusEnum status) {
     this.status = status;
   }
 
 
   public AssetReportTransaction isoCurrencyCode(String isoCurrencyCode) {
-    
     this.isoCurrencyCode = isoCurrencyCode;
     return this;
   }
@@ -1590,14 +1582,12 @@ public class AssetReportTransaction {
     return isoCurrencyCode;
   }
 
-
   public void setIsoCurrencyCode(String isoCurrencyCode) {
     this.isoCurrencyCode = isoCurrencyCode;
   }
 
 
   public AssetReportTransaction remoteData(Object remoteData) {
-    
     this.remoteData = remoteData;
     return this;
   }
@@ -1610,7 +1600,6 @@ public class AssetReportTransaction {
   public Object getRemoteData() {
     return remoteData;
   }
-
 
   public void setRemoteData(Object remoteData) {
     this.remoteData = remoteData;
@@ -1717,9 +1706,9 @@ public class AssetReportTransaction {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!AssetReportTransaction.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AssetReportTransaction` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
@@ -1755,6 +1744,8 @@ public class AssetReportTransaction {
       if (!jsonObj.get("status").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
       }
+      // validate the required field `status`
+      StatusEnum.validateJsonElement(jsonObj.get("status"));
       if ((jsonObj.get("iso_currency_code") != null && !jsonObj.get("iso_currency_code").isJsonNull()) && !jsonObj.get("iso_currency_code").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `iso_currency_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("iso_currency_code").toString()));
       }

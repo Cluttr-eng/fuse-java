@@ -44,7 +44,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -52,7 +51,7 @@ import org.fuse.client.JSON;
 /**
  * ConsumerRiskReport
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class ConsumerRiskReport {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -94,7 +93,6 @@ public class ConsumerRiskReport {
   }
 
   public ConsumerRiskReport id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -108,14 +106,12 @@ public class ConsumerRiskReport {
     return id;
   }
 
-
   public void setId(String id) {
     this.id = id;
   }
 
 
   public ConsumerRiskReport customizationId(String customizationId) {
-    
     this.customizationId = customizationId;
     return this;
   }
@@ -129,14 +125,12 @@ public class ConsumerRiskReport {
     return customizationId;
   }
 
-
   public void setCustomizationId(String customizationId) {
     this.customizationId = customizationId;
   }
 
 
   public ConsumerRiskReport spendLimit(BigDecimal spendLimit) {
-    
     this.spendLimit = spendLimit;
     return this;
   }
@@ -150,14 +144,12 @@ public class ConsumerRiskReport {
     return spendLimit;
   }
 
-
   public void setSpendLimit(BigDecimal spendLimit) {
     this.spendLimit = spendLimit;
   }
 
 
   public ConsumerRiskReport currentSpend(BigDecimal currentSpend) {
-    
     this.currentSpend = currentSpend;
     return this;
   }
@@ -171,14 +163,12 @@ public class ConsumerRiskReport {
     return currentSpend;
   }
 
-
   public void setCurrentSpend(BigDecimal currentSpend) {
     this.currentSpend = currentSpend;
   }
 
 
   public ConsumerRiskReport pendingPaymentsAmount(BigDecimal pendingPaymentsAmount) {
-    
     this.pendingPaymentsAmount = pendingPaymentsAmount;
     return this;
   }
@@ -192,14 +182,12 @@ public class ConsumerRiskReport {
     return pendingPaymentsAmount;
   }
 
-
   public void setPendingPaymentsAmount(BigDecimal pendingPaymentsAmount) {
     this.pendingPaymentsAmount = pendingPaymentsAmount;
   }
 
 
   public ConsumerRiskReport isoCurrencyCode(String isoCurrencyCode) {
-    
     this.isoCurrencyCode = isoCurrencyCode;
     return this;
   }
@@ -213,14 +201,12 @@ public class ConsumerRiskReport {
     return isoCurrencyCode;
   }
 
-
   public void setIsoCurrencyCode(String isoCurrencyCode) {
     this.isoCurrencyCode = isoCurrencyCode;
   }
 
 
   public ConsumerRiskReport lastUpdated(String lastUpdated) {
-    
     this.lastUpdated = lastUpdated;
     return this;
   }
@@ -234,14 +220,12 @@ public class ConsumerRiskReport {
     return lastUpdated;
   }
 
-
   public void setLastUpdated(String lastUpdated) {
     this.lastUpdated = lastUpdated;
   }
 
 
   public ConsumerRiskReport financeScore(FinanceScore financeScore) {
-    
     this.financeScore = financeScore;
     return this;
   }
@@ -255,14 +239,12 @@ public class ConsumerRiskReport {
     return financeScore;
   }
 
-
   public void setFinanceScore(FinanceScore financeScore) {
     this.financeScore = financeScore;
   }
 
 
   public ConsumerRiskReport predictedBalance(BigDecimal predictedBalance) {
-    
     this.predictedBalance = predictedBalance;
     return this;
   }
@@ -275,7 +257,6 @@ public class ConsumerRiskReport {
   public BigDecimal getPredictedBalance() {
     return predictedBalance;
   }
-
 
   public void setPredictedBalance(BigDecimal predictedBalance) {
     this.predictedBalance = predictedBalance;
@@ -379,9 +360,9 @@ public class ConsumerRiskReport {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!ConsumerRiskReport.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ConsumerRiskReport` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }

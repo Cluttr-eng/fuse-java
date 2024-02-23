@@ -43,7 +43,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.fuse.client.JSON;
@@ -51,7 +50,7 @@ import org.fuse.client.JSON;
 /**
  * CreateLinkTokenRequestTellerConfig
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-12T15:13:43.182056Z[UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T12:03:45.546785Z[UTC]")
 public class CreateLinkTokenRequestTellerConfig {
   /**
    * The mode of account selection: - &#39;disabled&#39;: automatically connect all the supported financial accounts associated with this user&#39;s account at the institution (default). - &#39;single&#39;: the user will see a list of supported financial accounts and will need to select one to connect - &#39;multiple&#39;: the user will see a list of supported financial accounts and will need to select one or more to connect
@@ -100,6 +99,11 @@ public class CreateLinkTokenRequestTellerConfig {
         return SelectAccountEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      SelectAccountEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_SELECT_ACCOUNT = "selectAccount";
@@ -114,7 +118,6 @@ public class CreateLinkTokenRequestTellerConfig {
   }
 
   public CreateLinkTokenRequestTellerConfig selectAccount(SelectAccountEnum selectAccount) {
-    
     this.selectAccount = selectAccount;
     return this;
   }
@@ -128,14 +131,12 @@ public class CreateLinkTokenRequestTellerConfig {
     return selectAccount;
   }
 
-
   public void setSelectAccount(SelectAccountEnum selectAccount) {
     this.selectAccount = selectAccount;
   }
 
 
   public CreateLinkTokenRequestTellerConfig accountFilter(CreateLinkTokenRequestTellerConfigAccountFilter accountFilter) {
-    
     this.accountFilter = accountFilter;
     return this;
   }
@@ -148,7 +149,6 @@ public class CreateLinkTokenRequestTellerConfig {
   public CreateLinkTokenRequestTellerConfigAccountFilter getAccountFilter() {
     return accountFilter;
   }
-
 
   public void setAccountFilter(CreateLinkTokenRequestTellerConfigAccountFilter accountFilter) {
     this.accountFilter = accountFilter;
@@ -222,9 +222,9 @@ public class CreateLinkTokenRequestTellerConfig {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!CreateLinkTokenRequestTellerConfig.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CreateLinkTokenRequestTellerConfig` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
@@ -232,6 +232,10 @@ public class CreateLinkTokenRequestTellerConfig {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("selectAccount") != null && !jsonObj.get("selectAccount").isJsonNull()) && !jsonObj.get("selectAccount").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `selectAccount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("selectAccount").toString()));
+      }
+      // validate the optional field `selectAccount`
+      if (jsonObj.get("selectAccount") != null && !jsonObj.get("selectAccount").isJsonNull()) {
+        SelectAccountEnum.validateJsonElement(jsonObj.get("selectAccount"));
       }
       // validate the optional field `accountFilter`
       if (jsonObj.get("accountFilter") != null && !jsonObj.get("accountFilter").isJsonNull()) {
